@@ -1,0 +1,11 @@
+Note: validations are for the model.  Constraints are defined inside migrations.
+
+
+https://github.com/appacademy/curriculum/blob/master/sql/projects/url_shortener/solution/db/migrate/20170708074429_create_shortened_urls.rb
+
+is a good reference for migrations
+
+
+
+Questions:
+  1.  Should it be save! or save in user.  I think save! to create errors.
