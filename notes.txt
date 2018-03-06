@@ -9,3 +9,19 @@ is a good reference for migrations
 
 Questions:
   1.  Should it be save! or save in user.  I think save! to create errors.
+
+
+
+ user = User.new({username: 'abc'})
+
+1. make account
+2. login
+3. establish remote
+4. build packs in setting, node.js, THEN ruby
+5. then in package JSON add "postinstall" "webpack"
+6. then go to engines and check version of npm and node
+
+
+
+7. you have to run migrations to get it to heroku
+8. heroku run should go first
