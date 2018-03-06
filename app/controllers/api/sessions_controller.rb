@@ -12,6 +12,7 @@ class Api::SessionsController < ApplicationController
       #not sure this is the appropriate place to redirect to
     else
       render json: {errors: ["Invalid credentials"]}, status: 422
+    end
   end
 
 
@@ -21,6 +22,7 @@ class Api::SessionsController < ApplicationController
       render json: {}
     else
       render json: {errors: ["You need to be logged in to logout!"]}, status: 404
+    end
   end
 
   private
