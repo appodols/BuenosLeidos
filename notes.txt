@@ -25,3 +25,13 @@ Questions:
 
 7. you have to run migrations to get it to heroku
 8. heroku run should go first
+
+
+1. be careful about cSS
+you can't drop the database, you can only migrate and seed
+
+
+migrate and seed
+
+I put this in application.js --> //= require jquery
+remember that if it is gem testing and not in development/test it can be available everywhere
