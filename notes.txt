@@ -44,3 +44,6 @@ $.ajax({method: 'POST', url: '/api/users', data: { user: { username: 'chewbacca'
 
 
 Would love to use helpers and understand what those do
+
+
+Note we should make filnames in snake, and the name of the stuff in the file in camel
