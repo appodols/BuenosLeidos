@@ -1,0 +1,38 @@
+Looks great, doesn’t it? Not only it gives you these predicate methods with names, it also gives you the methods to switch between defined statuses.
+* 		book.draft!
+* 		book.completed!
+* 		book.published!
+These methods will as switch the status matching the method. What an elegant tool to have in your arsenal.
+Fat Models, Skinny Controllers and Concerns
+Another best practice is to keep non-response related logic out of the controllers. Examples of code you don’t want in a controller are any business logic or persistence/model changing logic. For example, someone might have their controller like:
+class BooksController < ApplicationController
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :publish]
+
+  # code omitted for brevity
+
+  def publish
+    @book.published = true
+    pub_date = params[:publish_date]
+    if pub_date
+      @book.published_at = pub_date
+    else
+      @book.published_at = Time.zone.now
+    end
+
+    if @book.save
+      # success response, some redirect with a flash notice
+    else
+      # failure response, some redirect with a flash alert
+    end
+  end
+
+  # code omitted for brevity
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_book
+      @book = Book.find(params[:id])
+    end
+  # code omitted for brevity
+end
+ 

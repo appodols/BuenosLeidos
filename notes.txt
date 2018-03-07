@@ -41,3 +41,6 @@ Note: error messages in the model are from the JSON
 
 
 $.ajax({method: 'POST', url: '/api/users', data: { user: { username: 'chewbacca', password: 'starwars' }}});
+
+
+Would love to use helpers and understand what those do

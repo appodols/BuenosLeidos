@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 export const signup = user => {
   return $.ajax({
     method: 'POST',
@@ -15,7 +17,7 @@ export const login = user => {
   });
 };
 
-export const logout = user => {
+export const logout = () => {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
