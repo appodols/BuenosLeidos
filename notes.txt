@@ -35,3 +35,9 @@ migrate and seed
 
 I put this in application.js --> //= require jquery
 remember that if it is gem testing and not in development/test it can be available everywhere
+
+
+Note: error messages in the model are from the JSON
+
+
+$.ajax({method: 'POST', url: '/api/users', data: { user: { username: 'chewbacca', password: 'starwars' }}});
