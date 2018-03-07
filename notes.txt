@@ -50,6 +50,8 @@ Note we should make filnames in snake, and the name of the stuff in the file in 
 
 
 
+//Questions--how is provider getting access to the store?
+
 
 1073
 down vote
