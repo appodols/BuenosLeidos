@@ -11,7 +11,4 @@ class CreateUsers < ActiveRecord::Migration[5.1]
     add_index :users, :e_mail, unique: true
   end
 
-
-
-
 end

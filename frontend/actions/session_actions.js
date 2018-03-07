@@ -3,6 +3,7 @@ import * as ApiUtils from '../util/session_api_util';
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
+
 export const login = (user) => {
   return dispatch => {
     return ApiUtils.login(user).then(currentUser =>{

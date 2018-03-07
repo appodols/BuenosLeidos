@@ -47,3 +47,26 @@ Would love to use helpers and understand what those do
 
 
 Note we should make filnames in snake, and the name of the stuff in the file in camel
+
+
+
+
+1073
+down vote
+accepted
+db:migrate runs (single) migrations that have not run yet.
+db:create creates the database
+db:drop deletes the database
+db:schema:load creates tables and columns within the (existing) database following schema.rb
+
+db:setup does db:create, db:schema:load, db:seed
+
+db:reset does db:drop, db:setup
+Typically, you would use db:migrate after having made changes to the schema via new migration files (this makes sense only if there is already data in the database). db:schema:load is used when you setup a new instance of your app.
+
+I hope that helps.
+
+
+
+
+NOTE: we have not yet run the command form npm-install save yet.
