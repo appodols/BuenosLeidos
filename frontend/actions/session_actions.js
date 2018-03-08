@@ -8,7 +8,7 @@ export const login = user => dispatch => {
   return(ApiUtils.login(user).then(user => (
     dispatch(receiveCurrentUser(user))
   ), (error) => (
-    dispatch(receiveErrors(error.responseJSON))
+    dispatch(receiveSessionErrors(error.responseJSON))
   ))
  );
 };
@@ -17,17 +17,10 @@ export const signup = user => dispatch => {
   return(ApiUtils.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))
   ), (error) => (
-    dispatch(receiveErrors(error.responseJSON))
+    dispatch(receiveSessionErrors(error.responseJSON))
   ))
  );
 };
-
-
-
-
-
-
-
 
 
 
@@ -55,9 +48,9 @@ const receiveCurrentUser = currentUser => {
 };
 
 
-export const receiveSessionErrors = (errors) => ({
+export const receiveSessionErrors = (error) => ({
   type: RECEIVE_SESSION_ERRORS,
-  errors
+  error: error
 });
 
 

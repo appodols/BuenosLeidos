@@ -82,3 +82,11 @@ Warning: Hash history cannot PUSH the same path; a new entry will not be added t
 Questions on a) debuggers, b) rails console, c) me needing to reload the server each time
 
 Use kill -9 $(lsof -i tcp:3000 -t) if you get a stupid server error
+
+
+Note the reason why params are nested is because in the AJAX request
+
+we pass for data an object of user WITH keys to e_mail and password
+
+
+Always have model level validations above the database

@@ -9,7 +9,7 @@ import {RECEIVE_CURRENT_USER,
     Object.freeze(state);
     switch(action.type){
       case RECEIVE_SESSION_ERRORS:
-        return action.errors.responseJSON;
+        return action.error;
       case RECEIVE_CURRENT_USER:
         return [];
       default:
