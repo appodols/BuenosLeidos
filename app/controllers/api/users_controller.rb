@@ -9,6 +9,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render template: '/api/users/show'
     else
+      debugger
       render json: @user.errors.full_messages, status: 422
     end
   end
@@ -18,8 +19,9 @@ class Api::UsersController < ApplicationController
     render :show
   end
 
+
   def user_params
-    user_params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password)
   end
 
 

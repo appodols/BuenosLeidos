@@ -14,7 +14,6 @@ export const login = user => dispatch => {
 };
 
 export const signup = user => dispatch => {
-  debugger
   return(ApiUtils.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))
   ), (error) => (
