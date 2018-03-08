@@ -11,6 +11,7 @@ class SessionForm extends React.Component{
   }
 
   handleSubmit(e){
+    debugger
     e.preventDefault();
     this.props.processForm(this.state);
   }
@@ -26,10 +27,17 @@ class SessionForm extends React.Component{
   render(){
     return(
       <div>
-      <form onClick={this.handleSubmit}>
-        <input type="text" onChange={this.update('username')} value={this.state.username}></input>
-        <input type="password" onChange={this.update('password')} value={this.state.password}></input>
-      </form>
+        <form onSubmit={this.handleSubmit}>
+          <label>{'E-mail'}
+          <input type="text" onChange={this.update('username')} value={this.state.username}></input>
+          </label>
+
+          <label>Password
+          <input type="password" onChange={this.update('password')} value={this.state.password}></input>
+          </label>
+
+          <button>Submit Information</button>
+        </form>
       </div>
 
     );
@@ -41,3 +49,5 @@ class SessionForm extends React.Component{
 }
 
 export default withRouter(SessionForm);
+
+//<button onSubmit={()=>this.props.processForm(this.state)}>{this.props.formType}</button>

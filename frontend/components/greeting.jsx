@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 const session_links = () =>(
   <div>
     <Link to="/signup">Sign Up</Link>
+    <br></br>
+    <br></br>
     <Link to="/login">Login</Link>
   </div>
 );

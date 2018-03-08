@@ -72,3 +72,11 @@ I hope that helps.
 
 
 NOTE: we have not yet run the command form npm-install save yet.
+
+Questions: why do we keep getting that on SIGNIN?
+
+Warning: Hash history cannot PUSH the same path; a new entry will not be added to the history stack
+
+
+
+Questions on a) debuggers, b) rails console, c) me needing to reload the server each time
