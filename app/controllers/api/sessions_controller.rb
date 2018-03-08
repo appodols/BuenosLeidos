@@ -5,15 +5,12 @@ class Api::SessionsController < ApplicationController
   def create
     e_mail = session_params[:e_mail]
     password = session_params[:password]
-    debugger
     @user = User.find_by_credentials(e_mail,password)
     if @user
-      debugger
       login(@user)
       render template: '/api/users/show'
       #not sure this is the appropriate place to redirect to
     else
-      debugger
       render json: {errors: ["Invalid credentials"]}, status: 422
     end
   end

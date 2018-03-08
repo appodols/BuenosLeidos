@@ -1,0 +1,1 @@
+Why is the partial called user instead of _user?

@@ -1,0 +1,47 @@
+* {
+  color: #000000;
+  /*background-color: #CD5C5C;*/
+  background-image: url(https://s.gr-assets.com/assets/home/masthead_background.jpg);
+}
+
+
+.name {
+  justify-content: flex-start;
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 13px;
+}
+
+
+.BuenosLeidos{
+  margin-right: auto
+}
+
+
+.username, .password{
+  width: 120px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 13px;
+}
+
+.signinButton{
+    /*background-color: #382110;*/
+    background-color: #573722;
+    border: 1px solid #382110;
+    border-radius: 3px;
+    color: #333333;
+  /*background-color: #F4F1EA;*/
+  line-height: 1;
+  padding: 8px 12px;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+}
