@@ -67,7 +67,7 @@ db:reset does db:drop, db:setup
 Typically, you would use db:migrate after having made changes to the schema via new migration files (this makes sense only if there is already data in the database). db:schema:load is used when you setup a new instance of your app.
 
 I hope that helps.
-
+//why are we passing ownProps through dispatch? Is this so I can access it in the actual form?
 
 
 
