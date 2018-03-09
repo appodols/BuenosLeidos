@@ -7,7 +7,8 @@ import {signup} from '../actions/session_actions';
 
 const msp = (state) => ({
   errors: state.errors.session,
-  formType: 'Sign Up!'
+  formType: 'Sign Up!',
+  styleKey: 'normal'
 });
 
 const mdp = (dispatch,ownProps) => ({
