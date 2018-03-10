@@ -1,7 +1,6 @@
 class Api::SessionsController < ApplicationController
 
 
-
   def create
     e_mail = session_params[:e_mail]
     password = session_params[:password]
@@ -11,7 +10,7 @@ class Api::SessionsController < ApplicationController
       render template: '/api/users/show'
       #not sure this is the appropriate place to redirect to
     else
-      render json: {errors: ["Invalid credentials"]}, status: 422
+      render json: ["Invalid credentials"], status: 422
     end
   end
 
@@ -21,7 +20,7 @@ class Api::SessionsController < ApplicationController
       logout
       render json: {}
     else
-      render json: {errors: ["You need to be logged in to logout!"]}, status: 404
+      render json: ["You need to be logged in to logout!"], status: 404
     end
   end
 

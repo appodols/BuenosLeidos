@@ -5,11 +5,13 @@ import SessionForm from './session_form';
 import {signup} from '../actions/session_actions';
 
 
-const msp = (state) => ({
-  errors: state.errors.session,
-  formType: 'Sign Up!',
-  styleKey: 'normal'
-});
+const msp = (state) => {
+  return({
+    errors: state.errors.session,
+    formType: 'Sign Up!',
+    styleKey: 'normal'
+ });
+};
 
 const mdp = (dispatch,ownProps) => ({
   processForm: (user) => dispatch(signup(user))

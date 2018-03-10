@@ -4,11 +4,14 @@ import React from 'react';
 import SessionForm from './session_form';
 
 
-const msp = state => ({
-  errors: state.errors.session,
-  formType: 'Sign In',
-  styleKey: 'normal'
-});
+const msp = state => {
+  return({
+    errors: state.errors.session,
+    formType: 'Sign In!',
+    styleKey: 'normal'
+ });
+};
+
 
 
 const mdp = (dispatch, ownProps) => ({

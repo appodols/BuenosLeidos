@@ -1,1 +1,2 @@
-Why is the partial called user instead of _user?
+1. Why is the partial called user instead of _user?
+2. Why in the errors reducer do we have a case for the regular action?

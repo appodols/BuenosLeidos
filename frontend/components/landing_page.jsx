@@ -13,8 +13,10 @@ const landingPage = () => (
         <h1 className ='BuenosLeidos'>Buenos Leidos</h1>
         <LoginFormContainer className = 'siginForm'></LoginFormContainer>
       </div>
-      <h2 id="identified"> New here? Create a free account!</h2>
-      <LandingPageSignupContainer></LandingPageSignupContainer>
+      <section className = 'landing-main-lower-half'>
+        <h1 id="cta"> Meet Your Next Favorite Book</h1>
+        <LandingPageSignupContainer></LandingPageSignupContainer>
+     </section>
   </div>
 );
 
@@ -23,3 +25,4 @@ export default landingPage;
 
 //design question...do we use existing form, and pass in current user
 //  <h1 id='landing_call_to_action'> Meet Your Next Favorite Book</h1>
+//  <h1 id="cta"> Meet Your Next Favorite Book</h1>

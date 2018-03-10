@@ -5,6 +5,7 @@ import React from 'react';
 import GreetingContainer from './greeting_container';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
+import BookContainer from './book_container';
 
 import {
   Route,
@@ -15,10 +16,9 @@ import {
 } from 'react-router-dom';
 const App = () => (
   <div>
-    <header>
-      <GreetingContainer/>
-    </header>
+    <GreetingContainer></GreetingContainer>
     <Switch>
+      <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </Switch>
@@ -26,3 +26,6 @@ const App = () => (
 );
 
 export default App;
+
+//  <Route exact path ='/' component={LandingPage}/>
+//problem that landing page will be available everywhere

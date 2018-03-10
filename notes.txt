@@ -90,3 +90,23 @@ we pass for data an object of user WITH keys to e_mail and password
 
 
 Always have model level validations above the database
+
+
+
+1. Must run NPM install on machine when cloning.
+
+
+display flex makes the HTML element a flex container
+all top level children in flex container become flex items. Only the flex items are flexed by the container.
+
+CSS flex properties: some are designed for children;
+some are designed for parents--refer to MDM docs.
+
+1. Let's avoid having an array
+
+a. optons
+
+Book.destroy_all removes everything from the database
+
+
+Give default values to a container's items so that they have a value when you display them
