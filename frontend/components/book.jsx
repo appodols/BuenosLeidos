@@ -48,11 +48,14 @@ class Book extends React.Component {
               <b className="bold">Lorem ipsum dolor sit amet</b>
 
               <div class="space-2"></div>
+
+                <div className="description">
+                {this.state.description}
+                </div>
+
               </div>
 
-              <span className="description">
-                {this.state.description}
-              </span>
+
 
           </section>
 
