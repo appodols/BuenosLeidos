@@ -130,3 +130,7 @@ end
 
 
 Note, we ran this migration
+
+
+
+Keep in mind the partial for the review view could be messed up

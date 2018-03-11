@@ -1,0 +1,38 @@
+/*jshint esversion: 6 */
+
+export const createReview = review => {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/reviews',
+    data: {review: review}
+  });
+};
+
+
+
+export const fetchReview = id => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/reviews/${id}`
+  });
+};
+
+
+export const updateReview = review => {
+  return $.ajax({
+    method: 'PATCH',
+    url: '/api/reviews',
+    data: {review: review}
+  });
+};
+
+
+export const deleteReview = id => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `/api/reviews/${id}`
+  });
+};
+
+
+const review = {user_id: 1, book_id: 2, rating: 4};
