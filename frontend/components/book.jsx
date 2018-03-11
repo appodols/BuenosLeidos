@@ -22,9 +22,22 @@ class Book extends React.Component {
 
     render (){
       return(
-        <div key={this.state.id}>
-          {this.state.title}
-          {this.state.author}
+        <div key={this.state.id} className="bookContent">
+          <section className ='bookVisuals'>
+            <div className='cover'></div>
+
+
+            <div className='reading-info'>
+
+            </div>
+
+          </section>
+
+          <section className = 'bookText'>
+
+          </section>
+
+
         </div>
       );
 
@@ -34,3 +47,7 @@ class Book extends React.Component {
 
 
 export default Book;
+
+
+/// {this.state.title}
+// {this.state.author}

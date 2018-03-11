@@ -1,0 +1,30 @@
+.bookContent{
+  display: flex;
+  width: 625px;
+  height: 587px;
+  background-color: green;
+  margin-left: 15px;
+}
+
+
+
+.bookVisuals{
+  width: 150px;
+  height: 349px;
+  background-color: red;
+  // margin-right: 20px;
+}
+
+//there needs to be some break between the 2 boxes
+
+.bookText{
+  width: 577px;
+  height: 455px;
+  background-color: blue;
+}
+
+.cover{
+  width: 150px;
+  height: 229px;
+  background-color: purple;
+}
