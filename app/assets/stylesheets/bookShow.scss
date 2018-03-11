@@ -18,13 +18,89 @@
 //there needs to be some break between the 2 boxes
 
 .bookText{
-  width: 577px;
-  height: 455px;
-  background-color: blue;
+  width: 455px;
+  height: 625px;
+  display: flex;
+  // align-content: flex-start;
+  // background-color: blue;
 }
 
 .cover{
   width: 150px;
   height: 229px;
-  background-color: purple;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: yellow;
+}
+
+
+.title{
+  color: #333333;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 120%;
+  font-weight: bold;
+  line-height: 1.3;
+  width: 455px;
+  height: 54px;
+}
+
+
+.authorInfo{
+  display: flex;
+  font-size: 12px;
+  line-height: 150%;
+  font-family: "Merriweather", "Georgia", serif;
+  align-items: center;
+}
+
+.by{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 13px;
+  color: #000;
+  margin-right: 3px;
+}
+
+.author{
+  color: #333;
+  font-size: 110%;
+}
+
+.ratingInfo{
+  height: 19.8px;
+  width: 455px;
+  background-color: orange;
+}
+
+
+.space-1{
+  height: 20px;
+  // line-height: 30px;
+}
+
+
+.space-2{
+  height: 40px;
+  // line-height: 30px;
+}
+
+
+.bold{
+  font-weight: bold;
+  font-family: "Merriweather", "Georgia", serif;
+}
+
+
+.description{
+  height: 160px;
+  width: 453.8px;
+  line-height: 21px;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 20px;
+  line-height: 21px;
+  height: 17.6px;
+  margin-top: 300px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: left;
 }

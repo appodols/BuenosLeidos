@@ -24,16 +24,35 @@ class Book extends React.Component {
       return(
         <div key={this.state.id} className="bookContent">
           <section className ='bookVisuals'>
-            <div className='cover'></div>
 
-
-            <div className='reading-info'>
-
-            </div>
-
+            <img className='cover'
+              src={this.state.image_url}>
+            </img>
           </section>
 
+
+
           <section className = 'bookText'>
+            <div className='reading-info'>
+              <h1 className="title">{this.state.title}</h1>
+
+              <section className="authorInfo">
+                <span className="by">by</span>
+                <span className="author">{this.state.author}</span>
+              </section>
+
+              <section className="ratingInfo">
+              </section>
+
+              <div class="space-1"></div>
+              <b className="bold">Lorem ipsum dolor sit amet</b>
+
+              <div class="space-2"></div>
+              </div>
+
+              <span className="description">
+                {this.state.description}
+              </span>
 
           </section>
 
@@ -51,3 +70,11 @@ export default Book;
 
 /// {this.state.title}
 // {this.state.author}
+//// <h1 className="title">{this.state.title}</h1>
+
+
+// <img className='cover'
+//   src="https://s.s-bol.com/imgbase0/imagebase3/large/FC/8/7/4/4/9200000083044478.jpg">
+// </img>
+//
+//<b className="bold">Lorem ipsum dolor sit amet</b>
