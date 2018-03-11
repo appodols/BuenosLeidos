@@ -33,6 +33,3 @@ export const deleteReview = id => {
     url: `/api/reviews/${id}`
   });
 };
-
-
-const review = {user_id: 1, book_id: 2, rating: 4};

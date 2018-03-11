@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 import * as ApiUtils from '../util/book_api_util';
 export const RECEIVE_BOOK = 'RECEIVE_BOOK';
-export const RECEIVE_BOOK_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const RECEIVE_BOOK_ERRORS = 'RECEIVE_BOOK_ERRORS';
 
 
 export const createBook = book => dispatch => (
