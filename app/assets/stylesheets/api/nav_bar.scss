@@ -1,0 +1,45 @@
+.header-nav{
+  display: flex;
+  // justify-content: space-between;
+  margin: 0 auto;
+  min-width: 780px;
+  width: 100%;
+  height: 50px;
+  // border-left: 1px solid #ccc;
+  // border-right: 1px solid #ccc;
+  background-color: rgba(244,241,234,0.5);
+}
+
+
+.logo{
+  display: inline-block;
+  background: url("https://s.gr-assets.com/assets/layout/header/goodreads_logo.svg");
+  background-position: center;
+  background-size: 140px 30px;
+  margin: 0 0 0 16px;
+  width: 140px;
+  background-repeat:no-repeat;
+}
+
+
+
+.header-list{
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+
+.header-list > li {
+  display: inline-block;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 6px;
+}
+
+
+.header-list > li:hover {
+  background-color: #382110;
+  color: white;
+}
