@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React from 'react';
+import ReviewsContainer from './reviews_container';
 
 class Book extends React.Component {
   constructor(props){
@@ -22,42 +23,45 @@ class Book extends React.Component {
 
     render (){
       return(
-        <div key={this.state.id} className="bookContent">
-          <section className ='bookVisuals'>
+        <div className='bookContainer'>
+          <div key={this.state.id} className="bookContent">
+            <section className ='bookVisuals'>
 
-            <img className='cover'
-              src={this.state.image_url}>
-            </img>
-          </section>
+              <img className='cover'
+                src={this.state.image_url}>
+              </img>
+            </section>
+            <section className = 'bookText'>
+              <div className='reading-info'>
+                <h1 className="title">{this.state.title}</h1>
 
+                <section className="authorInfo">
+                  <span className="by">by</span>
+                  <span className="author">{this.state.author}</span>
+                </section>
 
+                <section className="ratingInfo">
+                </section>
 
-          <section className = 'bookText'>
-            <div className='reading-info'>
-              <h1 className="title">{this.state.title}</h1>
+                <div className="space-1"></div>
+                <b className="bold">Lorem ipsum dolor sit amet</b>
 
-              <section className="authorInfo">
-                <span className="by">by</span>
-                <span className="author">{this.state.author}</span>
-              </section>
+                <div className="space-2"></div>
 
-              <section className="ratingInfo">
-              </section>
+                  <div className="description">
+                  {this.state.description}
+                  </div>
 
-              <div class="space-1"></div>
-              <b className="bold">Lorem ipsum dolor sit amet</b>
-
-              <div class="space-2"></div>
-
-                <div className="description">
-                {this.state.description}
                 </div>
+              </section>
+          </div>
 
-              </div>
-
-
-
-          </section>
+           <div className='reviews'>
+             {this.state.id ?
+              <ReviewsContainer bookId={this.state.id}></ReviewsContainer>:
+                null
+              }
+            </div>
 
 
         </div>

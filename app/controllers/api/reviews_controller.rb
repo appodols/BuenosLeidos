@@ -1,8 +1,8 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    book_id = params[:book][:book_id]
-    @reviews = Review.where("book_id = ?",book_id)
+    book_id = params[:review][:book_id]
+    @reviews = Review.where(book_id: book_id)
     render :index
   end
 
@@ -27,7 +27,6 @@ class Api::ReviewsController < ApplicationController
       render json: ["Invalid credentials"], status: 422
     end
   end
-
 
   def update
     #this should be handeled in react

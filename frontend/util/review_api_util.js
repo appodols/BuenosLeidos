@@ -17,11 +17,11 @@ export const fetchReview = id => {
   });
 };
 
-  export const fetchReviews = bookId => {
+  export const fetchReviews = book_id => {
     return $.ajax({
       method: 'GET',
       url: `/api/reviews`,
-      data: {review: bookId }
+      data: {review: {book_id} }
     });
   };
 

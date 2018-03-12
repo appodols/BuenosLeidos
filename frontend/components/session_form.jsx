@@ -5,7 +5,7 @@ import { withRouter} from 'react-router';
 class SessionForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = {e_mail: '', password: ''};
+    this.state = {e_mail: '', password: '', name: ''};
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -51,6 +51,7 @@ class SessionForm extends React.Component{
       <div className='l_signupForm'>
         <form onSubmit={this.handleSubmit} className= "l_signUp">
           <h3 id="identified"> New here? Create a free account!</h3>
+          <input type="text" className ='l_name' onChange={this.update('name')} placeholder='Name' value={this.state.name}></input>
           <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'Username' value={this.state.e_mail}></input>
           <input type="password" className ='l_password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
           <input className='l_signupButton' type="submit" value={this.props.formType}></input>

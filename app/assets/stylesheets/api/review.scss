@@ -1,0 +1,32 @@
+.reviewItem{
+  max-height: 300px;
+  width: 622.5;
+  color: grey;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.user-picture{
+  background: grey;
+  width: 55px;
+  height: 66px;
+}
+
+
+.user-review-header{
+  width: 540px;
+  height: 18px;
+  background-color: #8A2BE2;
+  display: flex;
+}
+
+.user{
+  font-weight: bold;
+  color: #00635d;
+  font-size: 14px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  word-wrap: break-word;
+  text-align: left;
+}

@@ -134,3 +134,13 @@ Note, we ran this migration
 
 
 Keep in mind the partial for the review view could be messed up
+
+export const receiveReviews = payload => ({
+  type: RECEIVE_REVIEWS,
+  reviews: payload.reviews,
+  users: payload.users
+});
+
+
+option a is just putting additional keys on the front end review
+option b is having a separate slice of state for them

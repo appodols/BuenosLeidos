@@ -2,6 +2,7 @@
 import * as ApiUtils from '../util/review_api_util';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 
@@ -24,6 +25,18 @@ export const fetchReview = id => dispatch => {
  );
 };
 
+
+export const fetchReviews = bookId => dispatch => {
+  return (
+  ApiUtils.fetchReviews(bookId).then(reviews => (
+    dispatch(receiveReviews(reviews))
+  ), error => (
+    dispatch(receiveError(error.responseJSON))
+  ))
+ );
+};
+
+
 export const updateReview = review => dispatch => (
   ApiUtils.updateReview(review).then(updatedReview=>(
     dispatch(receiveReview(updatedReview))
@@ -31,6 +44,12 @@ export const updateReview = review => dispatch => (
     dispatch(receiveError(error.responseJSON))
   ))
 );
+
+
+export const receiveReviews = reviews => ({
+  type: RECEIVE_REVIEWS,
+  reviews
+});
 
 
 

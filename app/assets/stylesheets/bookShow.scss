@@ -7,6 +7,11 @@
 }
 
 
+.bookContainer{
+  max-height: 7459px;
+}
+
+
 
 .bookVisuals{
   width: 150px;
@@ -102,4 +107,28 @@
   height: 17.6px;
   margin-bottom: 20px;
   text-align: left;
+}
+
+
+.reviews{
+  background-color: #A52A2A;
+  width: 625px;
+  max-height: 7459px;
+  margin-left: 15px;
+  color: white;
+}
+
+.brownBackground{
+  display: block;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 2px 0;
+  width: auto;
+  height: 24px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: transparent;
+  border-bottom: 1px solid #D8D8D8;
+  color: #382110;
 }
