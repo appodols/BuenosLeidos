@@ -1,7 +1,12 @@
 class Api::ReviewsController < ApplicationController
 
+  def index
+    book_id = params[:book][:book_id]
+    @reviews = Review.where("book_id = ?",book_id)
+    render :index
+  end
+
   def create
-    debugger
     @review = Review.new(review_params)
     if @review.save
       render template: '/api/reviews/show'

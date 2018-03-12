@@ -8,6 +8,7 @@ import configureStore from './store/store';
 import {createBook} from './util/book_api_util';
 import {fetchBook} from './util/book_api_util';
 import {createReview} from './util/review_api_util';
+import {fetchReviews} from './util/review_api_util';
 
 window.login = login;
 
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   window.createBook = createBook;
   window.fetchBook = fetchBook;
   window.createReview = createReview;
+  window.fetchReviews = fetchReviews;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}> We're doing stuff!</Root>,root);
 });

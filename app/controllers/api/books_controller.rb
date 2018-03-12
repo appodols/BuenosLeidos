@@ -8,6 +8,9 @@ class Api::BooksController < ApplicationController
     end
   end
 
+
+
+
   def show
     @book = Book.find(params[:id])
     render :show

@@ -17,6 +17,15 @@ export const fetchReview = id => {
   });
 };
 
+  export const fetchReviews = bookId => {
+    return $.ajax({
+      method: 'GET',
+      url: `/api/reviews`,
+      data: {review: bookId }
+    });
+  };
+
+
 
 export const updateReview = review => {
   return $.ajax({
