@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 
+// const review = {user_id: 1, book_id: 4, body: "fabolous!", rating: 3};
+// const review = {user_id: 1, book_id: 4, body: "o m g amazing!", rating: 4};
+// const review = {user_id: 1, book_id: 4, body: "great!", rating: 5};
 
 
 // document.addEventListener('DOMContentLoaded', () => {

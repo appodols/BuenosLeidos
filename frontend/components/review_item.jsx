@@ -8,7 +8,9 @@ return(
     <div className = 'reviewItem'>
       <img className="user-picture"></img>
       <div className="user-review-header">
-        <span>{'Placeholder user'}</span>
+        <span className="author">{review.authorname}</span>
+        <span className="rated-it">rated it</span>
+        <Stars rating={review.rating}></Stars>
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
 @reviews.each do |review|
   json.set! review.id do
     json.partial! "api/reviews/review", review: review
-
-    # json.authorname review.user.e_mail
-
+    json.authorname review.user.name
   end
 
   # json.user_id review.user_id

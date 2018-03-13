@@ -20,13 +20,44 @@
   height: 18px;
   background-color: #8A2BE2;
   display: flex;
+  align-items: flex-end;
 }
 
-.user{
+.author{
   font-weight: bold;
   color: #00635d;
   font-size: 14px;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   word-wrap: break-word;
   text-align: left;
+  margin-right: 5px;
+}
+
+
+.rated-it{
+  font-size: 14.5px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  color: black;
+  text-align: left;
+  margin-bottom: 1.5px;
+}
+
+
+.stars{
+  margin-left: 5px;
+  color: black;
+}
+
+
+.full_star, .empty_star{
+  width: 15px;
+  height: 15px;
+}
+
+.full_star{
+  color: #F76150;
+}
+
+.empty_star{
+  color: #D6D6D6;
 }

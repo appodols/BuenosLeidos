@@ -71,7 +71,7 @@
 }
 
 
-.l_username, .l_password{
+.l_username, .l_password, .l_name{
   background-color: white;
   display: inline-block;
   text-align: start;
