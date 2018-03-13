@@ -8,6 +8,15 @@
   display: flex;
 }
 
+.userReviewContent{
+  display: flex;
+  flex-direction: column;
+  background: blue;
+  width: 570px;
+}
+
+
+//
 .user-picture{
   background: grey;
   width: 55px;
@@ -16,11 +25,16 @@
 
 
 .user-review-header{
-  width: 540px;
+  width: 570px;
   height: 18px;
   background-color: #8A2BE2;
   display: flex;
   align-items: flex-end;
+}
+
+
+.dateItem{
+  align-self: flex-end;
 }
 
 .author{
@@ -60,4 +74,12 @@
 
 .empty_star{
   color: #D6D6D6;
+}
+
+.reviewText{
+  width: 539.88px;
+  max-height: 194px;
+  margin-bottom: 4px;
+  margin-top: 10px;
+  margin-left: 20px;
 }

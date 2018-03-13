@@ -144,3 +144,7 @@ export const receiveReviews = payload => ({
 
 option a is just putting additional keys on the front end review
 option b is having a separate slice of state for them
+
+
+
+const review = {user_id: 1, book_id: 4, body: "Her literature really made me think. On one hand, it involved a degree of post modernist critique that overly relied on anaphora, but on the other hand the characterization of Donald Trump's sex life was phenomenal", rating: 4};
