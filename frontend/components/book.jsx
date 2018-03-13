@@ -30,6 +30,13 @@ class Book extends React.Component {
               <img className='cover'
                 src={this.state.image_url}>
               </img>
+
+              <section className='currentlyReading'>
+              </section>
+
+              <span className='rate-this-book'>Rate This Book</span>
+
+
             </section>
             <section className = 'bookText'>
               <div className='reading-info'>

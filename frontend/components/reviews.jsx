@@ -22,8 +22,8 @@ class Reviews extends React.Component {
     render (){
       // debugger
       return(
-        <div>
-          <h2 className = "brownBackground">Community Review</h2>
+        <div className= "ReviewsContainer">
+          <h2 className = "brownBackground">Community Reviews</h2>
           {this.props.reviews.map((review,id) => {
           return <ReviewItem key={id}review={review}></ReviewItem>;
         })}

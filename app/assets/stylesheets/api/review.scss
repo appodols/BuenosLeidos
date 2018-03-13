@@ -1,18 +1,27 @@
+
+.ReviewsContainer{
+  background: transparent;
+}
+
+
+
 .reviewItem{
   max-height: 300px;
   width: 622.5;
   color: grey;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  // border-top: 2px solid black;
+  // border-bottom: 2px solid black;
   justify-content: flex-start;
   display: flex;
+  background: transparent;
 }
 
 .userReviewContent{
   display: flex;
   flex-direction: column;
-  background: blue;
+  // background: blue;
   width: 570px;
+  margin-left: 10px;
 }
 
 
@@ -21,23 +30,40 @@
   background: grey;
   width: 55px;
   height: 66px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 
 .user-review-header{
   width: 570px;
   height: 18px;
-  background-color: #8A2BE2;
+  // background-color: #8A2BE2;
   display: flex;
   align-items: flex-end;
+  // justify-content: flex-start;
+  flex-direction: row;
 }
 
 
-.dateItem{
+// .dateItem{
+//   width: 200px;
+//   background-color: yellow;
+//   height: 100px;
+//   align-self: flex-end;
+// }
+
+.date-print{
   align-self: flex-end;
+  color: #bbbbbb;
+  // float: right;
+  font-size: 14px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  margin-left: 285px;
 }
 
-.author{
+.review-author{
   font-weight: bold;
   color: #00635d;
   font-size: 14px;
@@ -45,6 +71,7 @@
   word-wrap: break-word;
   text-align: left;
   margin-right: 5px;
+  margin-left: 20px;
 }
 
 
@@ -55,7 +82,6 @@
   text-align: left;
   margin-bottom: 1.5px;
 }
-
 
 .stars{
   margin-left: 5px;

@@ -7,7 +7,8 @@ import {fetchReviews} from '../actions/review_actions';
 const msp = (state,ownProps) => {
     return(
       {reviews: Object.values(state.reviews),
-       bookId: ownProps.bookId
+       bookId: ownProps.bookId,
+       currentUser: state.currentUser
   });
 };
 

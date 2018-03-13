@@ -1,13 +1,14 @@
 .bookContent{
   display: flex;
   width: 625px;
-  height: 587px;
-  background-color: green;
+  max-height: 350px;
+  // background-color: green;
   margin-left: 15px;
 }
 
 
 .bookContainer{
+  margin-top: 66px;
   max-height: 7459px;
 }
 
@@ -16,15 +17,40 @@
 .bookVisuals{
   width: 150px;
   height: 349px;
-  background-color: red;
+  margin-top: 3px;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
   // margin-right: 20px;
 }
+
+.currentlyReading{
+  height: 28px;
+  width: 142px;
+  color: grey;
+}
+
+.rate-this-book{
+  background: transparent;
+  font-size: 11px;
+  height: 16px;
+  line-height: 14px;
+  color: #999999;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  text-align: center;
+}
+
+.reading-info{
+max-height: 260px;
+}
+
 
 //there needs to be some break between the 2 boxes
 
 .bookText{
   width: 455px;
-  height: 625px;
+  max-height: 260px;
+  margin-left: 5px;
   display: flex;
   // align-content: flex-start;
   // background-color: blue;
@@ -47,7 +73,7 @@
   font-weight: bold;
   line-height: 1.3;
   width: 455px;
-  height: 54px;
+  max-height: 54px;
 }
 
 
@@ -63,12 +89,13 @@
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 13px;
   color: #000;
-  margin-right: 3px;
+  // margin-right: 3px;
 }
 
 .author{
   color: #333;
   font-size: 110%;
+  margin-left: 3px;
 }
 
 .ratingInfo{
@@ -111,9 +138,10 @@
 
 
 .reviews{
-  background-color: #A52A2A;
+  // background-color: #A52A2A;
   width: 625px;
   max-height: 7459px;
+  margin-top: 10px;
   margin-left: 15px;
   color: white;
 }
@@ -123,12 +151,13 @@
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 2px 0;
   width: auto;
-  height: 24px;
-  margin-bottom: 0;
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  background: transparent;
+  width: 625px;
+  max-height: 29px;
   border-bottom: 1px solid #D8D8D8;
+  margin: 4px 7px 4px 0px;
   color: #382110;
+  text-align: left;
 }

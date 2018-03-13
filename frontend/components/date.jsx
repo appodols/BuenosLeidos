@@ -24,7 +24,7 @@ const months = {
   let day = time.slice(8,10);
   let date = `${month} ${day}, ${year}`
    return(
-     <span key={date} className={date}>{date}</span>
+     <span key={date} className='date-print'>{date}</span>
    );
  }
 
