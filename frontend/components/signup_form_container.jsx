@@ -6,6 +6,7 @@ import {signup} from '../actions/session_actions';
 
 
 const msp = (state) => {
+  debugger
   return({
     errors: state.errors.session,
     formType: 'Sign Up!',

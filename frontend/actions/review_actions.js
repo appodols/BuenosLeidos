@@ -15,10 +15,23 @@ export const createReview = review => dispatch => (
 );
 
 
+export const deleteReview = id => dispatch => (
+  ApiUtils.deleteReview(id).then(()=>(
+    dispatch(receiveReview(createdReview))
+  ), error => (
+    dispatch(receiveError(error.responseJSON))
+  ))
+);
+
+
+
+
+
+
 export const fetchReview = id => dispatch => {
   return (
   ApiUtils.fetchReview(id).then(review => (
-    dispatch(receiveReview(review))
+    dispatch(removeReview(id))
   ), error => (
     dispatch(receiveError(error.responseJSON))
   ))

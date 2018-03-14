@@ -27,12 +27,7 @@ const App = () => (
 
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </Switch>
-
-
-
   </div>
 );
 
@@ -43,3 +38,5 @@ export default App;
 
 //note users can't log out when they get in
 //  // <Route exact path ='/' component={NavBar}/>
+//<AuthRoute exact path="/login" component={LoginFormContainer} />
+//<AuthRoute exact path="/signup" component={SignupFormContainer} />

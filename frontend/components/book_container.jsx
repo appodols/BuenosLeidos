@@ -12,8 +12,10 @@ const msp = (state,ownProps) => {
 };
 
 
-const mdp = (dispatch) => ({
-  fetchBook: (id) => dispatch(fetchBook(id))
-});
+const mdp = (dispatch) => {
+  return({
+    fetchBook: (id) => dispatch(fetchBook(id))
+  });
+};
 
 export default connect(msp, mdp)(Book);

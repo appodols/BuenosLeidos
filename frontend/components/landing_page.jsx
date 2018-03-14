@@ -5,20 +5,21 @@ import LoginFormContainer from './login_form_container';
 import LandingPageSignupContainer from './landing_page_signup_container';
 
 
-const landingPage = () => (
+const landingPage = () => {
+  return(
+      <div className = 'landing'>
 
-    <div className = 'landing'>
-
-      <div className = 'header'>
-        <h1 className ='BuenosLeidos'>Buenos Leidos</h1>
-        <LoginFormContainer className = 'siginForm'></LoginFormContainer>
-      </div>
-      <section className = 'landing-main-lower-half'>
-        <h1 id="cta"> Meet Your Next Favorite Book</h1>
-        <LandingPageSignupContainer></LandingPageSignupContainer>
-     </section>
-  </div>
-);
+        <div className = 'header'>
+          <h1 className ='BuenosLeidos'>Buenos Leidos</h1>
+          <LoginFormContainer className = 'siginForm'></LoginFormContainer>
+        </div>
+        <section className = 'landing-main-lower-half'>
+          <h1 id="cta"> Meet Your Next Favorite Book</h1>
+          <LandingPageSignupContainer></LandingPageSignupContainer>
+       </section>
+    </div>
+  );
+};
 
 export default landingPage;
 

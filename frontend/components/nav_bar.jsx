@@ -5,21 +5,18 @@ import React from 'react';
 // import LandingPageSignupContainer from './landing_page_signup_container';
 
 
-const NavBar = () => (
+const NavBar = () => {
+    return (<header className="header">
+      <nav className="header-nav">
+        <section className="logo"> </section>
 
-  <header className="header">
+        <ul className="header-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">My Books</a></li>
+        </ul>
 
-
-    <nav className="header-nav">
-      <section className="logo"> </section>
-
-      <ul className="header-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">My Books</a></li>
-      </ul>
-
-    </nav>
-  </header>
-);
-
+      </nav>
+    </header>
+  );
+};
 export default NavBar;

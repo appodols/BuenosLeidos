@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import ReviewsContainer from './reviews_container';
+import MyRatingContainer from './my_rating_container';
 
 class Book extends React.Component {
   constructor(props){
@@ -34,8 +35,7 @@ class Book extends React.Component {
               <section className='currentlyReading'>
               </section>
 
-              <span className='rate-this-book'>Rate This Book</span>
-
+             <MyRatingContainer></MyRatingContainer>
 
             </section>
             <section className = 'bookText'>
@@ -92,3 +92,12 @@ export default Book;
 // </img>
 //
 //<b className="bold">Lorem ipsum dolor sit amet</b>
+//  <span className='rate-this-book'>Rate This Book</span>
+
+
+
+
+// {this.state.id ?
+//  <MyRatingContainer></MyRatingContainer>:
+//    null
+//  }

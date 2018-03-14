@@ -34,7 +34,6 @@ class SessionForm extends React.Component{
    }
 
   render(){
-
     if(this.props.styleKey === 'normal'){
     return(
       <div className = 'l_login'>
