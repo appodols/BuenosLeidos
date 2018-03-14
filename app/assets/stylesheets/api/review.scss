@@ -120,7 +120,15 @@
   flex-direction: column;
 }
 
-.dv-star-rating book-show-review-stars{
+
+.myRating{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  display: inline;
+  align-items: center;
 }
+
+// .book-show-review-stars{
+//   justify-content: center;
+//   display: inline;
+// }

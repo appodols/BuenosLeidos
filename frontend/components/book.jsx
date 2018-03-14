@@ -38,8 +38,9 @@ class Book extends React.Component {
 
               <section className='currentlyReading'>
               </section>
-
-             <MyRatingContainer key={this.props.book.id}></MyRatingContainer>
+              <div className="myRating">
+                <MyRatingContainer key={this.props.book.id}></MyRatingContainer>
+             </div>
 
             </section>
             <section className = 'bookText'>
