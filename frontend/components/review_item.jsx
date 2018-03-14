@@ -11,7 +11,6 @@ import Date from './date';
 
 
 const reviewItem = ({review}) => {
-  debugger
 return(
     <div className = 'reviewItem'>
         <img className='user-picture'

@@ -9,14 +9,14 @@ class MyRating extends React.Component {
     this.state = {buttonName: "",rating: 0};
     this.hasGivenReview = this.hasGivenReview.bind(this);
     this.updateButton = this.updateButton.bind(this);
-    this.buttonName = this.buttonName.bind(this);
+    // this.buttonName = this.buttonName.bind(this);
     this.deleteUserReview = this.deleteUserReview.bind(this);
     this.onStarClick = this.onStarClick.bind(this);
   }
 
 
   componentDidMount(){
-    this.updateButton(this.props.reviews);
+    this.updateButton(this.props);
   }
 
   onStarClick(nextValue, prevValue, name) {
@@ -30,23 +30,19 @@ class MyRating extends React.Component {
   }
 
 
-
-
-
-  updateButton(reviews){
-    if(this.props.hasReviewed){
-      this.setState({buttonName: 'My Rating'});
+  updateButton(props){
+    let reviewed = this.props.hasReviewed(props.reviews,props.currentUser.id);
+    if(reviewed){
+      this.setState({buttonName: 'Clear Rating', rating: (props.ownReview ? props.ownReview.rating : 0)});
     } else {
-      this.setState({buttonName: 'Rate This Book'});
+      this.setState({buttonName: 'Rate This Book', rating: 0});
     }
 
   }
 
 
   componentWillReceiveProps(nextProps) {
-    if(this.props.hasReviewed !== nextProps.hasReviewed){
-      this.updateButton(nextProps.reviews);
-    }
+      this.updateButton(nextProps);
   }
 
   hasGivenReview(){
@@ -65,13 +61,9 @@ class MyRating extends React.Component {
 
   }
 
-  buttonName(){
-    if(this.props.hasReviewed){
-      return 'Clear Rating';
-    } else {
-      return 'Rate This Book';
-    }
-  }
+   onStarHover(nextValue, prevValue, name){
+
+   }
 
   deleteUserReview(e){
     this.props.deleteReview(this.props.userReviewId);
@@ -79,14 +71,14 @@ class MyRating extends React.Component {
 
 
     render (){
-      if(this.buttonName()=== 'Rate This Book'){
+      if(this.state.name === 'Rate This Book'){
       return(
       <div className="rate-this-book-content">
-        <span className='rate-this-book'>{this.buttonName()}</span>
+        <span className='rate-this-book'>{this.state.buttonName}</span>
         <StarRatingComponent starCount={5}
         name={'book-rating'}
         onStarClick={this.onStarClick.bind(this)}
-        value={0}
+        value={this.state.rating}
           ></StarRatingComponent>
       </div>
 );
@@ -95,13 +87,13 @@ class MyRating extends React.Component {
       return(
       <div className="rate-this-book-content">
         <span className='delete-this-book' onClick={this.deleteUserReview}>
-        {this.buttonName()}</span>
+        {this.state.buttonName}</span>
       <StarRatingComponent
         className='book-show-review-stars'
         starCount={5}
         name={'book-rating'}
         onStarClick={this.onStarClick.bind(this)}
-        value={this.props.ownReview ? this.props.ownReview.rating : 0}
+        value={this.state.rating}
           ></StarRatingComponent>
     </div>
     );
