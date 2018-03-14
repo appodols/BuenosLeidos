@@ -15,14 +15,15 @@ export const createReview = review => dispatch => (
 );
 
 
-export const deleteReview = id => dispatch => (
-  ApiUtils.deleteReview(id).then(()=>(
-    dispatch(receiveReview(createdReview))
-  ), error => (
-    dispatch(receiveError(error.responseJSON))
-  ))
-);
-
+export const deleteReview = id => dispatch => {
+  return (
+    ApiUtils.deleteReview(id).then(()=>(
+      dispatch(removeReview(id))
+    ), error => (
+      dispatch(receiveError(error.responseJSON))
+    ))
+  );
+};
 
 
 

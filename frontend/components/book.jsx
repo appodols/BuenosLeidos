@@ -2,6 +2,7 @@
 import React from 'react';
 import ReviewsContainer from './reviews_container';
 import MyRatingContainer from './my_rating_container';
+import { Link } from 'react-router-dom';
 
 class Book extends React.Component {
   constructor(props){
@@ -12,12 +13,15 @@ class Book extends React.Component {
 
   componentDidMount(){
 
-    this.props.fetchBook(this.props.match.params.bookId);
+    this.props.fetchBook(this.props.match.params.bookId).then(
+      this.props.fetchReviews(this.props.match.params.bookId));
+
   }
 
   componentWillReceiveProps(nextProps) {
     if (this.props.book.id !== nextProps.book.id){
-      this.props.fetchBook(nextProps.match.params.bookId);
+      this.props.fetchBook(nextProps.match.params.bookId).then
+      (this.props.fetchReviews(nextProps.match.params.bookId));
     this.setState(nextProps.book);}
   }
 
@@ -35,7 +39,7 @@ class Book extends React.Component {
               <section className='currentlyReading'>
               </section>
 
-             <MyRatingContainer></MyRatingContainer>
+             <MyRatingContainer key={this.props.book.id}></MyRatingContainer>
 
             </section>
             <section className = 'bookText'>
@@ -61,6 +65,7 @@ class Book extends React.Component {
 
                 </div>
               </section>
+
           </div>
 
            <div className='reviews'>
@@ -101,3 +106,5 @@ export default Book;
 //  <MyRatingContainer></MyRatingContainer>:
 //    null
 //  }
+
+//  <Link className= 'addaReview'to='/reviews/new'>Add a review</Link>

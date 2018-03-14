@@ -42,8 +42,9 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    render_error_if_not_current_user(@review)
+    # render_error_if_not_current_user(@review)
     @review.destroy
+    render template: '/api/reviews/show'
   end
 
 

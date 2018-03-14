@@ -27,6 +27,7 @@ const App = () => (
 
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
+      <Route exact path = '/reviews/new' component={BookContainer}/>
   </Switch>
   </div>
 );

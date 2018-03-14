@@ -30,7 +30,7 @@
   color: grey;
 }
 
-.rate-this-book{
+.rate-this-book, .delete-this-book{
   background: transparent;
   font-size: 11px;
   height: 16px;
@@ -39,6 +39,15 @@
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   text-align: center;
 }
+
+.delete-this-book:hover{
+  cursor:pointer;
+  color: #A52A2A;
+}
+
+
+
+
 
 .reading-info{
 max-height: 260px;
