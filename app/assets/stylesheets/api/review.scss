@@ -113,3 +113,14 @@
   font-size: 14px;
   color: #181818;
 }
+
+
+.rate-this-book-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.dv-star-rating book-show-review-stars{
+  justify-content: center;
+  display: inline;
+}

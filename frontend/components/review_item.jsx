@@ -11,15 +11,12 @@ import Date from './date';
 
 
 const reviewItem = ({review}) => {
+  debugger
 return(
     <div className = 'reviewItem'>
         <img className='user-picture'
           src="https://s.gr-assets.com/assets/nophoto/user/m_50x66-82093808bca726cb3249a493fbd3bd0f.png">
         </img>
-
-
-
-
       <div className="userReviewContent">
         <div className="user-review-header">
           <span className="review-author">{review.authorname}</span>

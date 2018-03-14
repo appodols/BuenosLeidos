@@ -2,8 +2,9 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import MyRating from './my_rating';
-import {deleteReview} from '../actions/review_actions';
-import {createReview} from '../actions/review_actions';
+import {deleteReview, updateReview, createReview} from '../actions/review_actions';
+// import {createReview} from '../actions/review_actions';
+
 
 
 const msp = (state) => {
@@ -17,12 +18,13 @@ const msp = (state) => {
     review.user_id === currentUser.id)).map(review=>(
       review.id))[0];
 
-
     return({
     currentUser: state.session.currentUser,
     reviews: Object.values(state.reviews),
     hasReviewed: hasReviewed,
-    userReviewId: userReviewId
+    userReviewId: userReviewId,
+    ownReview: state.reviews[userReviewId],
+    book: Object.values(getState().books)[0]
   });
 };
 

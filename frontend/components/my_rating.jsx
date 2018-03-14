@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class MyRating extends React.Component {
   constructor(props){
@@ -10,12 +11,26 @@ class MyRating extends React.Component {
     this.updateButton = this.updateButton.bind(this);
     this.buttonName = this.buttonName.bind(this);
     this.deleteUserReview = this.deleteUserReview.bind(this);
+    this.onStarClick = this.onStarClick.bind(this);
   }
 
 
   componentDidMount(){
     this.updateButton(this.props.reviews);
   }
+
+  onStarClick(nextValue, prevValue, name) {
+    if(this.props.ownReview){
+      //handle logic updating review
+    }
+    else {
+      const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue};
+      this.props.createReview(review);
+    }
+  }
+
+
+
 
 
   updateButton(reviews){
@@ -65,12 +80,31 @@ class MyRating extends React.Component {
 
     render (){
       if(this.buttonName()=== 'Rate This Book'){
-      return(<span className='rate-this-book'>
-      {this.buttonName()}</span>);
+      return(
+      <div className="rate-this-book-content">
+        <span className='rate-this-book'>{this.buttonName()}</span>
+        <StarRatingComponent starCount={5}
+        name={'book-rating'}
+        onStarClick={this.onStarClick.bind(this)}
+        value={0}
+          ></StarRatingComponent>
+      </div>
+);
 
     } else {
-      return(<span className='delete-this-book' onClick={this.deleteUserReview}>
-      {this.buttonName()}</span>);
+      return(
+      <div className="rate-this-book-content">
+        <span className='delete-this-book' onClick={this.deleteUserReview}>
+        {this.buttonName()}</span>
+      <StarRatingComponent
+        className='book-show-review-stars'
+        starCount={5}
+        name={'book-rating'}
+        onStarClick={this.onStarClick.bind(this)}
+        value={this.props.ownReview ? this.props.ownReview.rating : 0}
+          ></StarRatingComponent>
+    </div>
+    );
     }
 
   }
