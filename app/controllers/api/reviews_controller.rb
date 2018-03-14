@@ -29,9 +29,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
-    #this should be handeled in react
     @review = Review.find(params[:id])
-    render_error_if_not_current_user(@review)
     if @review.update(review_params)
       render template: '/api/reviews/show'
     else

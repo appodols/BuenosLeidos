@@ -39,7 +39,8 @@ const msp = (state) => {
 const mdp = (dispatch,ownProps) => {
   return({
     deleteReview: (id) => dispatch(deleteReview(id)),
-    createReview: (review) => dispatch(createReview(review))
+    createReview: (review) => dispatch(createReview(review)),
+    updateReview: (review) => dispatch(updateReview(review))
   });
 };
 

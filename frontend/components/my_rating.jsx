@@ -12,6 +12,8 @@ class MyRating extends React.Component {
     // this.buttonName = this.buttonName.bind(this);
     this.deleteUserReview = this.deleteUserReview.bind(this);
     this.onStarClick = this.onStarClick.bind(this);
+    this.onStarHover = this.onStarHover.bind(this);
+    this.onStarHoverOut = this.onStarHoverOut.bind(this);
   }
 
 
@@ -20,8 +22,10 @@ class MyRating extends React.Component {
   }
 
   onStarClick(nextValue, prevValue, name) {
+
     if(this.props.ownReview){
-      //handle logic updating review
+      const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue, id: this.props.ownReview.id};
+      this.props.updateReview(review);
     }
     else {
       const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue};
@@ -33,9 +37,9 @@ class MyRating extends React.Component {
   updateButton(props){
     let reviewed = this.props.hasReviewed(props.reviews,props.currentUser.id);
     if(reviewed){
-      this.setState({buttonName: 'Clear Rating', rating: (props.ownReview ? props.ownReview.rating : 0)});
+      this.setState({buttonName: 'Clear Rating', rating: (props.ownReview ? props.ownReview.rating : 0), initialRating: (props.ownReview ? props.ownReview.rating : 0)});
     } else {
-      this.setState({buttonName: 'Rate This Book', rating: 0});
+      this.setState({buttonName: 'Rate This Book', rating: 0, initialRating: 0});
     }
 
   }
@@ -62,7 +66,11 @@ class MyRating extends React.Component {
   }
 
    onStarHover(nextValue, prevValue, name){
+     this.setState({rating: nextValue});
+   }
 
+   onStarHoverOut(nextValue, prevValue, name){
+     this.setState({rating: this.state.initialRating});
    }
 
   deleteUserReview(e){
@@ -77,6 +85,8 @@ class MyRating extends React.Component {
         <span className='rate-this-book'>{this.state.buttonName}</span>
         <StarRatingComponent starCount={5}
         name={'book-rating'}
+        onStarHover = {this.onStarHover}
+        onStarHoverOut={this.onStarHoverOut}
         onStarClick={this.onStarClick.bind(this)}
         value={this.state.rating}
           ></StarRatingComponent>
@@ -90,6 +100,8 @@ class MyRating extends React.Component {
         {this.state.buttonName}</span>
       <StarRatingComponent
         className='book-show-review-stars'
+        onStarHover = {this.onStarHover}
+        onStarHoverOut={this.onStarHoverOut}
         starCount={5}
         name={'book-rating'}
         onStarClick={this.onStarClick.bind(this)}
