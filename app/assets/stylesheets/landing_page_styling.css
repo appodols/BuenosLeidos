@@ -6,20 +6,21 @@
 
 .landing{
   background-image: url(https://s.gr-assets.com/assets/home/masthead_background.jpg);
-  height: 100%;
-  flex-direction: column;
+  height: 370px;
   display: flex;
-  align-items: flex-end;
-  justify-content: start;
+  flex-direction: column;
+  /*align-items: flex-end;*/
+  justify-content: flex-start;
 }
 
 
 
 .landing-main-lower-half{
   display: flex;
-  justify-content: center;
-  align-items: space-between;
+  /*justify-content: center;*/
+  justify-content: space-between;
   flex-direction: row;
+  /*background-color: red;*/
 }
 
 
@@ -27,11 +28,15 @@
 
 #cta{
   justify-content: flex-start;
-  font-size: 20;
+  font-size: 40px;
   width: 300px;
   display: inline-block;
   padding: 0;
   color: #58371F;
+  height: 50px;
+  margin-left: 100px;
+  align-self: center;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 
@@ -44,20 +49,26 @@
 
 .header{
   background-color: transparent;
-
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 13px;
+  width: 100%;
+  height: 50px;
   /*border: none;*/
   outline: 0;
   border: 0px solid;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-right: 5px;
 }
 
 
 .BuenosLeidos{
-  margin-right: auto
+  margin-left: 30px;
+  font-size: 20px;
+  font-family:  'Roboto Slab', serif;
 }
 
 
@@ -116,19 +127,23 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 280px;
+  margin-right: 75px;
 }
 
 
 .l_signupForm{
   display: flex;
   justify-content: flex-end;
-  padding-right: 100px;
+
   /*align-items: flex-end;*/
 }
 
 
 
-
+.login{
+  display: flex;
+  flex-direction: row;
+}
 
 
 
