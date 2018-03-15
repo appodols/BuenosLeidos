@@ -7,9 +7,6 @@ import Date from './date';
 
 
 
-
-
-
 const reviewItem = ({review}) => {
 return(
     <div className = 'reviewItem'>
@@ -17,10 +14,14 @@ return(
           src="https://s.gr-assets.com/assets/nophoto/user/m_50x66-82093808bca726cb3249a493fbd3bd0f.png">
         </img>
       <div className="userReviewContent">
+
         <div className="user-review-header">
+          <section className='left-review-header'>
           <span className="review-author">{review.authorname}</span>
           <span className="rated-it">rated it</span>
           <Stars rating={review.rating}></Stars>
+        </section>
+
           <Date time={review.created_at}></Date>
         </div>
         <span className='reviewText'>

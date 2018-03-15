@@ -33,11 +33,13 @@ export const signup = user => dispatch => {
 //   ))
 // );
 
-export const logout = () => dispatch => (
-  ApiUtils.logout().then(user => (
-    dispatch(receiveCurrentUser(null))
-  ))
-);
+export const logout = () => dispatch => {
+  return (
+    ApiUtils.logout().then(user => (
+      dispatch(receiveCurrentUser(null))
+    ))
+  );
+};
 
 
 const receiveCurrentUser = currentUser => {

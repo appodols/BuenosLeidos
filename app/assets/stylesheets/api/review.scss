@@ -41,7 +41,7 @@
   height: 18px;
   // background-color: #8A2BE2;
   display: flex;
-  align-items: flex-end;
+  justify-content: space-between;
   // justify-content: flex-start;
   flex-direction: row;
 }
@@ -57,11 +57,16 @@
 .date-print{
   align-self: flex-end;
   color: #bbbbbb;
-  // float: right;
   font-size: 14px;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-  margin-left: 285px;
 }
+
+.left-review-header{
+  align-self: flex-start;
+}
+
+
+
 
 .review-author{
   font-weight: bold;
@@ -71,7 +76,7 @@
   word-wrap: break-word;
   text-align: left;
   margin-right: 5px;
-  margin-left: 20px;
+  margin-left: 8px;
 }
 
 

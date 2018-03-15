@@ -5,15 +5,21 @@ import React from 'react';
 // import LandingPageSignupContainer from './landing_page_signup_container';
 
 
-const NavBar = () => {
+const NavBar = ({currentUser, logout}) => {
     return (<header className="header">
       <nav className="header-nav">
         <section className="logo"> </section>
 
-        <ul className="header-list">
+      <section className ='header-list'>
+
+        <ul className="left-header">
           <li><a href="#">Home</a></li>
           <li><a href="#">My Books</a></li>
         </ul>
+
+        <span onClick={logout} className= 'Sign-Out'> Sign Out</span>
+      </section>
+
 
       </nav>
     </header>

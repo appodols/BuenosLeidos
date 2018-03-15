@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import React from 'react';
 // import { AuthRoute } from 'react-router-dom';
 import GreetingContainer from './greeting_container';
@@ -7,6 +7,7 @@ import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import BookContainer from './book_container';
 import LandingPage from './landing_page';
+import NavBarContainer from './nav_bar_container';
 import NavBar from './nav_bar.jsx';
 import ReviewFormContainer from './review_form_container';
 
@@ -23,13 +24,13 @@ const App = () => (
 
       <Switch>
         <Route exact path ='/' component={LandingPage}/>
-        <Route component={NavBar}/>
+        <ProtectedRoute component={NavBarContainer}/>
     </Switch>
 
     <Switch>
-      <Route exact path ='/books/show/:bookId' component={BookContainer}/>
-      <Route exact path = '/reviews/new' component={BookContainer}/>
-      <Route exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
+      <ProtectedRoute exact path ='/books/show/:bookId' component={BookContainer}/>
+      <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
+      <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
   </Switch>
   </div>
 );
