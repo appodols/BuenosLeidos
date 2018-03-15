@@ -1,6 +1,9 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import StarRatingComponent from 'react-star-rating-component';
+import {
+	withRouter
+} from 'react-router-dom';
 
 class ReviewForm extends React.Component {
   constructor(props){
@@ -36,8 +39,8 @@ class ReviewForm extends React.Component {
       book_id: this.props.book.id,
       rating: this.state.rating,
       body: this.state.body};
-      debugger
    this.props.createReview(review);
+   this.props.history.push(`/books/show/${this.props.book.id}`);
 }
 
   render(){
@@ -76,9 +79,6 @@ class ReviewForm extends React.Component {
     <button
       className='save'
       onClick={this.submitReview}
-
-
-
       >Save</button>
     </div>
 
@@ -88,7 +88,7 @@ class ReviewForm extends React.Component {
 
 
 }
-export default ReviewForm;
+export default withRouter(ReviewForm);
 
 
 //onStarHover = {this.onStarHover}
