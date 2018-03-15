@@ -6,7 +6,11 @@ class ReviewForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {rating: 0, initial_rating: 0, body: ""};
-  
+    this.onStarClick = this.onStarClick.bind(this);
+    this.onStarHover = this.onStarHover.bind(this);
+    this.onStarHoverOut = this.onStarHoverOut.bind(this);
+    this.updateBody = this.updateBody.bind(this);
+    this.submitReview = this.submitReview.bind(this);
   }
 
   onStarHover(nextValue, prevValue, name){
@@ -14,12 +18,27 @@ class ReviewForm extends React.Component {
   }
 
   onStarHoverOut(nextValue, prevValue, name){
-    this.setState({rating: this.state.initialRating});
+    this.setState({rating: this.state.initial_rating});
+  }
+
+  onStarClick(nextValue, prevValue, name) {
+      this.setState({rating: nextValue});
   }
 
 
+  updateBody(e){
+    this.setState({body: e.target.value});
+  }
 
+  submitReview(e){
 
+    const review = {user_id: this.props.currentUserId,
+      book_id: this.props.book.id,
+      rating: this.state.rating,
+      body: this.state.body};
+      debugger
+   this.props.createReview(review);
+}
 
   render(){
     return(
@@ -45,12 +64,22 @@ class ReviewForm extends React.Component {
             name={'onCreateReview'}
             value={this.state.rating}
             starCount={5}
+            onStarHover = {this.onStarHover}
+            onStarClick={this.onStarClick}
           ></StarRatingComponent>
       </section>
 
     <label className='thoughts'>What Did You Think?</label>
-    <textarea placeholder='Enter Your Review (optional)'className="reviewBody"></textarea>
-    <button className='save'>Save</button>
+    <textarea placeholder='Enter Your Review (optional)'className="reviewBody"
+      onChange={this.updateBody}
+      ></textarea>
+    <button
+      className='save'
+      onClick={this.submitReview}
+
+
+
+      >Save</button>
     </div>
 
     );
@@ -60,3 +89,7 @@ class ReviewForm extends React.Component {
 
 }
 export default ReviewForm;
+
+
+//onStarHover = {this.onStarHover}
+//onStarHoverOut={this.onStarHoverOut}
