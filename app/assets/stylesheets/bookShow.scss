@@ -75,7 +75,7 @@ max-height: 260px;
 }
 
 
-.title{
+.title, .submitReview{
   color: #333333;
   font-family: "Merriweather", "Georgia", serif;
   font-size: 120%;
@@ -137,7 +137,7 @@ max-height: 260px;
 
 
 .space-2{
-  height: 40px;
+  height: 30px;
   // line-height: 30px;
 }
 
@@ -159,6 +159,8 @@ max-height: 260px;
   height: 17.6px;
   margin-bottom: 20px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -185,4 +187,17 @@ max-height: 260px;
   margin: 4px 7px 4px 0px;
   color: #382110;
   text-align: left;
+}
+
+.submitReview{
+  margin-top: 10px;
+  align-self: center;
+  font-size: 14px;
+  width: 100px;
+  color: #00635d;
+}
+
+
+.submitReview:hover{
+  text-decoration: underline;
 }

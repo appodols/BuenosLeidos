@@ -8,6 +8,7 @@ import SignupFormContainer from './signup_form_container';
 import BookContainer from './book_container';
 import LandingPage from './landing_page';
 import NavBar from './nav_bar.jsx';
+import ReviewFormContainer from './review_form_container';
 
 import {
   Route,
@@ -28,6 +29,7 @@ const App = () => (
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <Route exact path = '/reviews/new' component={BookContainer}/>
+      <Route exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
   </Switch>
   </div>
 );

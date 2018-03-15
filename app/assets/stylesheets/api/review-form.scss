@@ -1,0 +1,107 @@
+.review-cover{
+  width: 49px;
+  height: 75px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: yellow;
+}
+
+.bookInformation{
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+
+.author-title{
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.review-book-title{
+  font-family: "Merriweather", "Georgia", serif;
+  font-weight: bold;
+  font-size: 120%;
+  line-height: 1.3;
+}
+
+
+.review-content{
+  margin-top: 15px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.author-inclusive{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.by{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+}
+
+.author{
+  font-size: 12px;
+  // line-height: 150%;
+  color: #333;
+  font-family: "Merriweather", "Georgia", serif;
+}
+
+.rating-review{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eee;
+}
+
+.my-rating{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  width: 70px;
+  height: 17px;
+  margin-top: 3px;
+}
+
+
+.thoughts{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+}
+
+.reviewBody{
+    background: #FFFFFF;
+    border-radius: 3px;
+    border: #DCD6CC 1px solid;
+    color: #333333;
+    width: 726px;
+    height: 258px;
+    font-family: "Merriweather", "Georgia", serif;
+    font: 400 15px system-ui;
+}
+
+.save{
+
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #333333;
+  background-color: #F4F1EA;
+  line-height: 1;
+  margin-top: 5px;
+  padding: 8px 12px;
+  height: 30px;
+  width: 32px;
+  border-radius: 8px;
+
+}
+
+.save:hover{
+  color: #333333;
+  background-color: #ede6d6;
+}

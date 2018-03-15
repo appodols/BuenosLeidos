@@ -22,10 +22,18 @@ const msp = (state,ownProps) => {
      (review.rating)).reduce((acc,el)=>(acc+el))/(Object.values(state.reviews).length)).toFixed(2));
    }
 
+
+   let currentUser = state.session.currentUser;
+//this could be problematic
+   const userReviewId = Object.values(state.reviews).filter(review=>(
+     review.user_id === currentUser.id)).map(review=>(
+       review.id))[0];
+
     return({
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),
-     averageRating: average_rating
+     averageRating: average_rating,
+     ownReview: state.reviews[userReviewId]
   });
 };
 

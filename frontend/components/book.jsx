@@ -63,16 +63,20 @@ class Book extends React.Component {
                   <span className='average-rating-span'>{this.props.averageRating}</span>
                 </section>
 
-                <div className="space-1"></div>
-                <b className="bold">Lorem ipsum dolor sit amet</b>
-
                 <div className="space-2"></div>
 
                   <div className="description">
                   {this.state.description}
+                    {this.props.ownReview ?
+                       null:
+                      <Link to={`/books/${this.props.book.id}/review`} className="submitReview">Add Review</Link>
+                     }
                   </div>
-
                 </div>
+
+
+
+
               </section>
 
           </div>
@@ -118,3 +122,22 @@ export default Book;
 
 //  <Link className= 'addaReview'to='/reviews/new'>Add a review</Link>
 //    <Span className='average-rating-span'>{this.props.averageRating}</Span>
+
+                //
+                //
+                // <div className="space-1"></div>
+                // <b className="bold">Lorem ipsum dolor sit amet</b>
+                //
+                // <div className="space-2"></div>
+//<span className="submitReview"> Add Review</span>
+//<Link to={`abc`} className="submitReview">Add Review</Link>
+
+
+
+// <div className="description">
+// {this.state.description}
+//   {this.props.ownReview ?
+//      null:
+//     <Link to={`/books/${this.props.book.id}/review`} className="submitReview">Add Review</Link>
+//    }
+// </div>
