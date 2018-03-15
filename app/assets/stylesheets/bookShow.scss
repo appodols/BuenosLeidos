@@ -110,8 +110,24 @@ max-height: 260px;
 .ratingInfo{
   height: 19.8px;
   width: 455px;
-  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+.average-rating-span{
+  margin-top: 3px;
+  margin-left: 3px;
+  align-self: center;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 14px;
+  color: #181818;
+}
+
+
+
+
 
 
 .space-1{

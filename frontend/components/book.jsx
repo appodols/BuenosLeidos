@@ -3,6 +3,7 @@ import React from 'react';
 import ReviewsContainer from './reviews_container';
 import MyRatingContainer from './my_rating_container';
 import { Link } from 'react-router-dom';
+import StarRatingComponent from 'react-star-rating-component';
 
 class Book extends React.Component {
   constructor(props){
@@ -53,6 +54,13 @@ class Book extends React.Component {
                 </section>
 
                 <section className="ratingInfo">
+                  <StarRatingComponent
+                    name={'average'}
+                    starCount={5}
+                    value={Math.round(this.props.averageRating)}
+                    className='average-rating-star'
+                    ></StarRatingComponent>
+                  <span className='average-rating-span'>{this.props.averageRating}</span>
                 </section>
 
                 <div className="space-1"></div>
@@ -109,3 +117,4 @@ export default Book;
 //  }
 
 //  <Link className= 'addaReview'to='/reviews/new'>Add a review</Link>
+//    <Span className='average-rating-span'>{this.props.averageRating}</Span>
