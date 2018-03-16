@@ -28,7 +28,7 @@ const App = () => (
     </Switch>
 
     <Switch>
-      <ProtectedRoute exact path ='/books/show/:bookId' component={BookContainer}/>
+      <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
   </Switch>
