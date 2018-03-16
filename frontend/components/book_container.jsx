@@ -24,20 +24,18 @@ const msp = (state,ownProps) => {
 
 
    let currentUser = state.session.currentUser;
-   let userReviewId;
-  if(currentUser){
-    userReviewId =  Object.values(state.reviews).filter(review=>{
+
+
+    const userReviewId =  Object.values(state.reviews).filter(review=>{
      return(
      review.user_id === currentUser.id);}).map(review=>(
        review.id))[0];
-
-    }
 
     return({
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),
      averageRating: average_rating,
-     ownReview: state.reviews[userReviewId] || {}
+     ownReview: state.reviews[userReviewId]
   });
 };
 

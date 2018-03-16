@@ -5,11 +5,12 @@ import SessionForm from './session_form';
 import {signup} from '../actions/session_actions';
 
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
     return({
     errors: state.errors.session,
-    formType: 'Sign Up!',
-    styleKey: 'landing'
+    formType: (ownProps.language === 'English' ? 'Sign Up' : 'Crear Cuenta'),
+    styleKey: 'landing',
+    language: ownProps.language
    });
 };
 

@@ -4,11 +4,12 @@ import React from 'react';
 import SessionForm from './session_form';
 
 
-const msp = state => {
+const msp = (state,ownProps) => {
   return({
     errors: state.errors.session,
-    formType: 'Sign In!',
-    styleKey: 'normal'
+    formType: (ownProps.language === 'English' ? 'Sign In' : 'Iniciar sesión'),
+    styleKey: 'normal',
+    language: ownProps.language
  });
 };
 

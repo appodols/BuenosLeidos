@@ -34,34 +34,59 @@ class SessionForm extends React.Component{
    }
 
   render(){
-    if(this.props.styleKey === 'normal'){
-    return(
-      <div className = 'l_login'>
-         {this.renderErrors()}
-        <form onSubmit={this.handleSubmit} className= "logIn">
-          <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
-          <input type="password" className ='password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
-          <input className='signinButton' type="submit" value={this.props.formType}></input>
-        </form>
-      </div>
-    );
+    if(this.props.language === 'English') {
+      if(this.props.styleKey === 'normal'){
+      return(
+        <div className = 'l_login'>
+           {this.renderErrors()}
+          <form onSubmit={this.handleSubmit} className= "logIn">
+            <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
+            <input type="password" className ='password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
+            <input className='signinButton' type="submit" value={this.props.formType}></input>
+          </form>
+        </div>
+      );
+    } else {
+      return(
+        <div className='l_signupForm'>
+          <form onSubmit={this.handleSubmit} className= "l_signUp">
+            <h3 id="identified"> New here? Create a free account!</h3>
+            <input type="text" className ='l_name' onChange={this.update('name')} placeholder='Name' value={this.state.name}></input>
+            <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
+            <input type="password" className ='l_password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
+            <input className='l_signupButton' type="submit" value={this.props.formType}></input>
+          </form>
+        </div>
+      );
+    }
+
   } else {
-    return(
-      <div className='l_signupForm'>
-        <form onSubmit={this.handleSubmit} className= "l_signUp">
-          <h3 id="identified"> New here? Create a free account!</h3>
-          <input type="text" className ='l_name' onChange={this.update('name')} placeholder='Name' value={this.state.name}></input>
-          <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
-          <input type="password" className ='l_password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
-          <input className='l_signupButton' type="submit" value={this.props.formType}></input>
-        </form>
-      </div>
-    );
+      if(this.props.styleKey === 'normal'){
+      return(
+        <div className = 'l_login'>
+           {this.renderErrors()}
+          <form onSubmit={this.handleSubmit} className= "logIn">
+            <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'Correo electrónico' value={this.state.e_mail}></input>
+            <input type="password" className ='password' onChange={this.update('password')} placeholder='Contraseña' value={this.state.password}></input>
+            <input className='signinButton' type="submit" value={this.props.formType}></input>
+          </form>
+        </div>
+      );
+    } else {
+      return(
+        <div className='l_signupForm'>
+          <form onSubmit={this.handleSubmit} className= "l_signUp">
+            <h3 id="identified"> Eres nuevo? Crea una cuenta gratis ya!</h3>
+            <input type="text" className ='l_name' onChange={this.update('name')} placeholder='Nombre' value={this.state.name}></input>
+            <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'Correo electrónico' value={this.state.e_mail}></input>
+            <input type="password" className ='l_password' onChange={this.update('password')} placeholder='Contraseña' value={this.state.password}></input>
+            <input className='crear-cuenta-button' type="submit" value={this.props.formType}></input>
+          </form>
+        </div>
+      );
+    }
+    }
   }
-
-
-  }
-
 
 
 }

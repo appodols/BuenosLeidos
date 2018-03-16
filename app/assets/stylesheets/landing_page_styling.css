@@ -15,6 +15,9 @@
 
 
 
+
+
+
 .landing-main-lower-half{
   display: flex;
   /*justify-content: center;*/
@@ -26,18 +29,23 @@
 
 
 
-#cta{
+#cta, #cta-espanol{
   justify-content: flex-start;
-  font-size: 40px;
-  width: 300px;
+  font-size: 35px;
   display: inline-block;
   padding: 0;
   color: #58371F;
   height: 50px;
   margin-left: 100px;
-  align-self: center;
+  margin-top: -50px;
+  width: 280px;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 }
+
+
+
+
+
 
 
 
@@ -126,7 +134,7 @@ h2 {
 .l_signUp{
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: max-content;
   margin-right: 75px;
 }
 
@@ -134,6 +142,7 @@ h2 {
 .l_signupForm{
   display: flex;
   justify-content: flex-end;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
 
   /*align-items: flex-end;*/
 }
@@ -159,13 +168,80 @@ h2 {
     width: 85px;
     display: inline;
     margin: 5px;
+    text-align: center;
     /*margin: auto;*/
     align-self: flex-start;
 }
 
-.l_signupButton:hover{
+.crear-cuenta-button{
+    padding: 8px;
+    border: 0px;
+    border-radius: 4px;
+    background: #fdd05f;
+    font-size: 18px;
+    line-height: 22px;
+    width: 110px;
+    display: inline;
+    margin: 5px;
+    text-align: center;
+    /*margin: auto;*/
+    align-self: flex-start;
+}
+
+
+
+
+
+
+
+
+
+.l_signupButton:hover,{
   background-color: #FFD56D;
 }
+
+.language-button:hover{
+  background-color: #FF69B4;
+}
+
+
+.language-button, .language-button-espanol{
+  padding: 8px;
+  border: 0px;
+  border-radius: 4px;
+  background: #fdd05f;
+  font-size: 18px;
+  line-height: 22px;
+  width: 85px;
+  display: inline;
+  margin: 5px;
+  height: 50px;
+  align-self: center;
+  background-color: #00BFFF;
+  text-align: center;
+  margin-top: -10px;
+  /*margin-bottom: 15px;*/
+   /*position: absolute;*/
+
+
+}
+
+
+
+
+
+
+
+.left-lower-half{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-around;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+}
+
+
+
 
 
 
