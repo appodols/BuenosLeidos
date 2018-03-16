@@ -196,7 +196,7 @@ h2 {
 
 
 
-.l_signupButton:hover,{
+.l_signupButton:hover, .crear-cuenta-button:hover{
   background-color: #FFD56D;
 }
 
