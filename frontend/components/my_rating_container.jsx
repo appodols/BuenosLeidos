@@ -14,9 +14,14 @@ const msp = (state) => {
   let currentUser = state.session.currentUser;
   // const hasReviewed = reviewer_Ids.includes(currentUser.id);
 
-  const userReviewId = Object.values(state.reviews).filter(review=>(
-    review.user_id === currentUser.id)).map(review=>(
+  let userReviewId;
+ if(currentUser){
+   userReviewId =  Object.values(state.reviews).filter(review=>{
+    return(
+    review.user_id === currentUser.id);}).map(review=>(
       review.id))[0];
+
+   }
 
     const hasReviewed = (reviews, userReviewId) => {
       let reviewerIds = Object.values(reviews).map(review=>(

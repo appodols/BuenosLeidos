@@ -35,7 +35,7 @@ class MyRating extends React.Component {
 
 
   updateButton(props){
-    let reviewed = this.props.hasReviewed(props.reviews,props.currentUser.id);
+    let reviewed = this.props.hasReviewed(props.reviews,(props.currentUser.id || null));
     if(reviewed){
       this.setState({buttonName: 'Clear Rating', rating: (props.ownReview ? props.ownReview.rating : 0), initialRating: (props.ownReview ? props.ownReview.rating : 0)});
     } else {

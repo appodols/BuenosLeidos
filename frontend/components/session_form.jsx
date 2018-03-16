@@ -13,8 +13,7 @@ class SessionForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.processForm(this.state);
-    this.props.history.push(`/books/show/1`);
+    this.props.processForm(this.state).then(() => this.props.history.push(`/books/show/1`));
   }
 
 
@@ -40,7 +39,7 @@ class SessionForm extends React.Component{
       <div className = 'l_login'>
          {this.renderErrors()}
         <form onSubmit={this.handleSubmit} className= "logIn">
-          <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'Username' value={this.state.e_mail}></input>
+          <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
           <input type="password" className ='password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
           <input className='signinButton' type="submit" value={this.props.formType}></input>
         </form>
@@ -52,7 +51,7 @@ class SessionForm extends React.Component{
         <form onSubmit={this.handleSubmit} className= "l_signUp">
           <h3 id="identified"> New here? Create a free account!</h3>
           <input type="text" className ='l_name' onChange={this.update('name')} placeholder='Name' value={this.state.name}></input>
-          <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'Username' value={this.state.e_mail}></input>
+          <input type="text" className='l_username' onChange={this.update('e_mail')} placeholder= 'E-Mail Address' value={this.state.e_mail}></input>
           <input type="password" className ='l_password' onChange={this.update('password')} placeholder='Password' value={this.state.password}></input>
           <input className='l_signupButton' type="submit" value={this.props.formType}></input>
         </form>
