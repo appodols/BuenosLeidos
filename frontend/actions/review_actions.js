@@ -32,7 +32,7 @@ export const deleteReview = id => dispatch => {
 export const fetchReview = id => dispatch => {
   return (
   ApiUtils.fetchReview(id).then(review => (
-    dispatch(removeReview(id))
+    dispatch(recieveReview(id))
   ), error => (
     dispatch(receiveError(error.responseJSON))
   ))

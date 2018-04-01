@@ -2,11 +2,14 @@
 import React from 'react';
 import merge from 'lodash/merge';
 import { RECEIVE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEWS } from '../actions/review_actions';
+import { RECEIVE_BOOK } from '../actions/book_actions';
 
 
 export const reviewReducer = (state = {} ,action) => {
   Object.freeze(state);
   switch(action.type){
+    case RECEIVE_BOOK:
+      return merge({}, action.book.reviews);
     case RECEIVE_REVIEWS:
       return merge({}, action.reviews);
     case RECEIVE_REVIEW:

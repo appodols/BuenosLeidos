@@ -5,16 +5,9 @@ import {fetchBook} from '../actions/book_actions';
 import {fetchReviews} from '../actions/review_actions';
 
 
-
-
-
-
-
-
-
 const msp = (state,ownProps) => {
 
-  const defaultBook = {title: "",author: ""};
+  const defaultBook = {title: "",author: "", id: ownProps.match.params.bookId};
 
     let average_rating = 0;
     if(Object.values(state.reviews).length > 0){
@@ -30,12 +23,11 @@ const msp = (state,ownProps) => {
      return(
      review.user_id === currentUser.id);}).map(review=>(
        review.id))[0];
-
     return({
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),
-     averageRating: average_rating,
-     ownReview: state.reviews[userReviewId]
+    averageRating: average_rating,
+    ownReview: state.reviews[userReviewId]
   });
 };
 

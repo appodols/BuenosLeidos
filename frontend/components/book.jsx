@@ -14,16 +14,17 @@ class Book extends React.Component {
 
   componentDidMount(){
 
-    this.props.fetchBook(this.props.match.params.bookId).then(
-      this.props.fetchReviews(this.props.match.params.bookId));
+    this.props.fetchBook(this.props.match.params.bookId);
+
 
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.book.id !== nextProps.book.id){
-      this.props.fetchBook(nextProps.match.params.bookId).then
-      (this.props.fetchReviews(nextProps.match.params.bookId));
-    this.setState(nextProps.book);}
+      this.setState(nextProps.book);
+    if (this.props.book.id != nextProps.book.id){
+      this.props.fetchBook(nextProps.match.params.bookId);
+    }
+      //still need to figure out how to set state correctly
   }
 
 
