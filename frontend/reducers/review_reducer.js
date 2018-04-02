@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import merge from 'lodash/merge';
-import { RECEIVE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEWS } from '../actions/review_actions';
+import { RECEIVE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEWS, format } from '../actions/review_actions';
 import { RECEIVE_BOOK } from '../actions/book_actions';
 
 

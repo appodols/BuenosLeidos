@@ -1,5 +1,11 @@
 json.partial! "api/books/book", book: @book
 
-json.reviews @book.reviews do |review|
-  json.partial! "api/reviews/review", review: review
+
+
+json.reviews do
+    @book.reviews.each do |review|
+      json.set! review.id do
+        json.partial! "api/reviews/review", review: review
+      end
+  end
 end

@@ -6,15 +6,12 @@ import {fetchReviews} from '../actions/review_actions';
 
 const msp = (state,ownProps) => {
     return(
-      {reviews: Object.values(state.reviews),
-       bookId: ownProps.bookId,
-       currentUser: state.currentUser
+      {reviews: Object.values(state.reviews)
   });
 };
 
 
 const mdp = (dispatch) => ({
-  fetchReviews: (bookId) => dispatch(fetchReviews(bookId))
 });
 
 export default connect(msp, mdp)(Reviews);

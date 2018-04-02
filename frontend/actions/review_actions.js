@@ -6,6 +6,15 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 
 
+
+
+export const format = (reviews) => (
+  Object.values(reviews)
+);
+
+
+
+
 export const createReview = review => dispatch => (
   ApiUtils.createReview(review).then(createdReview=>(
     dispatch(receiveReview(createdReview))
