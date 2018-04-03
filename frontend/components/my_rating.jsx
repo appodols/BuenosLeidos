@@ -7,7 +7,7 @@ class MyRating extends React.Component {
   constructor(props){
     super(props);
     this.state = {buttonName: "",rating: 0};
-    this.hasGivenReview = this.hasGivenReview.bind(this);
+    // this.hasGivenReview = this.hasGivenReview.bind(this);
     this.updateButton = this.updateButton.bind(this);
     // this.buttonName = this.buttonName.bind(this);
     this.deleteUserReview = this.deleteUserReview.bind(this);
@@ -49,21 +49,6 @@ class MyRating extends React.Component {
       this.updateButton(nextProps);
   }
 
-  hasGivenReview(){
-    let user_id = this.props.currentUser.id;
-    let ids = [];
-    var user_review_id;
-    this.props.reviews.forEach(review=> {
-      ids.push(review.user_id);
-    });
-
-    if(ids.includes (user_id)){
-      return true;
-    } else {
-      return false;
-    }
-
-  }
 
    onStarHover(nextValue, prevValue, name){
      this.setState({rating: nextValue});

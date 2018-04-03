@@ -3,25 +3,18 @@ import { connect } from 'react-redux';
 import React from 'react';
 import MyRating from './my_rating';
 import {deleteReview, updateReview, createReview} from '../actions/review_actions';
+import {has_reviewed, ownReview, currentUserReviewId} from '../reducers/selectors.js';
 // import {createReview} from '../actions/review_actions';
 
 
 
 const msp = (state) => {
 
-  const reviewer_Ids = Object.values(state.reviews).map(review=>(
-    review.user_id));
+
   let currentUser = state.session.currentUser;
-  // const hasReviewed = reviewer_Ids.includes(currentUser.id);
 
-  let userReviewId;
- if(currentUser){
-   userReviewId =  Object.values(state.reviews).filter(review=>{
-    return(
-    review.user_id === currentUser.id);}).map(review=>(
-      review.id))[0];
+   let userReviewId = currentUserReviewId(state);
 
-   }
 
     const hasReviewed = (reviews, userReviewId) => {
       let reviewerIds = Object.values(reviews).map(review=>(
@@ -30,13 +23,16 @@ const msp = (state) => {
       return reviewStatus;
     };
 
+
+
     return({
     currentUser: state.session.currentUser,
     reviews: Object.values(state.reviews),
     hasReviewed: hasReviewed,
+    has_reviewed: has_reviewed(state),
     userReviewId: userReviewId,
-    ownReview: state.reviews[userReviewId],
-    book: Object.values(getState().books)[0]
+    ownReview: ownReview(state),
+    book: Object.values(state.books)[0]
   });
 };
 

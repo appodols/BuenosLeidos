@@ -9,25 +9,14 @@ import {averageRating, ownReview } from '../reducers/selectors.js';
 const msp = (state,ownProps) => {
 
   const defaultBook = {title: "",author: "", id: ownProps.match.params.bookId};
-   let currentUser = state.session.currentUser;
 
-    const userReviewId =  Object.values(state.reviews).filter(review=>{
-     return(
-     review.user_id === currentUser.id);}).map(review=>(
-       review.id))[0];
-
-    let review = ownReview(state);
-    
     return({
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),
     averageRating: averageRating(state),
-    ownReview: state.reviews[userReviewId]
+    ownReview: ownReview(state)
   });
 };
-
-
-
 
 
 const mdp = (dispatch) => {

@@ -11,7 +11,7 @@ return average_rating;
 };
 
 
-export const userReviewId = (state) => {
+export const currentUserReviewId = (state) => {
   let currentUser = state.session.currentUser;
    const userReviewId =  Object.values(state.reviews).filter(review=>{
     return(
@@ -23,6 +23,12 @@ export const userReviewId = (state) => {
 //goes through all reviews, examines them to find review where the id of the user
 //is the id of the current user, and then gives me the review ID of that review
 export const ownReview = (state) => {
-  let review_id = userReviewId(state);
+  let review_id = currentUserReviewId(state);
   return state.reviews[review_id];
+};
+
+
+export const has_reviewed = (state) => {
+  return(
+  !!currentUserReviewId(state));
 };
