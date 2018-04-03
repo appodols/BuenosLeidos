@@ -25,7 +25,7 @@ const App = () => (
 
 
       <Switch>
-        <Route exact path ='/' component={LandingPage}/>
+        <Route exact path ='/' component={LandingPageContainer}/>
         <ProtectedRoute component={NavBarContainer}/>
     </Switch>
 

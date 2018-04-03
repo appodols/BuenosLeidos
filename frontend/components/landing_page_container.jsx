@@ -2,16 +2,12 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import LandingPage from './landing_page';
-import demoLogin from '../actions/session_actions';
-
-const msp = (state,ownProps) => {
-
-};
+import {demoLogin} from '../actions/session_actions';
 
 const mdp = (dispatch, ownProps) => ({
-  demoLogin:  dispatch(demoLogin())
+  demo: () => dispatch(demoLogin())
 });
 
 
 
-export default connect(msp, mdp)(LandingPage);
+export default connect(null, mdp)(LandingPage);

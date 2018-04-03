@@ -10,7 +10,7 @@ class LandingPage extends React.Component{
     super(props);
     this.state = {language: 'English', buttonName: 'Español'};
     this.updateButton = this.updateButton.bind(this);
-
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
 
@@ -22,7 +22,9 @@ class LandingPage extends React.Component{
     }
   }
 
-
+  demoLogin(e){
+    this.props.demo().then(() => this.props.history.push(`/books/show/1`));
+  }
 
   render(){
     return(
@@ -47,10 +49,12 @@ class LandingPage extends React.Component{
                 <button onClick={this.updateButton} className='language-button-espanol'>{this.state.buttonName}</button>
             </div>}
 
-            <div className='demoLogin'>
+            <div className = 'demoLoginContainer'>
+              <button className= 'demoLogin'
+              onClick={this.demoLogin}>Demo Login
+              </button>
 
-            </div>
-
+              </div>
 
             <LandingPageSignupContainer language= {this.state.language}></LandingPageSignupContainer>
          </section>
@@ -69,3 +73,4 @@ export default LandingPage;
 
 // <h1 className ='BuenosLeidos'>Buenos Leidos</h1>
 // <LoginFormContainer className = 'siginForm'></LoginFormContainer>
+//onClick={this.demoLogin}
