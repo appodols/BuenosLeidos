@@ -15,7 +15,13 @@
 
 
 
-
+.demoLogin{
+  height: 100px;
+  width: 100px;
+  border-radius: 4px;
+  background: #FFD56D;
+  align-self: center;
+}
 
 
 .landing-main-lower-half{

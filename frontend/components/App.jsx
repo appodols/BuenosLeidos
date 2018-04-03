@@ -10,6 +10,8 @@ import LandingPage from './landing_page';
 import NavBarContainer from './nav_bar_container';
 import NavBar from './nav_bar.jsx';
 import ReviewFormContainer from './review_form_container';
+import LandingPageContainer from './landing_page_container';
+
 
 import {
   Route,

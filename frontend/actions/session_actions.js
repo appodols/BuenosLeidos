@@ -22,6 +22,20 @@ export const signup = user => dispatch => {
  );
 };
 
+export const demoLogin = () => dispatch => {
+  return(ApiUtils.login({username: 'Demo@demo.com', password: 'demodemo'}).then(user => (
+    dispatch(receiveCurrentUser(user))
+  ), (error) => (
+    dispatch(receiveSessionErrors(error.responseJSON))
+  ))
+ );
+};
+
+
+
+
+
+
 
 
 
