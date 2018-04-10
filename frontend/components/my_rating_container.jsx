@@ -22,9 +22,7 @@ const msp = (state) => {
       const reviewStatus = reviewerIds.includes(userReviewId);
       return reviewStatus;
     };
-
-
-
+    
     return({
     currentUser: state.session.currentUser,
     reviews: Object.values(state.reviews),
