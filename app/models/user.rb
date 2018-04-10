@@ -37,9 +37,9 @@ class User < ApplicationRecord
   end
 
   def create_default_shelves
-    Bookshelves.create(name: "Read", user_id: self.id, default: true)
-    Bookshelves.create(name: "Want to Read", user_id: self.id, default: true)
-    Bookshelves.create(name: "Currently Reading",user_id: self.id, default: true)
+    Bookshelf.create(name: "Read", user_id: self.id, default: true)
+    Bookshelf.create(name: "Want to Read", user_id: self.id, default: true)
+    Bookshelf.create(name: "Currently Reading",user_id: self.id, default: true)
   end
 
 end
