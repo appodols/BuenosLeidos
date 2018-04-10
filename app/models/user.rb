@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   attr_accessor :password
   after_initialize :ensure_session_token
+  after_create :create_default_shelves
 
 
   def self.find_by_credentials(e_mail,password)
@@ -35,6 +36,10 @@ class User < ApplicationRecord
     self.session_token
   end
 
-
+  def create_default_shelves
+    Bookshelves.create(name: "Read", user_id: self.id, default: true)
+    Bookshelves.create(name: "Want to Read", user_id: self.id, default: true)
+    Bookshelves.create(name: "Currently Reading",user_id: self.id, default: true)
+  end
 
 end
