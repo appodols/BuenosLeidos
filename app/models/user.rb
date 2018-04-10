@@ -7,6 +7,11 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   after_create :create_default_shelves
 
+  has_many :bookshelves,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :User
+
 
   def self.find_by_credentials(e_mail,password)
     user = User.find_by(e_mail: e_mail)
