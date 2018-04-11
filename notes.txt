@@ -148,3 +148,8 @@ option b is having a separate slice of state for them
 
 
 const review = {user_id: 2, book_id: 4, body: "I'm not sure I agree with Sasha's rating.  The use of anaphora was frankly off putting, and made me consider whether or not I should be consuming more Chipotle", rating: 2};
+
+
+
+
+http://localhost:3000/api/books/1 enables you to look at the JSON you need
