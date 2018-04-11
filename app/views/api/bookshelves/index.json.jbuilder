@@ -5,7 +5,7 @@
   json.bookshelves @bookshelves.each do |bookshelf|
       json.partial! "api/bookshelves/bookshelf", bookshelf: bookshelf
       json.books bookshelf.books.each do |book|
-        json.partial! "api/books/book", book: book
+        json.partial! "api/books/book_shelf", book: book
       end
   end
 

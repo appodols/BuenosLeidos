@@ -153,3 +153,6 @@ const review = {user_id: 2, book_id: 4, body: "I'm not sure I agree with Sasha's
 
 
 http://localhost:3000/api/books/1 enables you to look at the JSON you need
+
+
+for partials: as long as it starts with an _ in it in jbuilder you're good
