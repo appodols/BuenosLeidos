@@ -9,6 +9,8 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def show
+      @bookhelf = Bookshelf.find(params[:id])
+      render :show
   end
 
   def update
