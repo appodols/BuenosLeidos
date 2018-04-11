@@ -33,9 +33,10 @@ class Review < ApplicationRecord
 
       if(args[:update])
         if(quantity_ratings == 1)
-          book.update_attribute(:average_rating, rating)
+          book.update_attribute(:average_rating, rating + args[:diff])
         else
-          new_avg = ((quantity_ratings) * (previous_average) + diff) / (quantity_ratings + 0.0).round(2)
+          new_avg = ((quantity_ratings) * (previous_average) + args[:diff]) / (quantity_ratings + 0.0).round(2)
+          debugger
           book.update_attribute(:average_rating, new_avg)
         end
 
