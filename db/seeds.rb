@@ -45,11 +45,11 @@
 
 
 ownership_list = []
-ownership_list << [2,1]
-ownership_list << [3,1]
-ownership_list << [4,3]
-ownership_list << [3,5]
-ownership_list << [1,6]
+ownership_list << [2,7]
+ownership_list << [1,8]
+ownership_list << [1,13]
+ownership_list << [2,14]
+ownership_list << [3,15]
 
 ownership_list.each do |book_id, bookshelf_id|
   BookshelfOwnership.create(book_id: book_id, bookshelf_id: bookshelf_id)

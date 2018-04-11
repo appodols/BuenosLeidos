@@ -4,8 +4,7 @@ class Api::BookshelvesController < ApplicationController
   def index
     # user_id = params[:bookshelves][:user_id]
     # temporarily is 1
-    user_id = 24
-    @bookshelves = Bookshelf.where(user_id: user_id)
+    @bookshelves = Bookshelf.where(user_id: current_user.id)
     render :index
   end
 
