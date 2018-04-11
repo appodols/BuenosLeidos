@@ -156,3 +156,7 @@ http://localhost:3000/api/books/1 enables you to look at the JSON you need
 
 
 for partials: as long as it starts with an _ in it in jbuilder you're good
+
+
+
+http://localhost:3000/api/bookshelves

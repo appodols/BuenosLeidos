@@ -9,7 +9,7 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def show
-      @bookhelf = Bookshelf.find(params[:id])
+      @bookshelf = Bookshelf.find(params[:id])
       render :show
   end
 
@@ -20,6 +20,8 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def destroy
+      @bookshelf = Bookshelf.find(params[:id])
+      @bookshelf.destroy!
   end
 
 
