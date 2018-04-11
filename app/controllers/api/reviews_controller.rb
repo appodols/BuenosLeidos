@@ -6,8 +6,14 @@ class Api::ReviewsController < ApplicationController
     render :index
   end
 
+
+
+
+
+
   def create
     @review = Review.new(review_params)
+    @review.update_average_rating({create: true})
     if @review.save
       render template: '/api/reviews/show'
     else
@@ -30,6 +36,8 @@ class Api::ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
+    review_diff = review_params[:rating] - @review.rating
+    # @review.update_average_rating({update: true, diff: review_diff})
     if @review.update(review_params)
       render template: '/api/reviews/show'
     else
@@ -40,6 +48,7 @@ class Api::ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
+    # @review.update_average_rating({delete: true})
     # render_error_if_not_current_user(@review)
     @review.destroy
     render template: '/api/reviews/show'
