@@ -7,5 +7,5 @@
  end
 
 
-json.extract! book, :title, :author, :id, :image_url, :description, :created_at
+json.extract! book, :title, :author, :id, :image_url, :description, :created_at, :average_rating
 json.rating user_rating
