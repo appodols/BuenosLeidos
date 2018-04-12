@@ -23,9 +23,11 @@ export const fetchBookShelf = id => dispatch => (
 );
 
 
+
+
 export const fetchBookShelves = () => dispatch => (
-  ApiUtils.fetchBookShelf().then(bookShelves=>(
-    dispatch(receiveBookShelf(bookShelf))
+  ApiUtils.fetchBookShelves().then(bookShelves=>(
+    dispatch(receiveBookShelves(bookShelves))
   ), error => (
     dispatch(receiveError(error.responseJSON))
   ))
@@ -49,14 +51,14 @@ export const removeBookShelf = id => ({
 
 
 export const receiveError = error => ({
-  type: RECEIVE_REVIEW_ERRORS,
+  type: RECEIVE_BOOKSHELF_ERRORS,
   error
 });
 
 
 
 export const receiveBookShelves = bookshelves => ({
-  type:  RECEIVE_BOOKSHELF_ERRORS,
+  type:  RECEIVE_BOOKSHELVES,
   bookshelves
 });
 
