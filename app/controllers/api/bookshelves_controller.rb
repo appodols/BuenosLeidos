@@ -17,6 +17,13 @@ class Api::BookshelvesController < ApplicationController
   end
 
   def create
+    @bookshelf = Bookshelf.new(bookshelf_params)
+    if @bookshelf.save
+      render template: '/api/bookshelves/show'
+    else
+      render json @bookshelf.errors.full_messages, status: 422
+    end
+
   end
 
   def destroy
@@ -25,7 +32,7 @@ class Api::BookshelvesController < ApplicationController
   end
 
 
-  def bookshelves_params
+  def bookshelf_params
     params.require(:bookshelves).permit(:user_id, :name, :default)
   end
 

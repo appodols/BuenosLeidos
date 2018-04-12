@@ -23,8 +23,6 @@ export const fetchBookShelf = id => dispatch => (
 );
 
 
-
-
 export const fetchBookShelves = () => dispatch => (
   ApiUtils.fetchBookShelves().then(bookShelves=>(
     dispatch(receiveBookShelves(bookShelves))
