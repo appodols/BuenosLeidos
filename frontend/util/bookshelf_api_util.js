@@ -15,6 +15,17 @@ export const fetchBookShelf = id => {
 };
 
 
+export const fetchBookShelves = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/bookshelves`
+  });
+};
+
+
+
+
+
 export const deleteBookShelf = id => {
   return $.ajax({
     method: 'DELETE',
