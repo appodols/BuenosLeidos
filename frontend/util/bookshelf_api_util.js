@@ -1,9 +1,9 @@
 /*jshint esversion: 6 */
-export const createBookShelf = book => {
+export const createBookShelf = bookShelf => {
   return $.ajax({
     method: 'POST',
     url: '/api/bookshelves',
-    data: {book: book}
+    data: {bookShelf: bookShelf}
   });
 };
 
@@ -21,9 +21,6 @@ export const fetchBookShelves = () => {
     url: `/api/bookshelves`
   });
 };
-
-
-
 
 
 export const deleteBookShelf = id => {

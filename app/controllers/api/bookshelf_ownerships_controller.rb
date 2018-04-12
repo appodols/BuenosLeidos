@@ -21,7 +21,7 @@ class Api::BookshelfOwnershipsController < ApplicationController
 
 
   def bookshelf_ownership_params
-    params.require(:bookshelf_ownerships).permit(:book_id, :bookshelf_id)
+    params.require(:bookShelfOwnership).permit(:book_id, :bookshelf_id)
   end
 
 
