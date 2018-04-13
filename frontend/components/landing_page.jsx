@@ -23,7 +23,8 @@ class LandingPage extends React.Component{
   }
 
   demoLogin(e){
-    this.props.demo().then(() => this.props.history.push(`/books/show/1`));
+    this.props.demo().then(()=>this.props.fetchBookShelves()).
+    then(() => this.props.history.push(`/books/show/1`));
   }
 
   render(){

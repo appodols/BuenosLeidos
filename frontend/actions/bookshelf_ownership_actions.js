@@ -2,7 +2,7 @@
 import * as ApiUtils from '../util/bookshelf_ownership_api_util';
 export const RECEIVE_BOOKSHELF = 'RECEIVE_BOOKSHELF';
 export const RECEIVE_BOOKSHELF_OWNERSHIP_ERRORS = 'RECEIVE_BOOKSHELF_ERRORS';
-
+import {receiveBookShelf, receiveError} from './bookshelf_actions';
 
 
 export const createBookShelfOwnership = (bookShelfOwnership) => dispatch => (
@@ -22,14 +22,15 @@ export const removeBookShelfOwnership = (id) => dispatch => (
 );
 
 
-export const receiveBookShelf = bookshelf => ({
-  type: RECEIVE_BOOKSHELF,
-  bookshelf
-});
 
-
-
-export const receiveError = error => ({
-  type: RECEIVE_BOOKSHELF_OWNERSHIP_ERRORS,
-  error
-});
+// export const receiveBookShelf = bookshelf => ({
+//   type: RECEIVE_BOOKSHELF,
+//   bookshelf
+// });
+//
+//
+//
+// export const receiveError = error => ({
+//   type: RECEIVE_BOOKSHELF_OWNERSHIP_ERRORS,
+//   error
+// });

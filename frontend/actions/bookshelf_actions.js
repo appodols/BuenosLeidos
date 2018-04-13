@@ -23,13 +23,17 @@ export const fetchBookShelf = id => dispatch => (
 );
 
 
-export const fetchBookShelves = () => dispatch => (
-  ApiUtils.fetchBookShelves().then(bookShelves=>(
-    dispatch(receiveBookShelves(bookShelves))
-  ), error => (
-    dispatch(receiveError(error.responseJSON))
-  ))
-);
+export const fetchBookShelves = () => dispatch => {
+  // debugger
+  return(
+    ApiUtils.fetchBookShelves().then(bookShelves=>(
+      dispatch(receiveBookShelves(bookShelves))
+    ), error => (
+      dispatch(receiveError(error.responseJSON))
+    ))
+  );
+
+};
 
 
 export const deleteBookShelf = id => dispatch => (

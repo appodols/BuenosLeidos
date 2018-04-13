@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 import React from 'react';
 import merge from 'lodash/merge';
-import { RECEIVE_BOOKSHELF, RECEIVE_BOOKSHELVES,  REMOVE_BOOKSHELF} from '../actions/review_actions';
+import { RECEIVE_BOOKSHELF, RECEIVE_BOOKSHELVES,  REMOVE_BOOKSHELF} from '../actions/bookshelf_actions';
 
 
 export const bookShelfReducer = (state = {} ,action) => {

@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import SessionForm from './session_form';
-
+import { fetchBookShelves } from '../actions/bookshelf_actions';
 
 const msp = (state,ownProps) => {
   return({
@@ -16,7 +16,8 @@ const msp = (state,ownProps) => {
 
 
 const mdp = (dispatch, ownProps) => ({
-  processForm: (user) => dispatch(login(user))
+  processForm: (user) => dispatch(login(user)),
+  fetchBookShelves: () => dispatch(fetchBookShelves())
 });
 
 

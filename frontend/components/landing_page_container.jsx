@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import React from 'react';
 import LandingPage from './landing_page';
 import {demoLogin} from '../actions/session_actions';
+import { fetchBookShelves } from '../actions/bookshelf_actions';
 
 const mdp = (dispatch, ownProps) => ({
-  demo: () => dispatch(demoLogin())
+  demo: () => dispatch(demoLogin()),
+  fetchBookShelves: () => dispatch(fetchBookShelves())
 });
+
 
 
 

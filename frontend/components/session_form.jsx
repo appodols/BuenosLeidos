@@ -2,6 +2,7 @@
 import React from 'react';
 import { withRouter} from 'react-router';
 
+
 class SessionForm extends React.Component{
   constructor(props){
     super(props);
@@ -13,7 +14,9 @@ class SessionForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.processForm(this.state).then(() => this.props.history.push(`/books/show/1`));
+    console.log('handlesubmit');
+    this.props.processForm(this.state).then(()=>this.props.fetchBookShelves()).
+    then(() => this.props.history.push(`/books/show/1`));
   }
 
 

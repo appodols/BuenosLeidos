@@ -5,6 +5,7 @@ import sessionReducer from './session_reducer';
 import {bookReducer} from './book_reducer';
 import {reviewReducer} from './review_reducer';
 import {bookShelfReducer} from './bookshelf_reducer';
+import {bookShelfOwnershipReducer} from './bookshelf_ownership_reducer';
 
 const rootReducer = combineReducers({
   session: sessionReducer,

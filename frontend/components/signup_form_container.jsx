@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import React from 'react';
 import SessionForm from './session_form';
 import {signup} from '../actions/session_actions';
+import { fetchBookShelves } from '../actions/bookshelf_actions';
 
 
 const msp = (state) => {
-  debugger
   return({
     errors: state.errors.session,
     formType: 'Sign Up!',
@@ -15,8 +15,10 @@ const msp = (state) => {
 };
 
 const mdp = (dispatch,ownProps) => ({
-  processForm: (user) => dispatch(signup(user))
+  processForm: (user) => dispatch(signup(user)),
+  fetchBookShelves: () => dispatch(fetchBookShelves())
 });
+
 
 
 export default connect(msp,mdp)(SessionForm);
