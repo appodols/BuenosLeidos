@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
 import BookShelf from './bookshelf';
+import {fetchBookShelf } from '../actions/bookshelf_actions';
 
 
 const msp = (state,ownProps) => {
@@ -8,17 +9,14 @@ const msp = (state,ownProps) => {
   const defaultBook = {};
 
     return({
-
-    // averageRating: averageRating(state),
-    // ownReview: ownReview(state)
+    
   });
 };
 
 
 const mdp = (dispatch) => {
   return({
-    // fetchBook: (id) => dispatch(fetchBook(id)),
-    // fetchReviews: (bookId) => dispatch(fetchReviews(bookId))
+    fetchBookShelf: (id) => dispatch(fetchBookShelf(id))
   });
 };
 

@@ -32,3 +32,9 @@ export const has_reviewed = (state) => {
   return(
   !!currentUserReviewId(state));
 };
+
+
+export const bookshelf_show = (state, id) => {
+  let bookshelves = state.bookshelves;
+  
+};
