@@ -1,0 +1,37 @@
+.bookShelf{
+  height: 2312px;
+  width: 1213px;
+  background-color: green;
+}
+
+
+.header{
+  width: 960px;
+  height: 35px;
+  background-color: yellow;
+}
+
+
+.bookShelfContent{
+  display: flex;
+  width: 960px;
+  height: 2272px;
+  background-color: red;
+
+}
+
+
+.leftColumn{
+  width: 190px;
+  height: 1072px;
+  background-color: blue;
+}
+
+
+
+.rightColumn{
+  width: 750px;
+  height: 2155px;
+  background-color: brown;
+
+}

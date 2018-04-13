@@ -9,7 +9,6 @@ import {averageRating, ownReview } from '../reducers/selectors.js';
 const msp = (state,ownProps) => {
 
   const defaultBook = {title: "",author: "", id: ownProps.match.params.bookId};
-
     return({
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),

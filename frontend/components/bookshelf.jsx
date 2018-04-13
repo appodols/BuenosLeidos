@@ -72,8 +72,18 @@ class BookShelf extends React.Component {
 
       <div className ='bookShelf'>
         {this.props.currentBookShelf ?
-         <h2> yay we have stuff</h2>:
-           <h2> no bookshelf here</h2>
+        <div>
+
+         <header className='header'></header>
+         <div className='bookShelfContent'>
+           <div className= 'leftColumn'></div>
+           <div className= 'rightColumn'></div>
+         </div>
+
+       </div>
+
+        :
+           null
          }
       </div>
     );
@@ -81,4 +91,4 @@ class BookShelf extends React.Component {
 
 }
 //return<span className='rate-this-book'>{this.state.buttonName}</span>;
-export default MyRating;
+export default BookShelf;

@@ -35,6 +35,7 @@ export const has_reviewed = (state) => {
 
 
 export const bookshelfShow = (state, id) => {
+
   let bookshelves = state.bookshelves;
   return bookshelves[id];
 };

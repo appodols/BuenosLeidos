@@ -11,7 +11,7 @@ import NavBarContainer from './nav_bar_container';
 import NavBar from './nav_bar.jsx';
 import ReviewFormContainer from './review_form_container';
 import LandingPageContainer from './landing_page_container';
-// import BookShelfContainer from './bookshelf_container';
+import BookShelfContainer from './bookshelf_container';
 
 
 import {
@@ -34,6 +34,7 @@ const App = () => (
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
+      <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
   </Switch>
   </div>
 );

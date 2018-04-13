@@ -7,12 +7,13 @@ import {bookshelfShow} from '../reducers/selectors';
 
 const msp = (state,ownProps) => {
 
-  const defaultBook = {};
-  current_bookShelf = bookshelfShow(ownProps.match.params.bookShelfId);
-    return({
+  const defaultBookShelf = {};
+  let current_bookShelf = (bookshelfShow(state, ownProps.match.params.bookShelfId) ||  defaultBookShelf);
+  return({
       currentBookShelf: current_bookShelf
   });
 };
+
 
 
 const mdp = (dispatch) => {
