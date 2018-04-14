@@ -13,8 +13,9 @@ class BookShelf extends React.Component {
 
 
   componentDidMount(){
+    debugger
     if(!this.props.currentBookShelf){
-      this.props.fetchBookShelf();
+      this.props.fetchBookShelf(this.props.match.params.bookShelfId);
     }
     // this.updateButton(this.props);
   }
@@ -22,14 +23,16 @@ class BookShelf extends React.Component {
 
 
   componentWillReceiveProps(nextProps) {
-    if(!this.props.currentBookShelf){
-      this.props.fetchBookShelf();
+    debugger
+    if(!nextProps.currentBookShelf){
+      this.props.fetchBookShelf(nextProps.match.params.bookShelfId);
     }
 
   }
 
 
     render (){
+      debugger
       return(
 
       <div className ='bookShelf'>
@@ -48,11 +51,15 @@ class BookShelf extends React.Component {
                 <li><h2 className='bs-shelves'>shelves</h2></li>
                 <li><h2 className='bs-date-added'>date added</h2></li>
               </ul>
+              {this.props.currentBookShelf.books.length > 0 ?
+                 <h2> books</h2>:
+                 <h2> no books</h2>
+               }
           </div>
          </div>
        </div>
         :
-           null
+           <h2> No bookshelves</h2>
          }
       </div>
     );

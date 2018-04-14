@@ -8,7 +8,7 @@ import {bookshelfShow} from '../reducers/selectors';
 const msp = (state,ownProps) => {
 
   const defaultBookShelf = {};
-  let current_bookShelf = (bookshelfShow(state, ownProps.match.params.bookShelfId) ||  defaultBookShelf);
+  let current_bookShelf = bookshelfShow(state, ownProps.match.params.bookShelfId);
   return({
       currentBookShelf: current_bookShelf
   });
