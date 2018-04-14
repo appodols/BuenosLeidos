@@ -29,7 +29,8 @@
   width: 750px;
   height: 2155px;
   background-color: orange;
-
+  display: flex;
+  flex-direction: row;
 }
 
 .bookShelfContentContainer{
@@ -47,4 +48,59 @@
   width: 960px;
   height: 35px;
   background-color: red;
+}
+
+.bookShelf-header-list{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+
+
+
+.bookShelf-header-list > li > h2{
+      color: #382110;
+      font-weight: bold;
+      text-align: left;
+      font-size: 12px;
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 18px;
+}
+
+
+.bs-cover{
+
+}
+
+
+.bs-title{
+
+
+}
+
+.bs-author{
+
+}
+
+
+.bs-avg-rating{
+
+}
+
+
+.bs-rating{
+
+
+}
+
+.bs-shelves{
+
+
+}
+
+.bs-date-added{
+
 }
