@@ -40,7 +40,17 @@ class BookShelf extends React.Component {
          <header className='bs-header'></header>
          <div className='bookShelfContent'>
            <div className= 'leftColumn'></div>
-           <div className= 'rightColumn'></div>
+           <div className= 'rightColumn'>
+              <ul className="bookShelf-header-list">
+                <li><h2>cover</h2></li>
+                <li><h2>title</h2></li>
+                <li><h2>author</h2></li>
+                <li><h2>avg Rating</h2></li>
+                <li><h2>rating</h2></li>
+                <li><h2>shelves</h2></li>
+                <li><h2>date added</h2></li>
+              </ul>
+          </div>
          </div>
        </div>
         :
@@ -53,3 +63,17 @@ class BookShelf extends React.Component {
 }
 //return<span className='rate-this-book'>{this.state.buttonName}</span>;
 export default BookShelf;
+
+
+
+
+
+
+
+// <li><h2>cover</h2></li>
+// <li><h2>title</h2></li>
+// <li><h2>author</h2></li>
+// <li><h2>avg Rating</h2></li>
+// <li><h2>rating</h2></li>
+// <li><h2>shelves</h2></li>
+// <li><h2>date added</h2></li>
