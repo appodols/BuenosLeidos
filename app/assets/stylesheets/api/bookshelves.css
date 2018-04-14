@@ -64,43 +64,60 @@
 .bookShelf-header-list > li > h2{
       color: #382110;
       font-weight: bold;
-      text-align: left;
+      /* text-align: left; */
       font-size: 12px;
       font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height: 18px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
 }
 
 
 .bs-cover{
-
+  width: 56px;
+  height: 51px;
+  text-align: left;
+  /* font-size: 12px; */
 }
 
 
 .bs-title{
-
-
+  width: 187px;
+  height: 51px;
+  text-align: left;
 }
 
 .bs-author{
-
+  width: 101px;
+  height: 51px;
+  text-align: left;
 }
 
 
 .bs-avg-rating{
-
+  width: 53px;
+  /* height: 32.22px; */
+  height: 51px;
+  text-align: left;
 }
 
 
 .bs-rating{
-
-
+  width: 97px;
+  height: 51px;
+  text-align: left;
 }
 
 .bs-shelves{
-
+  width: 82px;
+  height: 51px;
+  text-align: left;
 
 }
 
 .bs-date-added{
-
+  width: 32.88px;
+  height: 51px;
+  text-align: left;
 }
