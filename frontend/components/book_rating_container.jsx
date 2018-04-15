@@ -5,14 +5,16 @@ import {deleteReview, updateReview, createReview} from '../actions/review_action
 const msp = (state,ownProps) => {
 
   return({
-
+    currentUser: state.session.currentUser,
+    book: ownProps.book,
+    rating: ownProps.book.rating,
+    rating_id: ownProps.book.rating_id
   });
 
 };
 
 const mdp = (dispatch) => {
   return({
-    deleteReview: (id) => dispatch(deleteReview(id)),
     createReview: (review) => dispatch(createReview(review)),
     updateReview: (review) => dispatch(updateReview(review))
   });
