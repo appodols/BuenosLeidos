@@ -13,7 +13,7 @@ const ShelfBook = ({book, name}) => {
             <li><h2 className='bs-avg-rating'>{book.average_rating}</h2></li>
             <li><h2 className='bs-rating'>{book.rating}</h2></li>
             <li><h2 className='bs-shelves'>{name}</h2></li>
-            <li><Date id='bs-date-added'time={book.created_at}></Date></li>
+            <li className='bookshelf-date-container'><Date  styling="bookShelf-date" className='bs-date-added'time={book.created_at}></Date></li>
           </ul>
       );
     };

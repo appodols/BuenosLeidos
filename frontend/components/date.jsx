@@ -17,14 +17,14 @@ const months = {
  "12": "Dec"};
 
 
- const date = ({time}) => {
+ const date = ({time, styling}) => {
 
   let year = time.slice(0,4);
   let month = months[time.slice(5,7)]
   let day = time.slice(8,10);
   let date = `${month} ${day}, ${year}`
    return(
-     <span key={date} id='date-print'>{date}</span>
+     <span className={styling} key={date}>{date}</span>
    );
  }
 

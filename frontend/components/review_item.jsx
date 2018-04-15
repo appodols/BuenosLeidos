@@ -22,7 +22,7 @@ return(
           <Stars rating={review.rating}></Stars>
         </section>
 
-          <Date time={review.created_at}></Date>
+          <Date styling="review-date" time={review.created_at}></Date>
         </div>
         <span className='reviewText'>
           {review.body}

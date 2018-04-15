@@ -93,7 +93,7 @@
 
 
 
-.bookShelf-header-list > li > h2{
+.bookShelf-header-list > li > h2, .bookShelf-header-list > li > date > span {
       color: #382110;
       font-weight: bold;
       /* text-align: left; */
@@ -160,8 +160,39 @@
 
 }
 
-#bs-date-added{
+.bs-date-added{
   width: 32.88px;
   height: 51px;
   text-align: left;
+  color: red;
+}
+
+
+.bs-date-added{
+  width: 90px;
+  height: 51px;
+  text-align: left;
+  color: red;
+}
+
+
+
+
+.bookShelf-date{
+  width: 90px;
+  height: 38px;
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  text-align: left;
+  /* margin-top: 60px; */
+  align-self: flex-end;
+}
+
+
+.bookshelf-date-container{
+  margin-top: 20px;
+  display: flex;
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
