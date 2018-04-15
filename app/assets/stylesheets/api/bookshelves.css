@@ -107,20 +107,46 @@
 
 
 
-.bookShelf-book-list{
-  width: 750px;
-  height: 70px;
+
+.bookShelf-book-list > li {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
 }
 
 
+.bookShelf-book-list{
+  width: 750px;
+  height: 80px;
+}
 
+/* .bookshelf-cover{
+  width: 49px;
+  height: 75px;
+  background-size: cover;
+}
+ */
+
+
+ .bookshelf-cover{
+   width: 56px;
+   /* width: 49px;
+   /*  */
+   height: 80;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-color: yellow;
+ }
 
 
 .bs-cover{
   width: 56px;
   height: 51px;
   text-align: left;
-  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: yellow;
   /* font-size: 12px; */
 }
 
@@ -129,6 +155,8 @@
   width: 187px;
   height: 51px;
   text-align: left;
+  margin-left: 10px;
+  background-color: red;
 }
 
 .bs-author{
@@ -191,15 +219,24 @@
 
 
 .bookshelf-date-container{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   display: flex;
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
+
+.bookShelf-date{
+
+}
+
+
 
 
 .bs-stars{
   width: 100px;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: 16px;
 }
