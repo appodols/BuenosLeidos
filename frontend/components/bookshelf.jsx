@@ -13,8 +13,10 @@ class BookShelf extends React.Component {
 
 
   componentDidMount(){
+    console.log('cdm');
     debugger
     if(!this.props.currentBookShelf){
+      console.log('inside print cdm');
       this.props.fetchBookShelf(this.props.match.params.bookShelfId);
     }
     // this.updateButton(this.props);
@@ -23,8 +25,10 @@ class BookShelf extends React.Component {
 
 
   componentWillReceiveProps(nextProps) {
+    console.log('cwrp');
     debugger
     if(!nextProps.currentBookShelf){
+      console.log('inside print cwrp');
       this.props.fetchBookShelf(nextProps.match.params.bookShelfId);
     }
 
@@ -32,35 +36,41 @@ class BookShelf extends React.Component {
 
 
     render (){
-      debugger
+      console.log('render');
       return(
-
       <div className ='bookShelf'>
         {this.props.currentBookShelf ?
-        <div>
+          <div className = 'bs-wrapper'>
          <header className='bs-header'></header>
-         <div className='bookShelfContent'>
-           <div className= 'leftColumn'></div>
-           <div className= 'rightColumn'>
-              <ul className="bookShelf-header-list">
-                <li><h2 className='bs-cover'>cover</h2></li>
-                <li><h2 className='bs-title'>title</h2></li>
-                <li><h2 className='bs-author'>author</h2></li>
-                <li><h2 className='bs-avg-rating'>avg rating</h2></li>
-                <li><h2 className='bs-rating'>rating</h2></li>
-                <li><h2 className='bs-shelves'>shelves</h2></li>
-                <li><h2 className='bs-date-added'>date added</h2></li>
-              </ul>
-              {this.props.currentBookShelf.books.length > 0 ?
-                 <h2> books</h2>:
-                 <h2> no books</h2>
-               }
-          </div>
-         </div>
-       </div>
+                 <div className='bookShelfContent'>
+                     <div className= 'leftColumn'></div>
+                     <div className= 'rightColumn'>
+                        <ul className="bookShelf-header-list">
+                          <li><h2 className='bs-cover'>cover</h2></li>
+                          <li><h2 className='bs-title'>title</h2></li>
+                          <li><h2 className='bs-author'>author</h2></li>
+                          <li><h2 className='bs-avg-rating'>avg rating</h2></li>
+                          <li><h2 className='bs-rating'>rating</h2></li>
+                          <li><h2 className='bs-shelves'>shelves</h2></li>
+                          <li><h2 className='bs-date-added'>date added</h2></li>
+                        </ul>
+                        {this.props.currentBookShelf.books.length > 0 ?
+                        <div className='shelfBooks'>
+                            {this.props.currentBookShelf.books.map((book,id) => {
+                          return <ShelfBook key={id}book={book}></ShelfBook>;
+                            })};
+                          </div>
+                          :
+                           <h2> no books</h2>}
+                    </div>
+                  </div>
+                </div>
+
         :
            <h2> No bookshelves</h2>
          }
+
+
       </div>
     );
     }

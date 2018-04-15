@@ -10,7 +10,6 @@ class Api::BookshelvesController < ApplicationController
 
   def show
       @bookshelf = Bookshelf.find(params[:id])
-      debugger
       render :show
   end
 
