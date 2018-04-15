@@ -19,7 +19,7 @@ class BookRating extends React.Component {
 
   onStarClick(nextValue, prevValue, name) {
 
-    if(this.state.ratings > 0){
+    if(this.state.rating > 0){
       const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue, id: this.props.rating_id};
       this.props.updateReview(review);
     }

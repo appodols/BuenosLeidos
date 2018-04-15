@@ -3,7 +3,7 @@
  user_review = book.reviews.select{|review| review.user_id == current_user.id}.first
  user_rating, rating_id = 0, 0
  if(user_review)
-   user_rating = user_review.rating
+   user_rating = user_review.rating.round(2)
    rating_id = user_review.id
  end
 
