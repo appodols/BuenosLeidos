@@ -4,6 +4,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
+import ShelfBook from './shelf_book';
 
 class BookShelf extends React.Component {
   constructor(props){
@@ -13,10 +14,10 @@ class BookShelf extends React.Component {
 
 
   componentDidMount(){
-    console.log('cdm');
-    debugger
+    // console.log('cdm');
+    // debugger
     if(!this.props.currentBookShelf){
-      console.log('inside print cdm');
+      // console.log('inside print cdm');
       this.props.fetchBookShelf(this.props.match.params.bookShelfId);
     }
     // this.updateButton(this.props);
@@ -25,10 +26,10 @@ class BookShelf extends React.Component {
 
 
   componentWillReceiveProps(nextProps) {
-    console.log('cwrp');
-    debugger
+    // console.log('cwrp');
+    // debugger
     if(!nextProps.currentBookShelf){
-      console.log('inside print cwrp');
+      // console.log('inside print cwrp');
       this.props.fetchBookShelf(nextProps.match.params.bookShelfId);
     }
 
@@ -36,7 +37,7 @@ class BookShelf extends React.Component {
 
 
     render (){
-      console.log('render');
+      // console.log('render');
       return(
       <div className ='bookShelf'>
         {this.props.currentBookShelf ?
@@ -58,7 +59,7 @@ class BookShelf extends React.Component {
                         <div className='shelfBooks'>
                             {this.props.currentBookShelf.books.map((book,id) => {
                           return <ShelfBook name={this.props.currentBookShelf.name} key={id}book={book}></ShelfBook>;
-                            })};
+                            })}
                           </div>
                           :
                            <h2> no books</h2>}
