@@ -57,7 +57,7 @@ class BookShelf extends React.Component {
                         {this.props.currentBookShelf.books.length > 0 ?
                         <div className='shelfBooks'>
                             {this.props.currentBookShelf.books.map((book,id) => {
-                          return <ShelfBook key={id}book={book}></ShelfBook>;
+                          return <ShelfBook name={this.props.currentBookShelf.name} key={id}book={book}></ShelfBook>;
                             })};
                           </div>
                           :
