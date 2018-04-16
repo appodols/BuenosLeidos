@@ -41,14 +41,18 @@ export const bookshelfShow = (state, id) => {
 };
 
 export const bookShelfName = (state) => {
-    let bookhelves = state.bookshelves;
+    if(!state.bookshelves) return "not found";
+    let bookshelves = Object.values(state.bookshelves);
     let current_book = Object.values(state.books)[0];
-    for(let i= 0; i < bookshelves.length; i++){
-      let bookshelf = bookshelves[i];
-      let books = bookshelf.books;
-      for(i = 0; i < books.length; i++ ){
-        if((book.title === current_book.title) && (book.author === current_book.author)){
-          return bookshelf.name;
+    // console.log(bookshelves.length);
+    if(current_book){
+      for(let i= 0; i < bookshelves.length; i++){
+        let bookshelf = bookshelves[i];
+        let books = Object.values(bookshelf.books);
+        for(let j = 0; j < books.length; j++ ){
+          if(books[j].id === current_book.id){
+            return bookshelf.name;
+          }
         }
       }
     }

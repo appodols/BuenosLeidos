@@ -27,11 +27,12 @@ class Book extends React.Component {
       this.props.fetchBookShelves().then(()=>
         this.props.fetchBook(nextProps.match.params.bookId));
     }
-      //still need to figure out how to set state correctly
+
   }
 
 
     render (){
+      console.log(this.props.bookshelfName);
       return(
         <div className='bookContainer'>
           <div key={this.state.id} className="bookContent">
