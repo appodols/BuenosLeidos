@@ -13,7 +13,8 @@ const msp = (state,ownProps) => {
     book: (state.books[ownProps.match.params.bookId] || defaultBook),
     reviews: Object.values(state.reviews),
     averageRating: averageRating(state),
-    ownReview: ownReview(state)
+    ownReview: ownReview(state),
+    bookshelves: state.bookshelves
   });
 };
 

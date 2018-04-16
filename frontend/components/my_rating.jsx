@@ -69,6 +69,7 @@ class MyRating extends React.Component {
       <div className="rate-this-book-content">
         <span className='rate-this-book'>{this.state.buttonName}</span>
         <StarRatingComponent starCount={5}
+        className='book-show-review-stars'
         name={'book-rating'}
         onStarHover = {this.onStarHover}
         onStarHoverOut={this.onStarHoverOut}

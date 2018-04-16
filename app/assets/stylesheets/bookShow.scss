@@ -1,3 +1,24 @@
+
+
+.book-bs-selector{
+  border-width: 1px;
+  padding: 6px 0 7px 8px;
+  width: 105px;
+  background: #f2f2f2;
+  border-color: #dddddd;
+  color: #181818;
+  line-height: 100%;
+  text-overflow: ellipsis;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-style: solid;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+}
+
+
+
+
 .bookContent{
   display: flex;
   width: 625px;
@@ -28,6 +49,8 @@
   height: 28px;
   width: 142px;
   color: grey;
+  display: flex;
+  justify-content: center;
 }
 
 .rate-this-book, .delete-this-book{
@@ -38,6 +61,7 @@
   color: #999999;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   text-align: center;
+  // background: blue;
 }
 
 .delete-this-book:hover{
@@ -73,6 +97,15 @@ max-height: 260px;
   background-position: 50% 50%;
   background-color: yellow;
 }
+
+.book-show-review-stars{
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  margin-top: -5px;
+}
+
+
 
 
 .title, .submitReview{
@@ -117,7 +150,7 @@ max-height: 260px;
 }
 
 .average-rating-span{
-  margin-top: 3px;
+  // margin-top: 3px;
   margin-left: 3px;
   align-self: center;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;

@@ -39,6 +39,7 @@ class Book extends React.Component {
               </img>
 
               <section className='currentlyReading'>
+                <button className='book-bs-selector'>Want to Read</button>
               </section>
               <div className="myRating">
                 <MyRatingContainer key={this.props.book.id}></MyRatingContainer>
