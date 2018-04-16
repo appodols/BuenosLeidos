@@ -5,24 +5,27 @@ import MyRatingContainer from './my_rating_container';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
+
 class Book extends React.Component {
   constructor(props){
     super(props);
     this.state = this.props.book;
   }
 
+  // this.props.processForm(this.state).then(()=>this.props.fetchBookShelves()).
+  // then(() => this.props.history.push(`/books/show/1`));
+
 
   componentDidMount(){
-
-    this.props.fetchBook(this.props.match.params.bookId);
-
-
+    this.props.fetchBookShelves().then(()=>
+      this.props.fetchBook(this.props.match.params.bookId));
   }
 
   componentWillReceiveProps(nextProps) {
       this.setState(nextProps.book);
     if (this.props.book.id != nextProps.book.id){
-      this.props.fetchBook(nextProps.match.params.bookId);
+      this.props.fetchBookShelves().then(()=>
+        this.props.fetchBook(nextProps.match.params.bookId));
     }
       //still need to figure out how to set state correctly
   }

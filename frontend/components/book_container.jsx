@@ -4,6 +4,7 @@ import Book from './book';
 import {fetchBook} from '../actions/book_actions';
 import {fetchReviews} from '../actions/review_actions';
 import {averageRating, ownReview } from '../reducers/selectors.js';
+import {fetchBookShelves } from '../actions/bookshelf_actions';
 
 
 const msp = (state,ownProps) => {
@@ -22,7 +23,8 @@ const msp = (state,ownProps) => {
 const mdp = (dispatch) => {
   return({
     fetchBook: (id) => dispatch(fetchBook(id)),
-    fetchReviews: (bookId) => dispatch(fetchReviews(bookId))
+    fetchReviews: (bookId) => dispatch(fetchReviews(bookId)),
+    fetchBookShelves: () => dispatch(fetchBookShelves())
   });
 };
 
