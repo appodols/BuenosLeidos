@@ -40,21 +40,48 @@ export const bookshelfShow = (state, id) => {
   return bookshelves[id];
 };
 
-export const bookShelfName = (state) => {
-    if(!state.bookshelves) return "not found";
+// export const bookShelfName = (state) => {
+//     if(!state.bookshelves) return "not found";
+//     let bookshelves = Object.values(state.bookshelves);
+//     let current_book = Object.values(state.books)[0];
+//     // console.log(bookshelves.length);
+//     if(current_book){
+//       for(let i= 0; i < bookshelves.length; i++){
+//         let bookshelf = bookshelves[i];
+//         let books = Object.values(bookshelf.books);
+//         for(let j = 0; j < books.length; j++ ){
+//           if(books[j].id === current_book.id){
+//             return bookshelf.name;
+//           }
+//         }
+//       }
+//     }
+//   return "not found";
+// };
+
+export const bookShelfInfo = (state) => {
+    let first_return = [['Read',0,false],['Want To Read',0, false],['Currently Reading',0,false]];
+    if(!state.bookshelves) return first_return;
+    let second_return = [];
     let bookshelves = Object.values(state.bookshelves);
+    // bookShelves.forEach((bookshelf)=>{
+    //   second_return.push([bookshelf.name, bookshelf.id,false]);
+    // });
+
+
     let current_book = Object.values(state.books)[0];
-    // console.log(bookshelves.length);
     if(current_book){
       for(let i= 0; i < bookshelves.length; i++){
         let bookshelf = bookshelves[i];
+        let to_add = [bookshelf.name, bookshelf.id, false];
         let books = Object.values(bookshelf.books);
         for(let j = 0; j < books.length; j++ ){
           if(books[j].id === current_book.id){
-            return bookshelf.name;
+            to_add[2] = true;
           }
         }
+        second_return.push(to_add);
       }
     }
-  return "not found";
+  return second_return;
 };
