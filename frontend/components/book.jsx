@@ -4,6 +4,7 @@ import ReviewsContainer from './reviews_container';
 import MyRatingContainer from './my_rating_container';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
+import AddtoBookShelfContainer from './add_to_bookshelf_container';
 
 
 class Book extends React.Component {
@@ -12,8 +13,6 @@ class Book extends React.Component {
     this.state = this.props.book;
   }
 
-  // this.props.processForm(this.state).then(()=>this.props.fetchBookShelves()).
-  // then(() => this.props.history.push(`/books/show/1`));
 
 
   componentDidMount(){
@@ -42,7 +41,7 @@ class Book extends React.Component {
               </img>
 
               <section className='currentlyReading'>
-                <button className='book-bs-selector'>Want to Read</button>
+                <AddtoBookShelfContainer></AddtoBookShelfContainer>
               </section>
               <div className="myRating">
                 <MyRatingContainer key={this.props.book.id}></MyRatingContainer>
@@ -146,3 +145,5 @@ export default Book;
 //     <Link to={`/books/${this.props.book.id}/review`} className="submitReview">Add Review</Link>
 //    }
 // </div>
+
+ // <button className='book-bs-selector'>Want to Read</button>

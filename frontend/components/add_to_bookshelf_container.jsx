@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import addtoBookShelf from './add_to_bookshelf';
 import {createBookShelfOwnership, removeBookShelfOwnership} from '../actions/bookshelf_ownership_actions';
-import {bookShelfInfo} from '../reducers/selector';
+import {bookShelfInfo } from '../reducers/selectors';
 
 const msp = (state,ownProps) => {
 
@@ -14,8 +14,8 @@ const msp = (state,ownProps) => {
 
 const mdp = (dispatch) => {
   return({
-    createReview: (ownership) => dispatch(createBookShelfOwnership(ownership)),
-    updateReview: (id) => dispatch(removeBookShelfOwnership(id))
+    createBookShelfOwnership: (ownership) => dispatch(createBookShelfOwnership(ownership)),
+    removeBookShelfOwnership: (id) => dispatch(removeBookShelfOwnership(id))
   });
 };
 

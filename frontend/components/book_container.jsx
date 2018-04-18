@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Book from './book';
 import {fetchBook} from '../actions/book_actions';
 import {fetchReviews} from '../actions/review_actions';
-import {averageRating, ownReview, bookShelfName, bookShelfInfo } from '../reducers/selectors.js';
+import {averageRating, ownReview } from '../reducers/selectors.js';
 import {fetchBookShelves } from '../actions/bookshelf_actions';
 
 
@@ -15,8 +15,7 @@ const msp = (state,ownProps) => {
     reviews: Object.values(state.reviews),
     averageRating: averageRating(state),
     ownReview: ownReview(state),
-    bookshelves: state.bookshelves,
-    bookShelfInfo: bookShelfInfo(state)
+    bookshelves: state.bookshelves
   });
 };
 

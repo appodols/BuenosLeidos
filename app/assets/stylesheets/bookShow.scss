@@ -3,7 +3,8 @@
 .book-bs-selector{
   border-width: 1px;
   padding: 6px 0 7px 8px;
-  width: 105px;
+  width: 130px;
+  margin-left: 15px;
   background: #f2f2f2;
   border-color: #dddddd;
   color: #181818;
@@ -235,4 +236,12 @@ max-height: 260px;
 
 .submitReview:hover{
   text-decoration: underline;
+}
+
+
+
+.add-shelves-modal{
+  background-color: blue;
+  height: 150px;
+  width: 300px;
 }
