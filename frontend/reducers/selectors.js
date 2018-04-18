@@ -67,11 +67,11 @@ export const bookShelfInfo = (state) => {
     if(current_book){
       for(let i= 0; i < bookshelves.length; i++){
         let bookshelf = bookshelves[i];
-        let to_add = [bookshelf.name, bookshelf.id, false];
+        let to_add = [bookshelf.name, bookshelf.id, 'Add'];
         let books = Object.values(bookshelf.books);
         for(let j = 0; j < books.length; j++ ){
           if(books[j].id === current_book.id){
-            to_add[2] = true;
+            to_add[2] = 'Delete';
             break;
           }
         }

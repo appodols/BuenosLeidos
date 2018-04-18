@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React from 'react';
+import AddBookShelfItem  from './add_bookshelf_item';
 
 
 class addtoBookShelf extends React.Component {
@@ -27,6 +28,9 @@ class addtoBookShelf extends React.Component {
           <div>
               <button onClick={this.toggle} className='book-bs-selector'>Add to Bookshelf</button>
               <div className= 'add-shelves-modal'>
+                {this.props.bookShelfInfo.map((el) => {
+                return <AddBookShelfItem name={el[0]} id={el[1]} button={el[2]}></AddBookShelfItem>;
+                })}
               </div>
           </div>
       );

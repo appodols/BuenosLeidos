@@ -1,21 +1,7 @@
 
 
-.book-bs-selector{
-  border-width: 1px;
-  padding: 6px 0 7px 8px;
-  width: 130px;
-  margin-left: 15px;
-  background: #f2f2f2;
-  border-color: #dddddd;
-  color: #181818;
-  line-height: 100%;
-  text-overflow: ellipsis;
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
-  border-style: solid;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: block;
-}
+
+
 
 
 
@@ -242,6 +228,9 @@ max-height: 260px;
 
 .add-shelves-modal{
   background-color: blue;
-  height: 150px;
-  width: 300px;
+  max-height: 200px;
+  width: 140px;
+  margin-left: 15px;
+  position: relative;
+  z-index: 100;
 }
