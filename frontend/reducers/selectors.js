@@ -10,7 +10,6 @@ export const averageRating = (state) => {
 return average_rating;
 };
 
-
 export const currentUserReviewId = (state) => {
   let currentUser = state.session.currentUser;
    const userReviewId =  Object.values(state.reviews).filter(review=>{
@@ -61,14 +60,9 @@ export const bookshelfShow = (state, id) => {
 
 export const bookShelfInfo = (state) => {
     let first_return = [['Read',0,false],['Want To Read',0, false],['Currently Reading',0,false]];
-    if(!state.bookshelves) return first_return;
+    if((!state.bookshelves) || Object.values(state.bookshelves).length == 0) return first_return;
     let second_return = [];
     let bookshelves = Object.values(state.bookshelves);
-    // bookShelves.forEach((bookshelf)=>{
-    //   second_return.push([bookshelf.name, bookshelf.id,false]);
-    // });
-
-
     let current_book = Object.values(state.books)[0];
     if(current_book){
       for(let i= 0; i < bookshelves.length; i++){
@@ -78,10 +72,12 @@ export const bookShelfInfo = (state) => {
         for(let j = 0; j < books.length; j++ ){
           if(books[j].id === current_book.id){
             to_add[2] = true;
+            break;
           }
         }
         second_return.push(to_add);
       }
     }
+  debugger
   return second_return;
 };

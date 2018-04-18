@@ -32,7 +32,6 @@ class Book extends React.Component {
 
 
     render (){
-      console.log(this.props.bookshelfName);
       return(
         <div className='bookContainer'>
           <div key={this.state.id} className="bookContent">
