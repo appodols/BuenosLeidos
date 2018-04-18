@@ -7,7 +7,8 @@ import {bookShelfInfo } from '../reducers/selectors';
 const msp = (state,ownProps) => {
 
   return({
-    bookShelfInfo: bookShelfInfo(state)
+    bookShelfInfo: bookShelfInfo(state),
+    book: ownProps.book
   });
 
 };

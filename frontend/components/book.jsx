@@ -41,7 +41,7 @@ class Book extends React.Component {
               </img>
 
               <section className='currentlyReading'>
-                <AddtoBookShelfContainer></AddtoBookShelfContainer>
+                <AddtoBookShelfContainer book={this.props.book}></AddtoBookShelfContainer>
               </section>
               <div className="myRating">
                 <MyRatingContainer key={this.props.book.id}></MyRatingContainer>

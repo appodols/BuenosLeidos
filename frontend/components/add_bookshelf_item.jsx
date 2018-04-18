@@ -8,6 +8,18 @@ class AddBookShelfItem extends React.Component {
   }
 
 
+  onClick(e){
+    if(this.props.name === 'delete'){
+      let bookOwnership = [this.props.book.id, this.props.id];
+      this.props.createBookShelfOwnership(bookOwnership);
+    } else {
+       this.props.removeBookShelfOwnership(this.props.id);
+    }
+  }
+
+
+
+
 render(){
   return(
       <div className = 'AddBookShelfItem'>
