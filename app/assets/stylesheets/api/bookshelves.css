@@ -68,9 +68,9 @@
   flex-direction: row;
 }
 
-/* .bookShelf-book-list{
-
-} */
+.bookShelf-book-list{
+  background-color: blue;
+}
 
 .shelfBooks{
   display: flex;
@@ -82,7 +82,7 @@
 .bookShelf-book-list > li > h2 {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   color: #382110;
   font-weight: bold;
   font-size: 12px;
@@ -102,22 +102,22 @@
       line-height: 18px;
       display: flex;
       justify-content: flex-start;
-      align-items: flex-end;
+      /* align-items: flex-end; */
 }
 
 
 
 
 .bookShelf-book-list > li {
-  height: 80px;
+  height: 100%;
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
 }
 
 
 .bookShelf-book-list{
   width: 750px;
-  height: 80px;
+  max-height: 80px;
 }
 
 /* .bookshelf-cover{
@@ -132,7 +132,7 @@
    width: 56px;
    /* width: 49px;
    /*  */
-   height: 80;
+   height: 80px;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 50% 50%;
@@ -153,7 +153,7 @@
 
 .bs-title{
   width: 187px;
-  height: 51px;
+  height: 80px;
   text-align: left;
   margin-left: 10px;
   background-color: red;
@@ -161,30 +161,39 @@
 
 .bs-author{
   width: 101px;
-  height: 51px;
+  height: 80px;
   text-align: left;
   margin-left: 10px;
+  background-color: red;
 }
 
 
 .bs-avg-rating{
   width: 70px;
   /* height: 32.22px; */
-  height: 51px;
+  height: 80px;
   text-align: left;
+  background-color: red;
 }
 
 
 .bs-rating{
   width: 100px;
-  height: 51px;
+  height: 80px;
   text-align: left;
+  background-color: red;
+  /* background-color: red; */
+  /* margin-bottom: 10px; */
 }
+
+
+
 
 .bs-shelves{
   width: 82px;
-  height: 51px;
+  height: 80px;
   text-align: left;
+  background-color: red;
 
 }
 
@@ -208,13 +217,14 @@
 
 .bookShelf-date{
   width: 90px;
-  height: 38px;
+  height: 80px;
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 18px;
   text-align: left;
   /* margin-top: 60px; */
-  align-self: flex-end;
+  /* align-self: flex-end; */
+  background-color: red;
 }
 
 
@@ -223,11 +233,24 @@
   display: flex;
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 51px;
 
 }
 
+
+.bookshelf-date-container > li {
+  height: 51px;
+}
+
+
+
 .bookShelf-date{
 
+}
+
+.bs-star{
+  height: 80px;
+  background-color: green;
 }
 
 
@@ -235,8 +258,9 @@
 
 .bs-stars{
   width: 100px;
+  height: 80px;
   display: flex;
+  /* background-color: green; */
   justify-content: flex-start;
-  align-items: flex-end;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }

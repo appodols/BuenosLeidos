@@ -50,6 +50,7 @@ class BookRating extends React.Component {
       return(
       <div className="rate-this-book-content">
         <StarRatingComponent starCount={5}
+        className={this.props.styling}
         name={'book-rating'}
         onStarHover = {this.onStarHover}
         onStarHoverOut={this.onStarHoverOut}
