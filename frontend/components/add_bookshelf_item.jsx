@@ -4,11 +4,12 @@ import React from 'react';
 class AddBookShelfItem extends React.Component {
   constructor(props){
     super(props);
-
+    this.onClick = this.onClick.bind(this);
   }
 
 
   onClick(e){
+    debugger
     if(this.props.name === 'delete'){
       let bookOwnership = [this.props.book.id, this.props.id];
       this.props.createBookShelfOwnership(bookOwnership);
@@ -19,12 +20,11 @@ class AddBookShelfItem extends React.Component {
 
 
 
-
 render(){
   return(
-      <div className = 'AddBookShelfItem'>
+      <div key ={this.props.book.id} className = 'AddBookShelfItem'>
         <span className= 'selector-shelf-name'>{this.props.name}</span>
-        <span className='selector-shelf-action'>{this.props.button}</span>
+      <span onClick={this.onClick} className='selector-shelf-action'>{this.props.button}</span>
       </div>
     );
   }
