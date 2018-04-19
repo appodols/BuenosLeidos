@@ -3,14 +3,15 @@ export const createBookShelfOwnership = bookShelfOwnership => {
   return $.ajax({
     method: 'POST',
     url: '/api/bookshelf_ownerships',
-    data: {bookShelfOwnership: bookShelf}
+    data: {bookShelfOwnership: bookShelfOwnership}
   });
 };
 
 
-export const deleteBookshelfOwnership = id => {
+export const deleteBookshelfOwnership = bookShelfOwnership => {
   return $.ajax({
     method: 'DELETE',
-    url: `/api/bookshelf_ownerships/${id}`
+    url: `/api/bookshelf_ownerships/${bookShelfOwnership.book_id}`,
+    data: {bookShelfOwnership: bookShelfOwnership}
   });
 };

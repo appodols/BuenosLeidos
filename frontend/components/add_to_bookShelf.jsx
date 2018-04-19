@@ -28,8 +28,8 @@ class addtoBookShelf extends React.Component {
           <div>
               <button onClick={this.toggle} className='book-bs-selector'>Add to Bookshelf</button>
               <div className= 'add-shelves-modal'>
-                {this.props.bookShelfInfo.map((el) => {
-                return <AddBookShelfItemContainer book={this.props.book} name={el[0]} id={el[1]} button={el[2]}></AddBookShelfItemContainer>;
+                {this.props.bookShelfInfo.map((el, idx) => {
+                return <AddBookShelfItemContainer key={idx} book={this.props.book} name={el[0]} id={el[1]} button={el[2]}></AddBookShelfItemContainer>;
                 })}
               </div>
           </div>

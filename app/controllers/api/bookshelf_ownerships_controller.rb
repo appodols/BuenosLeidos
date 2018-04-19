@@ -2,10 +2,11 @@ class Api::BookshelfOwnershipsController < ApplicationController
 
 
   def create
-    @bookshelfOwnership = BookshelfOwnership.new(bookshelf_params)
+    @bookshelfOwnership = BookshelfOwnership.new(bookshelf_ownership_params)
     if @bookshelfOwnership.save
-        @bookshelf = Bookshelf.where(id: @bookshelfOwnership.book_id)
-      render template: '/api/bookshelves/show'
+        @bookshelf = Bookshelf.where(id: @bookshelfOwnership.bookshelf_id)
+        debugger
+        render template: '/api/bookshelves/show'
     else
       render json @bookshelfOwnership.errors.full_messages, status: 422
     end
@@ -13,9 +14,12 @@ class Api::BookshelfOwnershipsController < ApplicationController
   end
 
   def destroy
-    @bookshelfOwnership = BookshelfOwnership.find(params[:id])
-    @bookshelfOwnership.destroy
-    @bookshelf = Bookshelf.where(id: @bookshelfOwnership.book_id)
+    book_id = bookshelf_ownership_params[:book_id]
+    bookshelf_id = bookshelf_ownership_params[:bookshelf_id]
+    @bookshelfOwnership = BookshelfOwnership.where("book_id = ? AND bookshelf_id = ?", book_id, bookshelf_id).first
+    @bookshelfOwnership.destroy!
+    @bookshelf = Bookshelf.where(id: bookshelf_id).first
+    debugger
     render template: '/api/bookshelves/show'
   end
 
@@ -23,7 +27,6 @@ class Api::BookshelfOwnershipsController < ApplicationController
   def bookshelf_ownership_params
     params.require(:bookShelfOwnership).permit(:book_id, :bookshelf_id)
   end
-
 
 
 
