@@ -47,13 +47,13 @@ class BookShelf extends React.Component {
                      <div className= 'leftColumn'></div>
                      <div className= 'rightColumn'>
                         <ul className="bookShelf-header-list">
-                          <li><h2 className='bs-cover'>cover</h2></li>
-                          <li><h2 className='bs-title'>title</h2></li>
-                          <li><h2 className='bs-author'>author</h2></li>
-                          <li><h2 className='bs-avg-rating'>avg rating</h2></li>
-                          <li><h2 className='bs-rating'>rating</h2></li>
-                          <li><h2 className='bs-shelves'>shelves</h2></li>
-                          <li><h2 className='bs-date-added'>date added</h2></li>
+                          <li><h2 className='bsh-cover'>cover</h2></li>
+                          <li><h2 className='bsh-title'>title</h2></li>
+                          <li><h2 className='bsh-author'>author</h2></li>
+                          <li><h2 className='bsh-avg-rating'>avg rating</h2></li>
+                          <li><h2 className='bsh-rating'>rating</h2></li>
+                          <li><h2 className='bsh-shelves'>shelves</h2></li>
+                          <li><h2 className='bsh-date-added'>date added</h2></li>
                         </ul>
                         {this.props.currentBookShelf.books.length > 0 ?
                         <div className='shelfBooks'>

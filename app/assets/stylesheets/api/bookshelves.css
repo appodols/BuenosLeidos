@@ -17,10 +17,6 @@
 
 
 
-
-
-
-
 .bookShelfContent{
   display: flex;
   width: 960px;
@@ -52,7 +48,7 @@
   align-items: flex-start;
   /*height: 1100px;
   width: 500px;*/
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 
@@ -69,7 +65,7 @@
 }
 
 .bookShelf-book-list{
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .shelfBooks{
@@ -102,7 +98,7 @@
       line-height: 18px;
       display: flex;
       justify-content: flex-start;
-      /* align-items: flex-end; */
+      align-items: center;
 }
 
 
@@ -111,7 +107,7 @@
 .bookShelf-book-list > li {
   height: 100%;
   display: flex;
-  /* align-items: flex-end; */
+  align-items: flex-end;
 }
 
 
@@ -136,7 +132,7 @@
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 50% 50%;
-   background-color: yellow;
+   /* background-color: yellow; */
  }
 
 
@@ -146,7 +142,7 @@
   text-align: left;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-color: yellow;
+  /* background-color: yellow; */
   /* font-size: 12px; */
 }
 
@@ -156,7 +152,7 @@
   height: 80px;
   text-align: left;
   margin-left: 10px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .bs-author{
@@ -164,7 +160,7 @@
   height: 80px;
   text-align: left;
   margin-left: 10px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 
@@ -173,7 +169,7 @@
   /* height: 32.22px; */
   height: 80px;
   text-align: left;
-  background-color: red;
+  /* background-color: blue; */
 }
 
 
@@ -181,8 +177,6 @@
   width: 100px;
   height: 80px;
   text-align: left;
-  background-color: red;
-  /* background-color: red; */
   /* margin-bottom: 10px; */
 }
 
@@ -193,7 +187,7 @@
   width: 82px;
   height: 80px;
   text-align: left;
-  background-color: red;
+  /* background-color: red; */
 
 }
 
@@ -224,7 +218,7 @@
   text-align: left;
   /* margin-top: 60px; */
   /* align-self: flex-end; */
-  background-color: red;
+  /* background-color: red; */
 }
 
 
@@ -233,7 +227,7 @@
   display: flex;
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  height: 51px;
+  /* height: 51px; */
 
 }
 
@@ -245,12 +239,19 @@
 
 
 .bookShelf-date{
-
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  font-weight: bold;
+  /* background-color: yellow; */
 }
 
 .bs-star{
   height: 80px;
-  background-color: green;
+  /* background-color: green; */
+  display: flex;
+  align-items: flex-end;
+  margin-top: -5px;
 }
 
 
