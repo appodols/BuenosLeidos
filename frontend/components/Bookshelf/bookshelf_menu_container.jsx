@@ -4,11 +4,14 @@ import {bookshelfMenu} from './bookshelf_menu';
 import { bookShelfMenuInfo } from '../../reducers/selectors';
 
 
-
 const msp = (state,ownProps) => {
-  debugger
+
+  // bookShelfMenuInfo(state)[0];
+  // let bookShelves =  bookShelfMenuInfo.slice(1);
+
   return({
-    bookShelfMenuInfo: bookShelfMenuInfo(state)
+    allBookShelves: bookShelfMenuInfo(state)[0],
+    bookshelves: bookShelfMenuInfo(state).slice(1)
   });
 };
 

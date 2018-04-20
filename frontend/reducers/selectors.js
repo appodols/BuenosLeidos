@@ -86,10 +86,8 @@ export const bookShelfMenuInfo = (state) => {
   let bookshelves = Object.values(state.bookshelves);
   bookshelves.forEach((bookshelf)=>{
     let bookshelfLength = bookshelf.books.length;
-    debugger
     to_return.push([bookshelf.name, bookshelf.id, bookshelfLength]);
     to_return[0][2] += bookshelfLength;
   });
-  debugger
   return to_return;
 };

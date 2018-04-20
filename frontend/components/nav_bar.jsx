@@ -8,6 +8,19 @@ class NavBar extends React.Component {
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchBookShelves().then(()=>
+      {});
+  }
+
+  componentWillReceiveProps(){
+    this.props.fetchBookShelves().then(()=>
+      {});
+  }
+      //temp but not great
+    //questions will this work in time-- do we need any type of async action to ensure this works?
+
+
   render(){
     return (<header className="header">
           <nav className="header-nav">
@@ -20,7 +33,6 @@ class NavBar extends React.Component {
            </ul>
            <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
          </section>
-
          </nav>
          </header>
        );
