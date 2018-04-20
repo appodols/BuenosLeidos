@@ -14,6 +14,7 @@ class BookRating extends React.Component {
 
 
   componentDidMount(){
+  
     // this.updateButton(this.props);
   }
 
@@ -21,18 +22,19 @@ class BookRating extends React.Component {
 
     if(this.state.initialRating > 0){
       const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue, id: this.props.rating_id};
-      this.props.updateReview(review);
+      this.props.updateReview(review).then(()=>{this.setState({rating: nextValue, initialRating: nextValue});});
     }
     else {
       const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue};
-      this.props.createReview(review);
+        this.setState({rating: nextValue});
+      this.props.createReview(review).then(()=>{this.setState({rating: nextValue, initialRating: nextValue});});
     }
   }
 
 
 
   componentWillReceiveProps(nextProps) {
-      // this.updateButton(nextProps);
+
   }
 
 
