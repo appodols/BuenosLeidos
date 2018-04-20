@@ -14,9 +14,9 @@ export const createBookShelfOwnership = (bookShelfOwnership) => dispatch => (
 );
 
 export const removeBookShelfOwnership = (id) => dispatch => (
-  ApiUtils.deleteBookshelfOwnership(id).then(bookShelf=>(
-    dispatch(receiveBookShelf(bookShelf))
-  ), error => (
+  ApiUtils.deleteBookshelfOwnership(id).then(bookShelf=>{
+    return(dispatch(receiveBookShelf(bookShelf)));
+  }, error => (
     dispatch(receiveError(error.responseJSON))
   ))
 );

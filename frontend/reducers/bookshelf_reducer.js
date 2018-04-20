@@ -8,7 +8,14 @@ export const bookShelfReducer = (state = {} ,action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_BOOKSHELF:
-      return merge({}, state, {[action.bookshelf.id]: action.bookshelf});
+    //you need to delete first
+    let newState_ = [];
+      if(state[action.bookshelf.id]){
+         newState_ = merge({},state);
+        delete newState_[action.bookshelf.id];
+      }
+
+      return merge({}, newState_, {[action.bookshelf.id]: action.bookshelf});
     case RECEIVE_BOOKSHELVES:
       return merge({}, action.bookshelves);
     case REMOVE_BOOKSHELF:
