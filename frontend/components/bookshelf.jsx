@@ -5,6 +5,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 import ShelfBook from './shelf_book';
+import BookShelfMenuContainer from './Bookshelf/bookshelf_menu_container';
 
 class BookShelf extends React.Component {
   constructor(props){
@@ -44,7 +45,9 @@ class BookShelf extends React.Component {
           <div className = 'bs-wrapper'>
          <header className='bs-header'></header>
                  <div className='bookShelfContent'>
-                     <div className= 'leftColumn'></div>
+                     <div className= 'leftColumn'>
+                       <BookShelfMenuContainer></BookShelfMenuContainer>
+                     </div>
                      <div className= 'rightColumn'>
                         <ul className="bookShelf-header-list">
                           <li><h2 className='bsh-cover'>cover</h2></li>

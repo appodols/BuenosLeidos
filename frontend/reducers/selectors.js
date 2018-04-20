@@ -80,3 +80,13 @@ export const bookShelfInfo = (state) => {
     }
   return second_return;
 };
+
+export const bookShelfMenuInfo = (state) => {
+  let to_return = [['All', null, 0]];
+  state.bookshelves.forEach((bookshelf)=>{
+    bookshelfLength = bookshelf.books.length;
+    to_return.push([bookshelf.name, bookshelf.id, bookshelfLength]);
+    to_return[0][2] += bookshelfLength;
+  });
+  return to_return;
+};
