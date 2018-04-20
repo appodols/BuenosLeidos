@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import NavBar from './nav_bar';
 import React from 'react';
 import {logout} from '../actions/session_actions';
+import {fetchBookShelves} from '../actions/bookshelf_actions';
 
 
 const msp = (state) => {
@@ -12,9 +13,9 @@ const msp = (state) => {
 
 };
 const mdp = (dispatch) => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  fetchBookShelves: () => dispatch(fetchBookShelves())
 });
-
 
 export default connect(msp, mdp)(NavBar);
 

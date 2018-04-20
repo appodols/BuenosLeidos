@@ -6,7 +6,7 @@ import { bookShelfMenuInfo } from '../../reducers/selectors';
 
 
 const msp = (state,ownProps) => {
-
+  debugger
   return({
     bookShelfMenuInfo: bookShelfMenuInfo(state)
   });

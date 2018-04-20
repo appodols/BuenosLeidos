@@ -3,26 +3,49 @@ import React from 'react';
 // import SessionForm from './session_form';
 // import LoginFormContainer from './login_form_container';
 // import LandingPageSignupContainer from './landing_page_signup_container';
+class NavBar extends React.Component {
+  constructor(props){
+    super(props);
+  }
 
-
-const NavBar = ({currentUser, logout}) => {
+  render(){
     return (<header className="header">
-      <nav className="header-nav">
-        <section className="logo"> </section>
+          <nav className="header-nav">
+             <section className="logo"> </section>
+            <section className ='header-list'>
 
-      <section className ='header-list'>
+            <ul className="left-header">
+              <li><a href="#">Home</a></li>
+            <li><a href="#">My Books</a></li>
+           </ul>
+           <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
+         </section>
 
-        <ul className="left-header">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">My Books</a></li>
-        </ul>
+         </nav>
+         </header>
+       );
+     }
 
-        <span onClick={logout} className= 'Sign-Out'> Sign Out</span>
-      </section>
+}
 
-
-      </nav>
-    </header>
-  );
-};
+// const NavBar = ({currentUser, logout}) => {
+//     return (<header className="header">
+//       <nav className="header-nav">
+//         <section className="logo"> </section>
+//
+//       <section className ='header-list'>
+//
+//         <ul className="left-header">
+//           <li><a href="#">Home</a></li>
+//           <li><a href="#">My Books</a></li>
+//         </ul>
+//
+//         <span onClick={logout} className= 'Sign-Out'> Sign Out</span>
+//       </section>
+//
+//
+//       </nav>
+//     </header>
+//   );
+// };
 export default NavBar;

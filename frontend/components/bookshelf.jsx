@@ -30,7 +30,7 @@ class BookShelf extends React.Component {
     // console.log('cwrp');
     // debugger
     if(!nextProps.currentBookShelf){
-      // console.log('inside print cwrp');
+;
       this.props.fetchBookShelf(nextProps.match.params.bookShelfId);
     }
 
