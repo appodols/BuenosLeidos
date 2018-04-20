@@ -2,12 +2,14 @@
   min-width: 130px;
   display: flex;
   flex-direction: row;
+  font-size: 14px;
 }
 
 
 .selector-shelf-name{
-  width: 100px;
+  width: 80px;
   border-right: 1px solid black;
+  margin-left: 4px;
 }
 
 

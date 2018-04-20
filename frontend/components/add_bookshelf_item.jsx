@@ -23,7 +23,7 @@ render(){
   return(
       <div className = 'AddBookShelfItem'>
         <span className= 'selector-shelf-name'>{this.props.name}</span>
-      <span onClick={this.onClick} className='selector-shelf-action'>{this.props.button}</span>
+        <span onClick={this.onClick} className='selector-shelf-action'>{this.props.button}</span>
       </div>
     );
   }
