@@ -6,7 +6,7 @@ import StarRatingComponent from 'react-star-rating-component';
 class BookRating extends React.Component {
   constructor(props){
     super(props);
-    this.state = {rating: this.props.rating};
+    this.state = {rating: this.props.rating, initialRating: this.props.rating};
     this.onStarClick = this.onStarClick.bind(this);
     this.onStarHover = this.onStarHover.bind(this);
     this.onStarHoverOut = this.onStarHoverOut.bind(this);
@@ -19,7 +19,7 @@ class BookRating extends React.Component {
 
   onStarClick(nextValue, prevValue, name) {
 
-    if(this.state.rating > 0){
+    if(this.state.initialRating > 0){
       const review = {user_id: this.props.currentUser.id, book_id: this.props.book.id, rating: nextValue, id: this.props.rating_id};
       this.props.updateReview(review);
     }

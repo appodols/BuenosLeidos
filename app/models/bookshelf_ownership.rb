@@ -5,12 +5,14 @@ class BookshelfOwnership < ApplicationRecord
   belongs_to :book,
   foreign_key: :book_id,
   primary_key: :id,
-  class_name: :Book
+  class_name: :Book,
+  required: false
 
   belongs_to :bookshelf,
   foreign_key: :bookshelf_id,
   primary_key: :id,
-  class_name: :Bookshelf
+  class_name: :Bookshelf,
+  required: false
 
 
 

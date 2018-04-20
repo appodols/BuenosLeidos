@@ -43,15 +43,15 @@ book_list.each do |title, author, image_url, description|
   description: description, average_rating: 0)
 end
 
+ownership_list = []
+ownership_list << [2,10]
+ownership_list << [1,10]
+ownership_list << [3,10]
+ownership_list << [4,10]
+# # ownership_list << [3,10]
 
-
-# ownership_list = []
-# ownership_list << [2,10]
-# ownership_list << [1,10]
-# ownership_list << [1,11]
-# ownership_list << [2,12]
-# ownership_list << [3,15]
+ownership_list.each do |book_id, bookshelf_id|
+  BookshelfOwnership.create(book_id: book_id, bookshelf_id: bookshelf_id)
+end
 #
-# ownership_list.each do |book_id, bookshelf_id|
-#   BookshelfOwnership.create(book_id: book_id, bookshelf_id: bookshelf_id)
-# end
+# BookshelfOwnership.create(book_id: 2, bookshelf_id: 10)
