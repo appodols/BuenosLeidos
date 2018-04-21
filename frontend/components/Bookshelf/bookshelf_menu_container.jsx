@@ -18,7 +18,7 @@ const msp = (state,ownProps) => {
 
 const mdp = (dispatch) => {
   return({
-    createBookShelf: (shelf) => dispatch(createBookShelf())
+    createBookShelf: (shelf) => dispatch(createBookShelf(shelf))
   });
 };
 

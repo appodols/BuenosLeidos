@@ -1,5 +1,6 @@
 class Bookshelf < ApplicationRecord
-  validates :user_id, :name, :default, presence: true
+  validates :user_id, :name, presence: true
+  validates :default, inclusion: { in: [ true, false ] }
 
 
 

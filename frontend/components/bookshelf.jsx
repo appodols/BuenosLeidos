@@ -15,7 +15,6 @@ class BookShelf extends React.Component {
 
   componentDidMount(){
     // console.log('cdm');
-    // debugger
     if(!this.props.currentBookShelf){
       // console.log('inside print cdm');
       this.props.fetchBookShelf(this.props.match.params.bookShelfId);

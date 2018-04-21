@@ -18,10 +18,12 @@ class Api::BookshelvesController < ApplicationController
 
   def create
     @bookshelf = Bookshelf.new(bookshelf_params)
+    debugger
     if @bookshelf.save
+      debugger
       render template: '/api/bookshelves/show'
     else
-      render json @bookshelf.errors.full_messages, status: 422
+      render json: @bookshelf.errors.full_messages, status: 422
     end
 
   end
