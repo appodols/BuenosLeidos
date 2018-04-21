@@ -1,4 +1,6 @@
+
 /*jshint esversion: 6 */
+import React from 'react';
 import { connect } from 'react-redux';
 import BookRating from './book_rating';
 import {deleteReview, updateReview, createReview} from '../actions/review_actions';
