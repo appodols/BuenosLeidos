@@ -17,7 +17,8 @@ class bookshelfMenu extends React.Component{
 
 
   submit(){
-
+    let bookshelf = {user_id: this.props.currentUserID, name: this.state.newBookShelf};
+    this.props.createBookShelf(bookshelf);
   }
 
 
@@ -34,7 +35,7 @@ render (){
       })}
         <form onSubmit={this.handleSubmit} className='add-shelf-form'>
           <h2>Add a Shelf</h2>
-        <input type="text" className='add-shelf-form-input' onChange={this.update()} value={this.state.newBookShelf}></input>
+          <input type="text" className='add-shelf-form-input' onChange={this.update} value={this.state.newBookShelf}></input>
         </form>
     </div>
   );

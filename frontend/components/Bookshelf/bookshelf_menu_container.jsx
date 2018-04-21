@@ -6,12 +6,12 @@ import { createBookShelf } from '../../actions/bookshelf_actions';
 
 const msp = (state,ownProps) => {
 
-  // bookShelfMenuInfo(state)[0];
-  // let bookShelves =  bookShelfMenuInfo.slice(1);
+
 
   return({
     allBookShelves: bookShelfMenuInfo(state)[0],
-    bookshelves: bookShelfMenuInfo(state).slice(1)
+    bookshelves: bookShelfMenuInfo(state).slice(1),
+    currentUserID: state.session.currentUser.id
   });
 };
 
