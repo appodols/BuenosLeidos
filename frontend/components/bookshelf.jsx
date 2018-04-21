@@ -10,7 +10,6 @@ import BookShelfMenuContainer from './Bookshelf/bookshelf_menu_container';
 class BookShelf extends React.Component {
   constructor(props){
     super(props);
-
   }
 
 
@@ -26,11 +25,15 @@ class BookShelf extends React.Component {
 
 
 
+
+
+
+
   componentWillReceiveProps(nextProps) {
     // console.log('cwrp');
     // debugger
     if(!nextProps.currentBookShelf){
-;
+
       this.props.fetchBookShelf(nextProps.match.params.bookShelfId);
     }
 

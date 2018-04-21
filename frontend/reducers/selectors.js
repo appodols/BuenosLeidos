@@ -98,6 +98,7 @@ export const allShelves = (state) => {
   bookshelves.forEach((bookshelf)=>{
     let books = bookshelf.books;
     books.forEach((book)=>{
+        book.shelf = bookshelf.name;
       to_return.push(book);
     });
   });

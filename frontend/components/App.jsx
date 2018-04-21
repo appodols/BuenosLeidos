@@ -33,6 +33,7 @@ const App = () => (
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
+      <Protected path ='/bookshelves/all' component={AllBookShelves}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
       <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
   </Switch>

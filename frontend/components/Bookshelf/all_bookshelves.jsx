@@ -1,20 +1,47 @@
 /*jshint esversion: 6 */
-import { connect } from 'react-redux';
-import {allShelves} from '../../reducers/selectors'
+import React from 'react';
+import ShelfBook from './shelf_book';
 
-
-const msp = (state,ownProps) => {
-
-  return({
-    allShelves: allshelves(state)
-  });
+const allBookShelves = ({allShelves:}) => {
+return(
+  <div className ='bookShelf'>
+    {this.props.allShelves ?
+      <div className = 'bs-wrapper'>
+     <header className='bs-header'></header>
+             <div className='bookShelfContent'>
+                 <div className= 'leftColumn'>
+                   <BookShelfMenuContainer></BookShelfMenuContainer>
+                 </div>
+                 <div className= 'rightColumn'>
+                    <ul className="bookShelf-header-list">
+                      <li><h2 className='bsh-cover'>cover</h2></li>
+                      <li><h2 className='bsh-title'>title</h2></li>
+                      <li><h2 className='bsh-author'>author</h2></li>
+                      <li><h2 className='bsh-avg-rating'>avg rating</h2></li>
+                      <li><h2 className='bsh-rating'>rating</h2></li>
+                      <li><h2 className='bsh-shelves'>shelves</h2></li>
+                      <li><h2 className='bsh-date-added'>date added</h2></li>
+                    </ul>
+                    {allShelves.length > 0 ?
+                    <div className='shelfBooks'>
+                        {allShelves.map((book,id) => {
+                      return <ShelfBook name={book.name} key={id}book={book}></ShelfBook>;
+                        })}
+                      </div>
+                      :
+                       <h2> no books</h2>}
+                </div>
+              </div>
+            </div>
+    :
+       <h2> No bookshelves</h2>
+     }
+    </div>
+  );
+  }
+  );
 };
 
 
-// const mdp = (dispatch) => {
-//   return({
-//   });
-// };
 
-
-export default connect (msp,null)(bookshelfMenu);
+export default allBookShelves
