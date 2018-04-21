@@ -1,12 +1,13 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
-import {allShelves} from '../../reducers/selectors'
+import {allShelves} from '../../reducers/selectors';
+import allBookShelves from './all_bookshelves';
 
 
 const msp = (state,ownProps) => {
 
   return({
-    allShelves: allshelves(state)
+    allShelves: allShelves(state)
   });
 };
 
@@ -16,4 +17,4 @@ const msp = (state,ownProps) => {
 //   });
 // };
 
-export default connect (msp,null)(bookshelfMenu);
+export default connect (msp,null)(allBookShelves);

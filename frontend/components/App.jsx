@@ -12,7 +12,7 @@ import NavBar from './nav_bar.jsx';
 import ReviewFormContainer from './review_form_container';
 import LandingPageContainer from './landing_page_container';
 import BookShelfContainer from './bookshelf_container';
-
+import AllBookShelvesContainer from './Bookshelf/all_bookshelves_container';
 
 import {
   Route,
@@ -33,7 +33,7 @@ const App = () => (
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
-      <Protected path ='/bookshelves/all' component={AllBookShelves}/>
+      <ProtectedRoute path ='/bookshelves/all' component={AllBookShelvesContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
       <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
   </Switch>

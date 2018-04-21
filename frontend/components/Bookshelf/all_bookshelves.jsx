@@ -1,13 +1,14 @@
 /*jshint esversion: 6 */
 import React from 'react';
-import ShelfBook from './shelf_book';
+import ShelfBook from '../shelf_book';
+import BookShelfMenuContainer from './bookshelf_menu_container';
 
-const allBookShelves = ({allShelves:}) => {
+const allBookShelves = ({allShelves}) => {
 return(
   <div className ='bookShelf'>
-    {this.props.allShelves ?
+    {allShelves ?
       <div className = 'bs-wrapper'>
-     <header className='bs-header'></header>
+        <header className='bs-header'></header>
              <div className='bookShelfContent'>
                  <div className= 'leftColumn'>
                    <BookShelfMenuContainer></BookShelfMenuContainer>
@@ -25,7 +26,7 @@ return(
                     {allShelves.length > 0 ?
                     <div className='shelfBooks'>
                         {allShelves.map((book,id) => {
-                      return <ShelfBook name={book.name} key={id}book={book}></ShelfBook>;
+                      return <ShelfBook name={book.shelf} key={id}book={book}></ShelfBook>;
                         })}
                       </div>
                       :
@@ -37,8 +38,6 @@ return(
        <h2> No bookshelves</h2>
      }
     </div>
-  );
-  }
   );
 };
 

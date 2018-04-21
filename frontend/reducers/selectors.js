@@ -94,14 +94,17 @@ export const bookShelfMenuInfo = (state) => {
 
 export const allShelves = (state) => {
   let to_return = [];
+  let ids= [];
   let bookshelves = Object.values(state.bookshelves);
   bookshelves.forEach((bookshelf)=>{
     let books = bookshelf.books;
     books.forEach((book)=>{
         book.shelf = bookshelf.name;
-      to_return.push(book);
+        if(!ids.includes (book.id)){
+          to_return.push(book);
+          ids.push(book.id);
+        }
     });
   });
-  to_return = [...new Set(to_return)];
   return to_return;
 };
