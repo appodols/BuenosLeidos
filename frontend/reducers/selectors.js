@@ -91,3 +91,16 @@ export const bookShelfMenuInfo = (state) => {
   });
   return to_return;
 };
+
+export const allShelves = (state) => {
+  let to_return = [];
+  let bookshelves = Object.values(state.bookshelves);
+  bookshelves.forEach((bookshelf)=>{
+    let books = bookshelf.books;
+    books.forEach((book)=>{
+      to_return.push(book);
+    });
+  });
+  to_return = [...new Set(to_return)];
+  return to_return;
+};

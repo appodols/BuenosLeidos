@@ -41,6 +41,8 @@ const App = () => (
 
 export default App;
 
+
+// <Route path ='/bookshelves/all' component={AllBookShelves}/>
 //  <Route exact path ='/' component={LandingPage}/>
 //problem that landing page will be available everywhere
 
