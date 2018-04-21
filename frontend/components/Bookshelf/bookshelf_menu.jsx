@@ -7,7 +7,21 @@ class bookshelfMenu extends React.Component{
   constructor(props){
     super(props);
     this.state = {newBookShelf: ""};
+    this.update = this.update.bind(this);
+    this.submit = this.submit.bind(this);
 }
+
+  update(e){
+    this.setState({newBookShelf: e.target.value});
+  }
+
+
+  submit(){
+
+  }
+
+
+
 
 render (){
   let bookshelves = this.props.bookshelves;
@@ -18,7 +32,10 @@ render (){
     {bookshelves.map((bookshelf) => {
       return <Link to={`/bookshelves/${bookshelf[1]}`} key={bookshelf[1]}className="bookshelf-link">{`${bookshelf[0]} (${bookshelf[2]})`}</Link>;
       })}
-        <h2>Add a Shelf</h2>
+        <form onSubmit={this.handleSubmit} className='add-shelf-form'>
+          <h2>Add a Shelf</h2>
+        <input type="text" className='add-shelf-form-input' onChange={this.update()} value={this.state.newBookShelf}></input>
+        </form>
     </div>
   );
 }
