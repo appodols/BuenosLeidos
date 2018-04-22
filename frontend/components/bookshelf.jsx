@@ -1,6 +1,5 @@
 
 /*jshint esversion: 6 */
-/*jshint esversion: 6 */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';

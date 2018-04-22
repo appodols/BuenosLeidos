@@ -2,6 +2,7 @@
 import React from 'react';
 import Date from './date';
 import BookRatingContainer from './book_rating_container';
+import ShelfStatus from './Bookshelf/shelf_status';
 
 
 const ShelfBook = ({book, name}) => {
@@ -15,6 +16,7 @@ const ShelfBook = ({book, name}) => {
             <li><h2 className='bs-avg-rating'>{book.average_rating}</h2></li>
             <li className='bs-rating'><BookRatingContainer styling='bs-star' className='bs-stars' book={book} ></BookRatingContainer></li>
             <li><h2 className='bs-shelves'>{name}</h2></li>
+          <ShelfStatus name={name}></ShelfStatus>
             <li className='bookshelf-date-container'><Date  styling="bookShelf-date" className='bs-date-added'time={book.created_at}></Date></li>
           </ul>
       );
