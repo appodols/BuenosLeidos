@@ -10,8 +10,7 @@ const msp = (state,ownProps) => {
   const defaultBookShelf = {};
   let current_bookShelf = bookshelfShow(state, ownProps.match.params.bookShelfId);
   return({
-      currentBookShelf: current_bookShelf,
-      readStatus: readStatus(state)
+      currentBookShelf: current_bookShelf
   });
 };
 

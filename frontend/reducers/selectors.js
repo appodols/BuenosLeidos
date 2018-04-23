@@ -106,19 +106,36 @@ export const bookShelfInfoStatus = (state, book) => {
 };
 
 
-export const readStatus = (state) => {
-  let to_return = {};
+// export const readStatus_advanced = (state) => {
+//   let to_return = {};
+//   let bookshelves = Object.values(state.bookshelves);
+//   bookshelves.forEach((bookshelf)=>{
+//     bookshelf.books.forEach((book)=>{
+//       if(!to_return[book.id]){
+//         to_return[book.id] = [];
+//       }
+//       to_return[book.id].push(bookshelf.title);
+//     });
+//   });
+//   return to_return;
+// };
+
+export const readStatus = (state, currentBook) => {
+  let to_return = [];
   let bookshelves = Object.values(state.bookshelves);
   bookshelves.forEach((bookshelf)=>{
     bookshelf.books.forEach((book)=>{
-      if(!to_return[book.id]){
-        to_return[book.id] = [];
+      if(book.id === currentBook.id){
+        debugger
+       to_return.push(bookshelf.name);
       }
-      to_return[book.id].push(bookshelf.title);
     });
   });
+  debugger
+  to_return = to_return.join(", ")
   return to_return;
 };
+
 
 
 export const bookShelfMenuInfo = (state) => {

@@ -4,7 +4,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import StarRatingComponent from 'react-star-rating-component';
 import ShelfBook from './shelf_book';
+import ShelfBookContainer from './shelf_book_container';
 import BookShelfMenuContainer from './Bookshelf/bookshelf_menu_container';
+
 
 class BookShelf extends React.Component {
   constructor(props){
@@ -63,7 +65,7 @@ class BookShelf extends React.Component {
                         {this.props.currentBookShelf.books.length > 0 ?
                         <div className='shelfBooks'>
                             {this.props.currentBookShelf.books.map((book,id) => {
-                          return <ShelfBook name={this.props.currentBookShelf.name} key={id}book={book}></ShelfBook>;
+                          return <ShelfBookContainer name={this.props.currentBookShelf.name} key={id}book={book}></ShelfBookContainer>;
                             })}
                           </div>
                           :
