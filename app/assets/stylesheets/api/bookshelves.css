@@ -19,7 +19,7 @@
 
 .bookShelfContent{
   display: flex;
-  width: 960px;
+  width: 980px;
   height: 2272px;
   /* background-color: green; */
 
@@ -99,6 +99,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      background-color: yellow;
 }
 
 
@@ -220,6 +221,9 @@
 }
 
 
+
+
+
 .bs-date-added{
   width: 90px;
   height: 51px;
@@ -286,6 +290,16 @@
   justify-content: flex-start;
   /* margin-bottom: 16px; */
 }
+
+.bs-bs-selector{
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  max-width: 50px;
+}
+
+
+
+
 
 
 .bs-status{

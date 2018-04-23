@@ -5,7 +5,6 @@ import {createBookShelfOwnership, removeBookShelfOwnership} from '../../actions/
 import {bookShelfInfoStatus } from '../../reducers/selectors';
 
 const msp = (state,ownProps) => {
-debugger
   return({
     bookShelfInfo: bookShelfInfoStatus(ownProps.book),
     book: ownProps.book,

@@ -22,7 +22,6 @@ class ShelfStatus extends React.Component{
           </div>
         );
     } else {
-      debugger
       return(
         <div className='bs-shelves'>
             <li><h2>{this.props.name}</h2></li>

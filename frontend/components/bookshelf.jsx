@@ -58,6 +58,7 @@ class BookShelf extends React.Component {
                           <li><h2 className='bsh-rating'>rating</h2></li>
                           <li><h2 className='bsh-shelves'>shelves</h2></li>
                           <li><h2 className='bsh-date-added'>date added</h2></li>
+                        <li><h2 className='bsh-add-to-shelves'>Add to bookshelves</h2></li>
                         </ul>
                         {this.props.currentBookShelf.books.length > 0 ?
                         <div className='shelfBooks'>

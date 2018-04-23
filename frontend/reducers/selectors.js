@@ -78,7 +78,6 @@ export const bookShelfInfo = (state, book) => {
         second_return.push(to_add);
       }
     }
-  debugger
   return second_return;
 };
 
