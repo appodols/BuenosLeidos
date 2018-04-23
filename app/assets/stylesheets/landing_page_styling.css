@@ -5,8 +5,12 @@
 }
 
 .landing{
-  background-image: url(https://s.gr-assets.com/assets/home/masthead_background.jpg);
-  height: 370px;
+  background: url(https://thepitcher.org/wp-content/uploads/2016/05/marketing-books.jpg)  no-repeat center center fixed;
+  height:  900px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   /*align-items: flex-end;*/
@@ -14,18 +18,30 @@
 }
 
 
+
+#identified{
+  color: white;
+}
+
+
+
+
 .demoLoginContainer{
   display: flex;
   width: 150px;
   height: 300px;
-  align-content: center;
+  /* align-content: center; */
+  align-self: flex-end;
+  margin-right: 193px;
+  margin-top: -115px;
 }
 
 
 .demoLogin{
-  height: 25px;
-  width: 100px;
-  border-radius: 4px;
+  width: 150px;
+  font-size: 18px;
+  line-height: 22px;
+  border-radius: 2px;
   background: #fdd05f;
   align-self: center;
   text-align: center;
@@ -47,15 +63,17 @@
 
 #cta, #cta-espanol{
   justify-content: flex-start;
-  font-size: 35px;
+  font-size: 50px;
   display: inline-block;
   padding: 0;
-  color: #58371F;
-  height: 50px;
-  margin-left: 100px;
-  margin-top: -50px;
-  width: 280px;
-  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  /* color: #58371F; */
+  color: white;
+  margin-left: 250px;
+  /* margin-top: -50px; */
+  width: 400px;
+  /* background-color: red; */
+  /* font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif; */
+  font-family: 'Pacifico', cursive;
 }
 
 
@@ -91,8 +109,9 @@
 
 .BuenosLeidos{
   margin-left: 30px;
-  font-size: 20px;
+  font-size: 30px;
   font-family:  'Roboto Slab', serif;
+  color: white;
 }
 
 
@@ -103,6 +122,7 @@
   margin: 5px;
   font-size: 13px;
   background-color: white;
+  border-radius: 2px;
 }
 
 
@@ -113,16 +133,16 @@
   height: 35px;
   padding: 5px;
   margin: 5px;
+  border-radius: 2px;
 }
 
 
 .signinButton{
     border: none;
-    background: #382110;
-    color: white;
+    background: #fdd05f;
     display: inline-block;
     border: 1px solid #382110;
-    border-radius: 3px;
+    border-radius: 2px;
   font-size: 13px;
   line-height: 1;
   padding: 8px 12px;
@@ -133,9 +153,12 @@
   margin: 5px;
 }
 
-.signinButton:hover{
-  background-color: #58371F;
+.signinButton:hover {
+  background: #FFD56D;
 }
+
+
+
 
 
 h2 {
@@ -152,6 +175,7 @@ h2 {
   flex-direction: column;
   width: max-content;
   margin-right: 75px;
+  border-radius: 2px;
 }
 
 
@@ -174,10 +198,10 @@ h2 {
 
 
 
-.l_signupButton{
+.l_signupButton {
     padding: 8px;
     border: 0px;
-    border-radius: 4px;
+    border-radius: 2px;
     background: #fdd05f;
     font-size: 18px;
     line-height: 22px;
@@ -192,7 +216,7 @@ h2 {
 .crear-cuenta-button{
     padding: 8px;
     border: 0px;
-    border-radius: 4px;
+    border-radius: 2px;
     background: #fdd05f;
     font-size: 18px;
     line-height: 22px;
@@ -241,9 +265,6 @@ h2 {
 
 
 }
-
-
-
 
 
 

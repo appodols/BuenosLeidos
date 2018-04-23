@@ -43,22 +43,20 @@ class LandingPage extends React.Component{
               {this.state.language === 'English' ?
               <div className='left-lower-half'>
                 <h1 id="cta"> Meet Your Next Favorite Book</h1>
-                <button onClick={this.updateButton} className='language-button'>{this.state.buttonName}</button>
+
                </div>:
               <div className='left-lower-half'>
                 <h1 id="cta-espanol"> Conoce tu próximo libro favorito</h1>
                 <button onClick={this.updateButton} className='language-button-espanol'>{this.state.buttonName}</button>
             </div>}
-
-            <div className = 'demoLoginContainer'>
-              <button className= 'demoLogin'
-              onClick={this.demoLogin}>Demo Login
-              </button>
-
-              </div>
-
             <LandingPageSignupContainer language= {this.state.language}></LandingPageSignupContainer>
          </section>
+
+         <div className = 'demoLoginContainer'>
+           <button className= 'demoLogin'
+           onClick={this.demoLogin}>Sign In Using Our Demo
+           </button>
+           </div>
       </div>
     );
   }
@@ -75,3 +73,4 @@ export default LandingPage;
 // <h1 className ='BuenosLeidos'>Buenos Leidos</h1>
 // <LoginFormContainer className = 'siginForm'></LoginFormContainer>
 //onClick={this.demoLogin}
+//<button onClick={this.updateButton} className='language-button'>{this.state.buttonName}</button>
