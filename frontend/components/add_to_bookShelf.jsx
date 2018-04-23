@@ -11,6 +11,7 @@ class addtoBookShelf extends React.Component {
   }
 
   toggle(e){
+    debugger
     this.setState({clicked: !this.state.clicked});
   }
 

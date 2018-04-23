@@ -5,12 +5,10 @@ import {createBookShelfOwnership, removeBookShelfOwnership} from '../actions/boo
 import {bookShelfInfo } from '../reducers/selectors';
 
 const msp = (state,ownProps) => {
-
   return({
     bookShelfInfo: bookShelfInfo(state),
     book: ownProps.book
   });
-
 };
 
 const mdp = (dispatch) => {

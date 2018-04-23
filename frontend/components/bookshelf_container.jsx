@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 import BookShelf from './bookshelf';
 import {fetchBookShelf } from '../actions/bookshelf_actions';
-import {bookshelfShow} from '../reducers/selectors';
+import {bookshelfShow, readStatus} from '../reducers/selectors';
 
 
 const msp = (state,ownProps) => {
@@ -10,7 +10,8 @@ const msp = (state,ownProps) => {
   const defaultBookShelf = {};
   let current_bookShelf = bookshelfShow(state, ownProps.match.params.bookShelfId);
   return({
-      currentBookShelf: current_bookShelf
+      currentBookShelf: current_bookShelf,
+      readStatus: readStatus(state)
   });
 };
 

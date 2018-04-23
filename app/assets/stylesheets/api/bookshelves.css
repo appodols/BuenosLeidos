@@ -181,13 +181,34 @@
 }
 
 
+.bs-shelves > li{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 22px;
+  margin-bottom: 0px;
+}
+
+
+
+.bs-status-button{
+  background-color: green;
+  margin-top: -15px;
+}
+
+
 
 
 .bs-shelves{
   width: 82px;
   height: 80px;
-  text-align: left;
-  /* background-color: red; */
+  /* text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column; */
+  background-color: red;
 
 }
 
@@ -264,4 +285,9 @@
   /* background-color: green; */
   justify-content: flex-start;
   /* margin-bottom: 16px; */
+}
+
+
+.bs-status{
+
 }
