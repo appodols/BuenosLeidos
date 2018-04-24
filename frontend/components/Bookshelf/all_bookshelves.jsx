@@ -22,6 +22,7 @@ return(
                       <li><h2 className='bsh-rating'>rating</h2></li>
                       <li><h2 className='bsh-shelves'>shelves</h2></li>
                       <li><h2 className='bsh-date-added'>date added</h2></li>
+                      <li><h2 className='bsh-add-to-shelves'>add to bookshelf</h2></li>
                     </ul>
                     {allShelves.length > 0 ?
                     <div className='shelfBooks'>
@@ -30,7 +31,7 @@ return(
                         })}
                       </div>
                       :
-                       <h2> no books</h2>}
+                       null}
                 </div>
               </div>
             </div>

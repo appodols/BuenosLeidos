@@ -16,19 +16,17 @@ class addtoBookShelf extends React.Component {
 
 
   render(){
-
       if(this.state.clicked === false){
-
         return(
-        <div>
+        <div className='bs-add-shelves'>
             <button onClick={this.toggle} className={`${this.props.styling}-bs-selector`}>Add to Bookshelf</button>
         </div>
         );
       } else {
         return(
-          <div>
+          <div className='bs-add-shelves'>
               <button onClick={this.toggle} className={`${this.props.styling}-bs-selector`}>Add to Bookshelf</button>
-              <div className= 'add-shelves-modal'>
+              <div className= 'bs-add-shelves-modal'>
                 {this.props.bookShelfInfo.map((el, idx) => {
                 return <AddBookShelfItemContainer key={idx} book={this.props.book} name={el[0]} id={el[1]} button={el[2]}></AddBookShelfItemContainer>;
                 })}
