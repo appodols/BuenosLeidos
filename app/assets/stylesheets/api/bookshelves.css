@@ -1,8 +1,10 @@
 .bookShelf{
   max-height: 2341px;
   max-width: 1172px;
+  /* background-color: lightblue; */
   /*background-color: green;*/
 }
+
 
 
 .shelfBooks{
@@ -27,8 +29,14 @@
 
 .leftColumn{
   width: 190px;
-  height: 1072px;
-  margin-top: -18px;
+  height: 100%;
+  /* max-height: 1072px; */
+  margin-top: 5px;
+  margin-left: 10px;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding-left: 5px;
+  margin-right: 10px;
   /* background-color: blue; */
 }
 
@@ -89,7 +97,8 @@
 
 
 
-.bookShelf-header-list > li > h2, .bookShelf-header-list > li > date > span {
+.bookShelf-header-list > li > h2, .bookShelf-header-list > li > date > span,
+.bookShelf-header-list > Link > h2 {
       color: #382110;
       font-weight: bold;
       /* text-align: left; */
@@ -99,13 +108,12 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      background-color: yellow;
 }
 
 
 
 
-.bookShelf-book-list > li {
+.bookShelf-book-list > li, .bookShelf-book-list > Link {
   height: 100%;
   display: flex;
   align-items: flex-end;
@@ -133,7 +141,7 @@
    background-size: cover;
    background-repeat: no-repeat;
    background-position: 50% 50%;
-   /* background-color: yellow; */
+   /* : yellow; */
  }
 
 
@@ -148,15 +156,38 @@
 }
 
 
+.li-book-title h2{
+  /* background-color: green; */
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.bookshelf-link{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
 .bs-title{
   height: 80px;
-  text-align: left;
+  /* text-align: left; */
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 18px;
+
   /* background-color: red; */
 }
 
 .bs-author{
   height: 80px;
   text-align: left;
+  font-weight: bold;
   /* background-color: red; */
 }
 
@@ -183,7 +214,7 @@
 
 
 .bs-status-button{
-  background-color: green;
+  /* background-color: green; */
   margin-top: -15px;
 }
 
@@ -196,7 +227,7 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column; */
-  background-color: red;
+  /* background-color: red; */
 
 }
 

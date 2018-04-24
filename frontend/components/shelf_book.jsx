@@ -4,14 +4,26 @@ import Date from './date';
 import BookRatingContainer from './book_rating_container';
 import ShelfStatusContainer  from './Bookshelf/shelf_status_container';
 import AddtoBookShelfContainer from './add_to_bookshelf_container';
+import { Link } from 'react-router-dom';
 
 const ShelfBook = ({book, name, readStatus}) => {
       return(
           <ul className="bookShelf-book-list">
-            <li>  <img className='bookshelf-cover'
-                src={book.image_url}>
-              </img></li>
-            <li><h2 className='bs-title'>{book.title}</h2></li>
+
+            <Link  to={`/books/show/${book.id}`}>
+                <img className='bookshelf-cover'
+                  src={book.image_url}>
+                </img></Link>
+
+
+
+
+              <Link className='li-book-title'  to={`/books/show/${book.id}`}>
+                  <h2 className='bs-title'>{book.title}</h2>
+                  </Link>
+
+
+
             <li><h2 className='bs-author'>{book.author}</h2></li>
             <li><h2 className='bs-avg-rating'>{book.average_rating}</h2></li>
             <li className='bs-rating'><BookRatingContainer styling='bs-star' className='bs-stars' book={book} ></BookRatingContainer></li>
@@ -22,6 +34,8 @@ const ShelfBook = ({book, name, readStatus}) => {
       );
     };
 
+
+// <Link className= 'addaReview'to='/reviews/new'>Add a review</Link>
 
 export default ShelfBook;
 
