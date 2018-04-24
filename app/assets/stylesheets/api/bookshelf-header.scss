@@ -1,34 +1,35 @@
-.bsh-cover{
+.bsh-cover, .bookshelf-cover{
    width: 56px;
 }
 
-
-.bsh-title{
+.bsh-title, .bs-title{
   width: 187px;
   margin-left: 10px;
 }
 
 
-.bsh-author{
+.bsh-author,.bs-author{
   width: 101px;
   margin-left: 10px;
 }
 
 
-.bsh-avg-rating{
+.bsh-avg-rating,.bs-avg-rating{
   width: 70px;
 }
 
 
-.bsh-rating{
-  width: 100px;
+.bsh-rating, .bs-rating {
+  min-width: 100px;
 }
 
 
-.bsh-shelves{
+.bsh-shelves, .bs-shelves{
     width: 82px;
 }
 
-.bsh-date-added{
+
+
+.bsh-date-added,.bookShelf-date{
   width: 90px;
 }

@@ -126,12 +126,10 @@ export const readStatus = (state, currentBook) => {
   bookshelves.forEach((bookshelf)=>{
     bookshelf.books.forEach((book)=>{
       if(book.id === currentBook.id){
-        debugger
        to_return.push(bookshelf.name);
       }
     });
   });
-  debugger
   to_return = to_return.join(", ")
   return to_return;
 };

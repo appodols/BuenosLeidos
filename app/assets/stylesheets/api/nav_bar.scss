@@ -12,13 +12,13 @@
 
 
 .logo{
-  display: inline-block;
-  background: url("https://s.gr-assets.com/assets/layout/header/goodreads_logo.svg");
-  background-position: center;
-  background-size: 140px 30px;
-  margin: 0 0 0 16px;
+  // display: inline-block;
   width: 140px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 25px;
   background-repeat:no-repeat;
+  align-self: center;
+  margin-top: -5px;
 }
 
 

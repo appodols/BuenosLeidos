@@ -4,7 +4,6 @@ import ShelfBook from './shelf_book';
 import { readStatus } from '../reducers/selectors';
 
 const msp = (state,ownProps) =>{
-    debugger
     return({
     name: ownProps.name,
     key: ownProps.key,
@@ -13,6 +12,7 @@ const msp = (state,ownProps) =>{
     }
   );
 };
+
 
 const mdp = (dispatch) => ({
 

@@ -24,12 +24,11 @@ class NavBar extends React.Component {
   render(){
     return (<header className="header">
           <nav className="header-nav">
-             <section className="logo"> </section>
+             <section className="logo">BuenosLeidos</section>
             <section className ='header-list'>
-
             <ul className="left-header">
               <li><a href="#">Home</a></li>
-            <li><a href="#">My Books</a></li>
+            <li><a href="/#/bookshelves/all">My Books</a></li>
            </ul>
            <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
          </section>

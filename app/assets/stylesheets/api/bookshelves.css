@@ -126,7 +126,7 @@
 
 
  .bookshelf-cover{
-   width: 56px;
+
    /* width: 49px;
    /*  */
    height: 80px;
@@ -149,37 +149,25 @@
 
 
 .bs-title{
-  width: 187px;
   height: 80px;
   text-align: left;
-  margin-left: 10px;
   /* background-color: red; */
 }
 
 .bs-author{
-  width: 101px;
   height: 80px;
   text-align: left;
-  margin-left: 10px;
   /* background-color: red; */
 }
 
 
 .bs-avg-rating{
-  width: 70px;
   /* height: 32.22px; */
   height: 80px;
   text-align: left;
   /* background-color: blue; */
 }
 
-
-.bs-rating{
-  width: 100px;
-  height: 80px;
-  text-align: left;
-  /* margin-bottom: 10px; */
-}
 
 
 .bs-shelves > li{
@@ -203,7 +191,6 @@
 
 
 .bs-shelves{
-  width: 82px;
   height: 80px;
   /* text-align: left;
   display: flex;
@@ -213,29 +200,9 @@
 
 }
 
-.bs-date-added{
-  width: 32.88px;
-  height: 51px;
-  text-align: left;
-  color: red;
-}
-
-
-
-
-
-.bs-date-added{
-  width: 90px;
-  height: 51px;
-  text-align: left;
-  color: red;
-}
-
-
-
 
 .bookShelf-date{
-  width: 90px;
+  /* width: 90px; */
   height: 80px;
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -295,13 +262,4 @@
   font-size: 12px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 50px;
-}
-
-
-
-
-
-
-.bs-status{
-
 }

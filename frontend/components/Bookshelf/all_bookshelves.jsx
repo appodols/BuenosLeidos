@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import React from 'react';
-import ShelfBook from '../shelf_book';
+import ShelfBookContainer from '../shelf_book_container';
 import BookShelfMenuContainer from './bookshelf_menu_container';
 
 const allBookShelves = ({allShelves}) => {
@@ -26,7 +26,7 @@ return(
                     {allShelves.length > 0 ?
                     <div className='shelfBooks'>
                         {allShelves.map((book,id) => {
-                      return <ShelfBook name={book.shelf} key={id}book={book}></ShelfBook>;
+                      return <ShelfBookContainer name={book.shelf} key={id}book={book}></ShelfBookContainer>;
                         })}
                       </div>
                       :
