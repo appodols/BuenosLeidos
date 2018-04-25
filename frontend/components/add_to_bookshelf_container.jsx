@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
-import addtoBookShelf from './add_to_bookshelf';
+import addtoBookShelf from './add_to_bookShelf';
 import {createBookShelfOwnership, removeBookShelfOwnership} from '../actions/bookshelf_ownership_actions';
 import {bookShelfInfo } from '../reducers/selectors';
 
@@ -20,4 +20,4 @@ const mdp = (dispatch) => {
 };
 
 
-export default connect (msp,mdp)(addtoBookShelf);
+export default connect (msp,mdp)(addtobookShelf);
