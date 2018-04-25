@@ -33,7 +33,7 @@ render (){
       return <Link to={`/bookshelves/${bookshelf[1]}`} key={bookshelf[1]}className="bookshelf-link">{`${bookshelf[0]} (${bookshelf[2]})`}</Link>;
       })}
         <form onSubmit={this.submit} className='add-shelf-form'>
-          <h2 className='bs-add-shelf-label'>Add a shelf</h2>
+          <h2 className='bs-add-shelf-label'>Add a shelf:</h2>
           <div className='bs-inner-label'>
           <input type="text" className='add-shelf-form-input' placeholder='Create your shelf here...' onChange={this.update} value={this.state.newBookShelf}></input>
           <input className='add-shelf-button' type="submit" value='Add'></input>

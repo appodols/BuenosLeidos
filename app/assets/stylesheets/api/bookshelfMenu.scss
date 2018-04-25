@@ -1,5 +1,7 @@
 
 
+
+
 .bookShelfMenu, .bs-add-shelf-label{
   display: flex;
   flex-direction: column;
@@ -18,6 +20,11 @@
   justify-content: flex-start;
 }
 
+.bookShelfMenu {
+  // background-color: red;
+  align-items: flex-start;
+  margin-top: 5px;
+}
 
 
 .add-shelf-form{
@@ -27,8 +34,16 @@
 
 
 .add-shelf-form-input{
-
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-right: 3px;
 }
+
+.add-shelf-button:hover{
+    color: #00635d;
+}
+
+
 
 
 .bs-inner-label{

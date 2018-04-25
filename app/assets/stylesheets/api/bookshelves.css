@@ -1,9 +1,15 @@
 .bookShelf{
   max-height: 2341px;
   max-width: 1172px;
+  background-color: #BBDEFB;
   /* background-color: lightblue; */
   /*background-color: green;*/
 }
+
+.bs-wrapper{
+  background-color: #BBDEFB;
+}
+
 
 
 
@@ -21,7 +27,8 @@
 .bookShelfContent{
   display: flex;
   width: 980px;
-  height: 2272px;
+  height: 100%
+  max-height: 2272px;
   /* background-color: green; */
 
 }
@@ -29,9 +36,9 @@
 
 .leftColumn{
   width: 190px;
-  height: 100%;
-  /* max-height: 1072px; */
-  margin-top: 5px;
+  height: 500px;
+  max-height: 1072px;
+  margin-top:  8px;
   margin-left: 10px;
   border: 2px solid black;
   border-radius: 3px;
