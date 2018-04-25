@@ -13,6 +13,7 @@ import ReviewFormContainer from './review_form_container';
 import LandingPageContainer from './landing_page_container';
 import BookShelfContainer from './bookshelf_container';
 import AllBookShelvesContainer from './Bookshelf/all_bookshelves_container';
+import HomeContainer from './Home/home_container';
 
 import {
   Route,
@@ -36,6 +37,7 @@ const App = () => (
       <ProtectedRoute path ='/bookshelves/all' component={AllBookShelvesContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
       <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
+    <ProtectedRoute exact path ='/home' component={HomeContainer}/>
   </Switch>
   </div>
 );

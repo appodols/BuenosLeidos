@@ -27,7 +27,7 @@ class NavBar extends React.Component {
              <section className="logo">BuenosLeidos</section>
             <section className ='header-list'>
             <ul className="left-header">
-              <li><a href="#">Home</a></li>
+              <li><a href="/#/home">Home</a></li>
             <li><a href="/#/bookshelves/all">My Books</a></li>
            </ul>
            <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
