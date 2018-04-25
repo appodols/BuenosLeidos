@@ -1,7 +1,35 @@
 .home-page-container{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   width: 700px;
   margin-left: 200px;
   margin-right: 200px;
+}
+
+.inner-home-container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+
+.homepage-cover-img{
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 160px;
+  width: 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  // background-color: red;
+
+}
+
+
+.homepage-cover-link{
+  // background-color: blue;
+  display: flex;
+  flex-direction: row;
 }

@@ -3,14 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = ({allShelves}) => {
-    debugger
       return(
           <div className= 'home-page-container'>
             {allShelves.length > 0 ?
-            <div className='shelfBooks'>
+            <div className='inner-home-container'>
                 {allShelves.map((book,id) => {
-              return   <Link  to={`/books/show/${book.id}`}>
-                    <img className='bookshelf-cover'
+              return   <Link className= 'homepage-cover-link' to={`/books/show/${book.id}`}>
+                    <img className='homepage-cover-img'
                       src={book.image_url}>
                     </img></Link>;
                 })}

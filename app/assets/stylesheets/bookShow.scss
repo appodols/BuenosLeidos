@@ -13,8 +13,14 @@
 
 
 .bookContainer{
-  margin-top: 66px;
+  margin-top: 0px;
   max-height: 7459px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // display: flex;
+  // justify-content: center;
 }
 
 
@@ -173,7 +179,7 @@ max-height: 260px;
   align-self: flex-end;
   line-height: 21px;
   font-family: "Merriweather", "Georgia", serif;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 21px;
   height: 17.6px;
   margin-bottom: 20px;
