@@ -8,8 +8,9 @@ const Home = ({allShelves}) => {
             {allShelves.length > 0 ?
             <div className='inner-home-container'>
                 {allShelves.map((book,id) => {
-              return   <Link className= 'homepage-cover-link' to={`/books/show/${book.id}`}>
+              return   <Link key={id} className='homepage-cover-link' to={`/books/show/${book.id}`}>
                     <img className='homepage-cover-img'
+                      key={book.id}
                       src={book.image_url}>
                     </img></Link>;
                 })}
