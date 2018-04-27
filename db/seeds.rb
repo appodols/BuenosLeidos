@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #
+Book.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('books')
 book_list =  []
 book_list << ['Thinking in Bets: Making Smarter Decisions When You Don\'t Have All the Facts','Annie Duke',
 'https://images-na.ssl-images-amazon.com/images/I/41oQkVLDeUL._SY346_.jpg','Poker champion turned business consultant Annie Duke teaches
@@ -43,15 +45,32 @@ book_list.each do |title, author, image_url, description|
   description: description, average_rating: 0)
 end
 
-ownership_list = []
-ownership_list << [2,10]
-ownership_list << [1,10]
-ownership_list << [3,10]
-ownership_list << [4,10]
-# # ownership_list << [3,10]
+BookshelfOwnership.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('bookshelf_ownerships')
 
-ownership_list.each do |book_id, bookshelf_id|
-  BookshelfOwnership.create(book_id: book_id, bookshelf_id: bookshelf_id)
-end
+Review.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('reviews')
+
+Bookshelf.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('bookshelves')
+
+User.delete_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+User.create(e_mail: "Demo@demo.com", password: "demodemo", name: "Ralph")
+
+
+# ownership_list = []
+# ownership_list << [2,10]
+# ownership_list << [1,10]
+# ownership_list << [3,10]
+# ownership_list << [4,10]
+# # # ownership_list << [3,10]
+#
+# ownership_list.each do |book_id, bookshelf_id|
+#   BookshelfOwnership.create(book_id: book_id, bookshelf_id: bookshelf_id)
+# end
+
+
+
 #
 # BookshelfOwnership.create(book_id: 2, bookshelf_id: 10)

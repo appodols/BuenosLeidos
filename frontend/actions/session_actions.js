@@ -23,7 +23,7 @@ export const signup = user => dispatch => {
 };
 
 export const demoLogin = () => dispatch => {
-  return(ApiUtils.login({e_mail: "Demo@demo.com", password: "demodemo", name: ""}).then(user => (
+  return(ApiUtils.login({e_mail: "Demo@demo.com", password: "demodemo", name: "Ralph"}).then(user => (
     dispatch(receiveCurrentUser(user))
   ), (error) => (
     dispatch(receiveSessionErrors(error.responseJSON))
