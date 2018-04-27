@@ -6,7 +6,7 @@ import { createBookShelf } from '../../actions/bookshelf_actions';
 
 const msp = (state,ownProps) => {
 
-
+  
 
   return({
     allBookShelves: bookShelfMenuInfo(state)[0],

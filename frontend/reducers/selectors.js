@@ -138,12 +138,18 @@ export const readStatus = (state, currentBook) => {
 
 export const bookShelfMenuInfo = (state) => {
   let to_return = [['All', null, 0]];
+  let ids = [];
   let bookshelves = Object.values(state.bookshelves);
   bookshelves.forEach((bookshelf)=>{
     let bookshelfLength = bookshelf.books.length;
+    bookshelf.books.forEach((book)=>{
+      if(!ids.includes (book.id)){
+        ids.push(book.id);
+      }
+    });
     to_return.push([bookshelf.name, bookshelf.id, bookshelfLength]);
-    to_return[0][2] += bookshelfLength;
   });
+  to_return[0][2] += ids.length;
   return to_return;
 };
 

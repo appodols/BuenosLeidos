@@ -25,6 +25,7 @@ class bookshelfMenu extends React.Component{
 render (){
   let bookshelves = this.props.bookshelves;
   let allBookShelves = this.props.allBookShelves;
+  debugger
   return(
     <div className='bookShelfMenu'>
       <h2 className='bookshelfmenu-header'> Bookshelves</h2>
