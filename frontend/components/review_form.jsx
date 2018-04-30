@@ -46,14 +46,18 @@ class ReviewForm extends React.Component {
   }
 
   submitReview(e){
-
-    const review = {user_id: this.props.currentUserId,
-      book_id: this.props.book.id,
-      rating: this.state.rating,
-      body: this.state.body};
-	if(this.props.formKey=== 'update'){
+	if(this.props.formType === 'update'){
+			const review = {user_id: this.props.currentUserId,
+				book_id: this.props.book.id,
+				rating: this.state.rating,
+				body: this.state.body,
+				id: this.props.review.id};
 		 this.props.updateReview(review);
 	}	else {
+			const review = {user_id: this.props.currentUserId,
+				book_id: this.props.book.id,
+				rating: this.state.rating,
+				body: this.state.body};
 		 this.props.createReview(review);
 	}
 

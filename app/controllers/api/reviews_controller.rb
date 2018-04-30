@@ -60,7 +60,7 @@ class Api::ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:user_id, :book_id, :body, :rating, :created_at, :updated_at)
+    params.require(:review).permit(:user_id, :book_id, :body, :rating, :created_at, :updated_at, :id)
   end
 
 #note, this isn't getting the created at, will have to figure that out
