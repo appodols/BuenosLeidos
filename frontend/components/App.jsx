@@ -31,13 +31,13 @@ const App = () => (
         <Route exact path ='/' component={LandingPageContainer}/>
         <ProtectedRoute component={NavBarContainer}/>
     </Switch>
-    
+
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
       <ProtectedRoute path ='/bookshelves/all' component={AllBookShelvesContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
-      <ProtectedRoute exact path = '/books/:bookId/edit_review' component={ReviewFormContainer}/>
+    <ProtectedRoute exact path = '/books/:bookId/edit_review' component={EditReviewFormContainer}/>
       <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
     <ProtectedRoute exact path ='/home' component={HomeContainer}/>
   </Switch>

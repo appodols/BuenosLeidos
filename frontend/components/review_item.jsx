@@ -22,7 +22,7 @@ return(
           <span className="rated-it">rated it</span>
         <div className='book-show-edit-stars'>
           <Stars rating={review.rating}></Stars>
-          <Link to={`/books/${review.book_id}/review`} className="book-show-edit-review">Edit Review</Link>
+        <Link to={`/books/${review.book_id}/edit_review`} className="book-show-edit-review">Edit Review</Link>
         </div>
         </section>
 

@@ -8,6 +8,7 @@ import { createReview} from '../actions/review_actions';
 const msp = (state,ownProps) => {
     return(
       {
+       formType: 'create',
        book: state.books[ownProps.match.params.bookId],
        currentUserId: state.session.currentUser.id
   });
