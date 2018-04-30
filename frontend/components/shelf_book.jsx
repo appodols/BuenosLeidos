@@ -2,7 +2,7 @@
 import React from 'react';
 import Date from './date';
 import BookRatingContainer from './book_rating_container';
-import ShelfStatusContainer  from './Bookshelf/shelf_status_container';
+// import ShelfStatusContainer  from './Bookshelf/shelf_status_container';
 import AddtoBookShelfContainer from './add_to_bookshelf_container';
 import { Link } from 'react-router-dom';
 
