@@ -14,6 +14,7 @@ import LandingPageContainer from './landing_page_container';
 import BookShelfContainer from './bookshelf_container';
 import AllBookShelvesContainer from './Bookshelf/all_bookshelves_container';
 import HomeContainer from './Home/home_container';
+import EditReviewFormContainer from './edit_review_form_container';
 
 import {
   Route,
@@ -30,12 +31,13 @@ const App = () => (
         <Route exact path ='/' component={LandingPageContainer}/>
         <ProtectedRoute component={NavBarContainer}/>
     </Switch>
-
+    
     <Switch>
       <Route exact path ='/books/show/:bookId' component={BookContainer}/>
       <ProtectedRoute exact path = '/reviews/new' component={BookContainer}/>
       <ProtectedRoute path ='/bookshelves/all' component={AllBookShelvesContainer}/>
       <ProtectedRoute exact path = '/books/:bookId/review' component={ReviewFormContainer}/>
+      <ProtectedRoute exact path = '/books/:bookId/edit_review' component={ReviewFormContainer}/>
       <ProtectedRoute exact path = '/bookshelves/:bookShelfId' component={BookShelfContainer}/>
     <ProtectedRoute exact path ='/home' component={HomeContainer}/>
   </Switch>

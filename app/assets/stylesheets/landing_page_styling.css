@@ -273,10 +273,7 @@ h2 {
 }
 
 
-
-
-
-
-.errors {
+.session-errors{
+  margin-left: 5px;
   color: red;
 }

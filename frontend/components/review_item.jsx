@@ -2,6 +2,7 @@
 import React from 'react';
 import Stars from './stars';
 import Date from './date';
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,7 +20,10 @@ return(
           <section className='left-review-header'>
           <span className="review-author">{review.authorname}</span>
           <span className="rated-it">rated it</span>
+        <div className='book-show-edit-stars'>
           <Stars rating={review.rating}></Stars>
+          <Link to={`/books/${review.book_id}/review`} className="book-show-edit-review">Edit Review</Link>
+        </div>
         </section>
 
           <Date styling="review-date" time={review.created_at}></Date>

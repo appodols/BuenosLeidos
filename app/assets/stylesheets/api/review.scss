@@ -134,6 +134,26 @@
   align-items: center;
 }
 
+
+
+.book-show-edit-stars{
+  width: 250px;
+  height: 100%;
+  background-color: green;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.book-show-edit-review{
+  font-size: 14.5px;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  color: red;
+}
+
+
+
+
 // .book-show-review-stars{
 //   justify-content: center;
 //   display: inline;

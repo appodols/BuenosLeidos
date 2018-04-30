@@ -29,7 +29,7 @@ class SessionForm extends React.Component{
 
     renderErrors() {
      return(
-       <ul className= "errors">
+       <ul className= "session-errors">
          {this.props.errors.map((error, i) => (
          error))}
        </ul>
@@ -71,7 +71,7 @@ class SessionForm extends React.Component{
             <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'Correo electrónico' value={this.state.e_mail}></input>
             <input type="password" className ='password' onChange={this.update('password')} placeholder='Contraseña' value={this.state.password}></input>
             <input className='signinButton' type="submit" value={this.props.formType}></input>
-            {this.renderErrors()}
+            {this.renderErrors()} 
           </form>
         </div>
       );
