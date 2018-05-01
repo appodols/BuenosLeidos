@@ -30,7 +30,7 @@ BuenosLeidos is a single page application inspired by the reading app GoodReads.
 * Ruby on Rails (v5.1.4) for MVC Framework
 * PostgreSQL (v0.18) database
 * Custom authentication through BCrypt (v3.1.7)
-* Jbuilder (v2.5) for serving appropriately shaped JSON
+* Jbuilder (v2.5) 
 
 ### Frontend
 
