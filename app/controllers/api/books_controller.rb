@@ -9,6 +9,12 @@ class Api::BooksController < ApplicationController
   end
 
 
+  def index
+    @books = Book.all
+    render :index
+  end
+
+
 
 
   def show
