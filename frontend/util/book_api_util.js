@@ -14,3 +14,11 @@ export const fetchBook = id => {
     url: `/api/books/${id}`
   });
 };
+
+
+export const fetchBooks = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/books`
+  });
+};

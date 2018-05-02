@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 import * as ApiUtils from '../util/book_api_util';
 export const RECEIVE_BOOK = 'RECEIVE_BOOK';
+export const RECEIVE_BOOKS = 'RECEIVE_BOOKS'
 export const RECEIVE_BOOK_ERRORS = 'RECEIVE_BOOK_ERRORS';
 
 
@@ -11,6 +12,23 @@ export const createBook = book => dispatch => (
     dispatch(receiveError(error.responseJSON))
   ))
 );
+
+
+export const fetchBooks = () => dispatch => {
+  return (
+  ApiUtils.fetchBooks().then(books => (
+    dispatch(receiveBooks(books))
+  ), error => (
+    dispatch(receiveError(error.responseJSON))
+  ))
+ );
+};
+
+
+
+
+
+
 
 
 
@@ -28,6 +46,16 @@ export const receiveBook = book => ({
   type: RECEIVE_BOOK,
   book
 });
+
+
+export const receiveBooks = books => ({
+  type: RECEIVE_BOOKS,
+  books
+});
+
+
+
+
 
 
 export const receiveError = error => ({
