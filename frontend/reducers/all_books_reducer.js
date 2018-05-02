@@ -4,7 +4,7 @@ import { RECEIVE_BOOKS } from '../actions/book_actions';
 import merge from 'lodash/merge';
 
 
-export const allBookReducer = (state = {} ,action) => {
+export const allBooksReducer = (state = {} ,action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_BOOKS:

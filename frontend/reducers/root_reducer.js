@@ -6,13 +6,16 @@ import {bookReducer} from './book_reducer';
 import {reviewReducer} from './review_reducer';
 import {bookShelfReducer} from './bookshelf_reducer';
 import {bookShelfOwnershipReducer} from './bookshelf_ownership_reducer';
+import {allBooksReducer} from './all_books_reducer';
+
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   errors: errorsReducer,
   books: bookReducer,
   reviews: reviewReducer,
-  bookshelves: bookShelfReducer
+  bookshelves: bookShelfReducer,
+  allBooks: allBooksReducer
 });
 
 export default rootReducer;

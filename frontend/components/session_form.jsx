@@ -16,6 +16,7 @@ class SessionForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.processForm(this.state).then(()=>this.props.fetchBookShelves()).
+    then(()=>this.props.fetchBooks()).
     then(() => this.props.history.push(`/books/show/1`));
   }
 
@@ -71,7 +72,7 @@ class SessionForm extends React.Component{
             <input type="text" className='username' onChange={this.update('e_mail')} placeholder= 'Correo electrónico' value={this.state.e_mail}></input>
             <input type="password" className ='password' onChange={this.update('password')} placeholder='Contraseña' value={this.state.password}></input>
             <input className='signinButton' type="submit" value={this.props.formType}></input>
-            {this.renderErrors()} 
+            {this.renderErrors()}
           </form>
         </div>
       );

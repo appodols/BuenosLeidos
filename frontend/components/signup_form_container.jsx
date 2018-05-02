@@ -4,6 +4,8 @@ import React from 'react';
 import SessionForm from './session_form';
 import {signup} from '../actions/session_actions';
 import { fetchBookShelves } from '../actions/bookshelf_actions';
+import {fetchBooks } from '../actions/book_actions';
+
 
 
 const msp = (state) => {
@@ -16,7 +18,8 @@ const msp = (state) => {
 
 const mdp = (dispatch,ownProps) => ({
   processForm: (user) => dispatch(signup(user)),
-  fetchBookShelves: () => dispatch(fetchBookShelves())
+  fetchBookShelves: () => dispatch(fetchBookShelves()),
+  fetchBooks: () => dispatch(fetchBooks())
 });
 
 
