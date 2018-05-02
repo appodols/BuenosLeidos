@@ -11,23 +11,28 @@ class Home extends React.Component {
   }
 
   componentDidMount(){
-
+    if(this.props.allBooks.length == 0){
+      this.props.fetchBooks();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
-
+    if(nextProps.allBooks.length == 0){
+      this.nextProps.fetchBooks();
+    }
 
   }
 
 
 
   render(){
-    let allShelves = this.props.allShelves;
+    // let allShelves = this.props.allShelves;
+    let allBooks = this.props.allBooks
           return(
               <div className= 'home-page-container'>
-                {allShelves.length > 0 ?
+                {allBooks.length > 0 ?
                 <div className='inner-home-container'>
-                    {allShelves.map((book,id) => {
+                    {allBooks.map((book,id) => {
                   return   <Link key={id} className='homepage-cover-link' to={`/books/show/${book.id}`}>
                         <img className='homepage-cover-img'
                           key={book.id}
