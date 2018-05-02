@@ -139,7 +139,7 @@
 .book-show-edit-stars{
   width: 250px;
   height: 100%;
-  background-color: green;
+  // background-color: green;
   display: flex;
   flex-direction: row;
 }
@@ -148,7 +148,8 @@
 .book-show-edit-review{
   font-size: 14.5px;
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-  color: red;
+  color: black;
+  margin-top: 3px;
 }
 
 
