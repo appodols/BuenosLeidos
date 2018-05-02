@@ -1,6 +1,18 @@
 /*jshint esversion: 6 */
 
 
+
+export const allBooks = (state) => {
+  let allBooks = Object.values(state.allBooks);
+  return allBooks;
+};
+
+
+
+
+
+
+
 export const averageRating = (state) => {
   let average_rating = 0;
   if(Object.values(state.reviews).length > 0){
