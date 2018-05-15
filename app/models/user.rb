@@ -42,8 +42,11 @@ class User < ApplicationRecord
     if(password[0] == password[0].upcase)
       fixed_passwords << password[0].downcase + password[1..-1]
     end
-    fixed_passwords << password[0...-1]
-    fixed_passwords << password[1..-1]
+
+    if password.length >= 1
+      fixed_passwords << password[0...-1]
+      fixed_passwords << password[1..-1]
+    end
     fixed_passwords << password
     fixed_passwords
   end
