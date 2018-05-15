@@ -28,8 +28,27 @@ class User < ApplicationRecord
   end
 
   def is_password?(password)
-    BCrypt::Password.new(self.password_digest).is_password?(password)
+    autocorrected_passwords(password).any? do |password|
+      BCrypt::Password.new(self.password_digest).is_password?(password)
+    end
   end
+
+  def autocorrected_passwords(password)
+      fixed_passwords = []
+    if password.split("").all?{|c| c == c.upcase}
+      fixed_passwords << password.downcase
+    end
+
+    if(password[0] == password[0].upcase)
+      fixed_passwords << password[0].downcase + password[1..-1]
+    end
+    fixed_passwords << password[0...-1]
+    fixed_passwords << password[1..-1]
+    fixed_passwords << password
+    fixed_passwords
+  end
+
+
 
   def ensure_session_token
     self.session_token ||= User.generate_session_token
