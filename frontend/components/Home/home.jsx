@@ -18,7 +18,7 @@ class Home extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.allBooks.length == 0){
-      this.nextProps.fetchBooks();
+      nextProps.fetchBooks();
     }
 
   }
