@@ -1,7 +1,7 @@
 {
   "name": "GoodReads",
   "version": "1.0.0",
-  "description": "air bnb for benches!",
+  "description": "inspired by goodReads",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -44,5 +44,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.11.0"
+  },
+  "devDependencies" : {
+    "redux-logger": "^3.0.6"
   }
 }
