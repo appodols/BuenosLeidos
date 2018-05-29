@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   attr_accessor :password
   after_initialize :ensure_session_token
-  after_create :create_default_shelves
+  after_create :create_default_shelves 
 
   has_many :bookshelves,
   primary_key: :id,
