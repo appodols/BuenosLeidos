@@ -14,6 +14,7 @@ class SearchSuggestion
         $redis.zadd 'search-suggestions:#{prefix.downcase}', author.id, author.downcase
       end
     end
-  end
 
-end
+  end #method
+
+end #class
