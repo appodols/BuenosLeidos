@@ -3,15 +3,15 @@ class SearchSuggestion
   def self.seed
     Book.find_each do |book|
       title = book.title
-      1.upto(book.length - 1) do |n|
-        prefix = name[0, n]
-        $redis.zadd 'search-suggestions:#{prefix.downcase}', book.id, book.downcase
+      1.upto(title.length - 1) do |n|
+        prefix = title[0, n].downcase
+        $redis.zadd prefix, 1, title.downcase
       end
 
       author = book.author
       1.upto(author.length - 1) do |n|
-        prefix = name[0, n]
-        $redis.zadd 'search-suggestions:#{prefix.downcase}', author.id, author.downcase
+        prefix = author[0, n]
+        $redis.zadd prefix, 1, title.downcase
       end
     end
 

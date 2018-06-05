@@ -1,5 +1,4 @@
 class Book < ApplicationRecord
-  require "trie"
   #note figure out how to put this in a proper folder
 
   validates :author, :title, presence: true
