@@ -10,11 +10,20 @@ class SearchSuggestion
 
       author = book.author
       1.upto(author.length - 1) do |n|
-        prefix = author[0, n]
+        prefix = author[0, n].downcase
         $redis.zadd prefix, 1, title.downcase
       end
     end
 
   end #method
+
+
+  def self.terms_for(prefix)
+    $redis.zrevrange prefix, 0, 9
+  end
+
+  
+
+
 
 end #class
