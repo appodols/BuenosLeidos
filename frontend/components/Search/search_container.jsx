@@ -5,7 +5,6 @@ import {updateSearchQuery} from '../actions/search';
 import {searchSelector } from '../reducers/selectors';
 
 const msp = (state) => {
-
   return({
     searchQuery: searchSelector(state)
   });

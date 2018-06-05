@@ -8,9 +8,10 @@ export const allBooks = (state) => {
 };
 
 
-
-
-
+export const searchSelector = (state) => {
+  let searchResult = Object.values(state.search);
+  return searchResult;
+};
 
 
 export const averageRating = (state) => {
