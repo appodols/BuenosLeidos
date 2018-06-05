@@ -6,6 +6,7 @@ class Search extends React.Component {
     super(props);
       this.state = {query: "", searched: true};
       this.update = this.update.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
     update(){
@@ -17,12 +18,23 @@ class Search extends React.Component {
 
     }
 
+
+    handleSubmit(){
+      //to be implemented in the future and lead to future search page
+
+    }
+
+
+
   render(){
     return(
-
     <div>
-       {this.state.id ?
-       <MyRatingContainer></MyRatingContainer>:
+      <input type="text" className= "searchBox" value={this.state.query} onChange ={this.update}>
+      </input>
+       {this.state.searched ?
+         {this.props.searchResult.map((el, idx) => {
+         return <SearchResult key={idx} book={this.props.book}></SearchResult>;
+         })}:
           null
         }
     </div>

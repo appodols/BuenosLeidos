@@ -6,7 +6,7 @@ import {searchSelector } from '../reducers/selectors';
 
 const msp = (state) => {
   return({
-    searchQuery: searchSelector(state)
+    searchResult: searchSelector(state)
   });
 };
 
