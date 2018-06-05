@@ -24,6 +24,4 @@ class SearchSuggestion
 
   
 
-
-
 end #class
