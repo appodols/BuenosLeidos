@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 
-export const search = searchQuery => {
+export const updateSearchQuery = searchQuery => {
   return $.ajax({
     method: 'GET',
     url: '/api/',
