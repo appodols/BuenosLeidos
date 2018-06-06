@@ -7,6 +7,7 @@ import {reviewReducer} from './review_reducer';
 import {bookShelfReducer} from './bookshelf_reducer';
 import {bookShelfOwnershipReducer} from './bookshelf_ownership_reducer';
 import {allBooksReducer} from './all_books_reducer';
+import {searchReducer} from './search_reducer';
 
 
 const rootReducer = combineReducers({
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   books: bookReducer,
   reviews: reviewReducer,
   bookshelves: bookShelfReducer,
-  allBooks: allBooksReducer
+  allBooks: allBooksReducer,
+  search: searchReducer
 });
 
 export default rootReducer;
