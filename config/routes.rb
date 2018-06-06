@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#root'
 
-  match '/search_suggestions', to: 'search_suggestions#index', via: :get
+  match 'api/search_suggestions', to: 'search_suggestions#index', via: :get
 
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :show]

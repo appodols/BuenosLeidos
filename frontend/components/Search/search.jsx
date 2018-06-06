@@ -17,14 +17,9 @@ class Search extends React.Component {
       }
 
     }
-
-
     handleSubmit(){
       //to be implemented in the future and lead to future search page
-
     }
-
-
 
   render(){
     return(
@@ -32,6 +27,7 @@ class Search extends React.Component {
       <input type="text" className= "searchBox" value={this.state.query} onChange ={this.update}>
       </input>
        {this.state.searched ?
+         debugger
          {this.props.searchResult.map((el, idx) => {
          return <SearchResult key={idx} book={this.props.book}></SearchResult>;
          })}:
@@ -56,3 +52,4 @@ export default Search;
   //display search result category
   //map over each book
   //put this in HTML/CSS that covers the whole thing
+  //we have a debugger--if we get the search results we need we'll map over them and build corresponding HTML/CSS
