@@ -1,10 +1,8 @@
 /*jshint esversion: 6 */
-
-
-export const updateSearchQuery = searchQuery => {
+export const updateSearchQuery = search_query => {
   return $.ajax({
     method: 'GET',
-    url: '/api/',
-    data: {searchQuery: searchQuery}
+    url: '/api/search_suggestions',
+    data: {searchSuggestion: {search_query} }
   });
 };
