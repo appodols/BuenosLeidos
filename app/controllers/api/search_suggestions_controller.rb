@@ -1,16 +1,18 @@
 class Api::SearchSuggestionsController < ApplicationController
 
   def index
-   debugger
-   render json: SearchSuggestion.terms_for(params[:term])
+    search_query = params[:searchSuggestion][:search_query]
+    suggestions = SearchSuggestion.terms_for(search_query)
+    @books = Book.where(id: suggestions)
+    debugger
+    render :index
   end
 
 
-end
+  def search_params
+    params.require(:searchSuggestion).permit(:search_query)
+  end
 
 
 
-private
-def search_params
-  params.require(:search).permit(:search_query)
 end
