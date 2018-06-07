@@ -4,7 +4,6 @@ class Api::SearchSuggestionsController < ApplicationController
     search_query = params[:searchSuggestion][:search_query]
     suggestions = SearchSuggestion.terms_for(search_query)
     @books = Book.where(id: suggestions)
-    debugger
     render :index
   end
 
