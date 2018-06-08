@@ -46,8 +46,20 @@
 }
 
 
-.left-header > li:hover, .Sign-Out:hover {
+.left-header > li:hover, .Sign-Out:hover,  {
   background-color: #382110;
   color: white;
   cursor: pointer;
+}
+
+.searchBox{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  padding: 0 6px;
+  height: 30px;
+  width: 200px;
+  border-radius: 3px;
+  background-color: white;
+  border: #DCD6CC 1px solid;;
 }

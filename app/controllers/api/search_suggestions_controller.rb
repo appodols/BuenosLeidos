@@ -1,6 +1,7 @@
 class Api::SearchSuggestionsController < ApplicationController
 
   def index
+    debugger
     search_query = params[:searchSuggestion][:search_query]
     suggestions = SearchSuggestion.terms_for(search_query)
     @books = Book.where(id: suggestions)

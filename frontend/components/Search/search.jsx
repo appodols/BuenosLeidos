@@ -9,9 +9,9 @@ class Search extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-    update(){
-      //set state with query
-      if(this.state.query.length > 2){
+    update(e){
+        this.setState({query: e.target.value});
+      if(this.state.query.length >= 2){
         this.props.updateSearchQuery(this.state.query);
         this.setState({searched: true});
       }
@@ -22,11 +22,15 @@ class Search extends React.Component {
     }
 
   render(){
-    debugger
     return(
     <div>
-      <input type="text" className= "searchBox" value={this.state.query} onChange ={this.update}>
-      </input>
+      <input type="text"
+        className= "searchBox"
+        value={this.state.query} onChange ={this.update}
+        placeholder = 'Search Books'
+        ></input>
+
+
     </div>
   )
 
