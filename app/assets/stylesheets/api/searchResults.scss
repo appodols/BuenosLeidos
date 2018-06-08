@@ -4,3 +4,16 @@
   border-radius: 3px;
   // width is covered in nav-bar
 }
+
+
+.searchResult{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.searchImage{
+  length: 40px;
+  width: 40px;
+}
