@@ -4,7 +4,7 @@ import SearchResult from './search_result';
 class Search extends React.Component {
   constructor(props){
     super(props);
-      this.state = {query: "", searched: true};
+      this.state = {query: "", searched: false};
       this.update = this.update.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,8 +29,10 @@ class Search extends React.Component {
         value={this.state.query} onChange ={this.update}
         placeholder = 'Search Books'
         ></input>
-
-
+      {this.state.searched ?
+         <h2>searched</h2>:
+           null
+         }
     </div>
   )
 
@@ -59,3 +61,7 @@ export default Search;
   //map over each book
   //put this in HTML/CSS that covers the whole thing
   //we have a debugger--if we get the search results we need we'll map over them and build corresponding HTML/CSS
+
+
+  // {this.props.searchResult.map((el, idx) => {
+  // return <SearchResult key={idx} book={this.props.book}></SearchResult>
