@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
 import { connect } from 'react-redux';
 import Search from './search';
-import {updateSearchQuery} from '../actions/search';
-import {searchSelector } from '../reducers/selectors';
+import {updateSearchQuery} from '../../actions/search_actions';
+import {searchSelector} from '../../reducers/selectors';
 
 const msp = (state) => {
   return({

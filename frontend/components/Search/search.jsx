@@ -22,17 +22,11 @@ class Search extends React.Component {
     }
 
   render(){
+    debugger
     return(
     <div>
       <input type="text" className= "searchBox" value={this.state.query} onChange ={this.update}>
       </input>
-       {this.state.searched ?
-         debugger
-         {this.props.searchResult.map((el, idx) => {
-         return <SearchResult key={idx} book={this.props.book}></SearchResult>;
-         })}:
-          null
-        }
     </div>
   )
 
@@ -44,6 +38,14 @@ class Search extends React.Component {
 }
 
 export default Search;
+
+//
+// {this.state.searched ?
+//   {this.props.searchResult.map((el, idx) => {
+//   return <SearchResult key={idx} book={this.props.book}></SearchResult>;
+//   })}:
+//    null
+//  }
 
 
 //display form

@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 import React from 'react';
+import SearchSuggestionContainer from './Search/search_container';
 // import SessionForm from './session_form';
 // import LoginFormContainer from './login_form_container';
 // import LandingPageSignupContainer from './landing_page_signup_container';
@@ -20,7 +21,6 @@ class NavBar extends React.Component {
       //temp but not great
     //questions will this work in time-- do we need any type of async action to ensure this works?
 
-
   render(){
     return (<header className="header">
           <nav className="header-nav">
@@ -31,6 +31,7 @@ class NavBar extends React.Component {
             <li><a href="/#/bookshelves/all">My Books</a></li>
            </ul>
            <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
+          <SearchSuggestionContainer></SearchSuggestionContainer>
          </section>
          </nav>
          </header>
