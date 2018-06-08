@@ -7,6 +7,7 @@
   height: 50px;
   // border-left: 1px solid #ccc;
   // border-right: 1px solid #ccc;
+  overflow: visible;
   background-color: rgba(244,241,234,0.5);
 }
 
@@ -58,8 +59,11 @@
   line-height: 50px;
   padding: 0 6px;
   height: 30px;
-  width: 200px;
   border-radius: 3px;
   background-color: white;
   border: #DCD6CC 1px solid;;
+}
+
+.searchBox, .searchResults{
+  width: 200px;
 }
