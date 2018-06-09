@@ -31,7 +31,7 @@ class NavBar extends React.Component {
             <li><a href="/#/bookshelves/all">My Books</a></li>
            </ul>
            <span onClick={this.props.logout} className= 'Sign-Out'> Sign Out</span>
-          <SearchSuggestionContainer></SearchSuggestionContainer>
+           <SearchSuggestionContainer></SearchSuggestionContainer>
          </section>
          </nav>
          </header>

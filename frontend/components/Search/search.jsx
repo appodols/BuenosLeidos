@@ -11,12 +11,9 @@ class Search extends React.Component {
 
     update(e){
         this.setState({query: e.target.value});
-
-        if(this.state.query.length <= 2){
+        if(this.state.query.length < 2){
           this.setState({searched: false});
         }
-
-
       if(this.state.query.length >= 2){
         this.props.updateSearchQuery(this.state.query);
         this.setState({searched: true});
@@ -35,14 +32,14 @@ class Search extends React.Component {
         value={this.state.query} onChange ={this.update}
         placeholder = 'Search Books'
         ></input>
-      {this.state.searched ?
-         <section className='searchResults'>
-           {this.props.searchResult.map((book,id) => {
-             return <SearchResult book={book}></SearchResult>;
-           })}
-         </section>:
-           null
-         }
+         {this.state.searched ?
+           <section className='searchResults'>
+                  {this.props.searchResult.map((book,id) => {
+                    return <SearchResult book={book}></SearchResult>;
+                  })}
+          </section>:
+             null
+            }
     </div>
   )
 
@@ -75,3 +72,20 @@ export default Search;
 
   // {this.props.searchResult.map((el, idx) => {
   // return <SearchResult key={idx} book={this.props.book}></SearchResult>
+
+
+
+
+
+
+
+
+
+  // {this.state.searched ?
+  //    <section className='searchResults'>
+  //      {this.props.searchResult.map((book,id) => {
+  //        return <SearchResult book={book}></SearchResult>;
+  //      })}
+  //    </section>:
+  //      null
+  //    }

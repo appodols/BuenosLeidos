@@ -12,6 +12,8 @@ return(
             src={book.image_url}>
           </img></Link>
 
+
+
     </div>
   );
 };

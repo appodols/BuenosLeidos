@@ -1,7 +1,10 @@
 .searchResults{
-  min-height: 50px;
-  background-color: blue;
   border-radius: 3px;
+  position: relative;
+  z-index: 100;
+  position: absolute;
+  left:0;
+  right:0;
   // width is covered in nav-bar
 }
 
@@ -10,10 +13,13 @@
   height: 50px;
   display: flex;
   flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 
 .searchImage{
   length: 40px;
   width: 40px;
+
 }
