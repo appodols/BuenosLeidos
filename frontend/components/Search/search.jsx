@@ -26,7 +26,7 @@ class Search extends React.Component {
 
   render(){
     return(
-    <div>
+    <div className='searchResultContent'>
       <input type="text"
         className= "searchBox"
         value={this.state.query} onChange ={this.update}

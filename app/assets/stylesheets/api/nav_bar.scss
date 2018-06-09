@@ -52,20 +52,3 @@
   color: white;
   cursor: pointer;
 }
-
-.searchBox{
-  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 16px;
-  line-height: 50px;
-  padding: 0 6px;
-  height: 30px;
-  border-radius: 3px;
-  background-color: red;
-  border: #DCD6CC 1px solid;
-  position: relative;
-}
-
-.searchBox, .searchResults, .searchResult, .searchImage{
-  width: 300px;
-  margin-left: 200px;
-}

@@ -12,24 +12,27 @@ return(
               className = 'searchImage'
               src={book.image_url}>
             </img></Link>
-      </div>
+       </div>
 
-      <div className = 'searchContent'>
+       <div className = 'searchContent'>
         <span className ='search-result-bookTitle'>
-          {book.title}
+           {book.title}
         </span>
-
-        <span className= 'search-result-bookAuthor'>
-          {book.author}
-        </span>
-
-
-      </div>
-
-
+       </div>
 
     </div>
   );
 };
 
 export default searchResult;
+
+
+
+
+
+{/* <span className= 'search-result-bookAuthor'>
+  {book.author}
+</span> */}
+
+
+//
