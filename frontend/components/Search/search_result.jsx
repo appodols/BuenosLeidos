@@ -16,7 +16,9 @@ return(
 
        <div className = 'searchContent'>
         <span className ='search-result-bookTitle'>
-           {book.title}
+          <Link to={`/books/show/${book.id}`}>
+              <h3>{book.title}</h3>
+          </Link>
         </span>
        </div>
 

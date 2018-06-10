@@ -6,7 +6,7 @@
   left:0;
   right:0;
   background-color: green;
-  width: 300px;
+  width: 313px;
   margin-left: 590px;
   // width is covered in nav-bar
 }
@@ -18,7 +18,7 @@
   flex-direction: row;
   margin-top: 5px;
   margin-bottom: 5px;
-  width: 300px;
+  width: 313px;
   background-color: blue;
 }
 
@@ -38,15 +38,16 @@
 .searchContent{
   display: flex;
   flex-direction: column;
+  margin-left: 5px;
 }
 
 .searchContent{
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .search-result-bookTitle {
-  width: 260px;
+  width: 280px;
   height: 40px;
 
 }
