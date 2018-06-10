@@ -5,7 +5,7 @@
   position: absolute;
   left:0;
   right:0;
-  background-color: green;
+  background-color: white;
   width: 313px;
   margin-left: 590px;
   // width is covered in nav-bar
@@ -19,7 +19,8 @@
   margin-top: 5px;
   margin-bottom: 5px;
   width: 313px;
-  background-color: blue;
+  background-color: white;
+  align-items: flex-start;
 }
 
 // .searchContent{
@@ -46,6 +47,25 @@
   font-size: 12px;
 }
 
+
+.search-title{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 10px;
+  margin-top: 2px;
+  background-color: red;
+}
+
+
+.search-author{
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 10px;
+  // background-color: red;
+  margin-top: -15px;
+}
+
+
+
+
 .search-result-bookTitle {
   width: 280px;
   height: 40px;
@@ -61,7 +81,7 @@
   padding: 0 6px;
   height: 30px;
   border-radius: 3px;
-  background-color: red;
+  // background-color: red;
   border: #DCD6CC 1px solid;
   position: relative;
 }

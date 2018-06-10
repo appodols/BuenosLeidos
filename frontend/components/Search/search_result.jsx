@@ -17,9 +17,17 @@ return(
        <div className = 'searchContent'>
         <span className ='search-result-bookTitle'>
           <Link to={`/books/show/${book.id}`}>
-              <h3>{book.title}</h3>
+              <h3 className ='search-title'> Title: {book.title}</h3>
           </Link>
         </span>
+
+        <span className ='search-result-bookAuthor'>
+          <Link to={`/books/show/${book.id}`}>
+              <h3 className ='search-author'>Author: {book.author}</h3>
+          </Link>
+        </span>
+
+
        </div>
 
     </div>
