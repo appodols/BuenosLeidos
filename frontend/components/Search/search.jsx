@@ -10,16 +10,18 @@ class Search extends React.Component {
   }
 
     update(e){
-        this.setState({query: e.target.value});
-        if(this.state.query.length < 2){
-          this.setState({searched: false});
-        }
-      if(this.state.query.length >= 2){
-        this.props.updateSearchQuery(this.state.query);
-        this.setState({searched: true});
+        this.setState({query: e.target.value}, ()=>{
+          if(this.state.query.length < 2){
+              this.setState({searched: false});
+            }
+          if(this.state.query.length >= 2){
+              this.props.updateSearchQuery(this.state.query);
+              this.setState({searched: true});
+          }
+        });
       }
 
-    }
+      // this.props.updateReview(review).then(()=>{this.setState({rating: nextValue, initialRating: nextValue});});
     handleSubmit(){
       //to be implemented in the future and lead to future search page
     }
@@ -89,3 +91,16 @@ export default Search;
   //    </section>:
   //      null
   //    }
+
+
+//   this.setState({query: e.target.value}).then(()=>
+//   {if(this.state.query.length < 2){
+//       this.setState({searched: false});
+//     }
+//     debugger
+//   if(this.state.query.length >= 2){
+//       debugger
+//       this.props.updateSearchQuery(this.state.query);
+//       this.setState({searched: true});
+//   }});
+// }
