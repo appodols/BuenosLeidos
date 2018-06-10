@@ -32,6 +32,7 @@
 .search-Image{
   length: 40px;
   width: 40px;
+  margin-left: 5px;
 
 }
 
@@ -45,6 +46,9 @@
 .searchContent{
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 
@@ -52,7 +56,7 @@
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 10px;
   margin-top: 2px;
-  background-color: red;
+  height: 100%;
 }
 
 
@@ -60,15 +64,16 @@
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 10px;
   // background-color: red;
-  margin-top: -15px;
+  margin-top: -5px;
 }
+
+
 
 
 
 
 .search-result-bookTitle {
   width: 280px;
-  height: 40px;
 
 }
 
