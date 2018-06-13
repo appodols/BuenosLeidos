@@ -7,6 +7,7 @@ class Search extends React.Component {
       this.state = {query: "", searched: false};
       this.update = this.update.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.updateSearchResult = this.updateSearchResult.bind(this);
   }
 
     update(e){
@@ -20,6 +21,16 @@ class Search extends React.Component {
           }
         });
       }
+
+
+      updateSearchResult(id){
+        debugger
+        this.props.updateSearchResult(this.state.query, id);
+      }
+
+
+
+
 
       // this.props.updateReview(review).then(()=>{this.setState({rating: nextValue, initialRating: nextValue});});
     handleSubmit(){
@@ -37,7 +48,7 @@ class Search extends React.Component {
          {this.state.searched ?
            <section className='searchResults'>
                   {this.props.searchResult.map((book,id) => {
-                    return <SearchResult book={book}></SearchResult>;
+                    return <SearchResult updateSearchResult={this.updateSearchResult} book={book}></SearchResult>;
                   })}
           </section>:
              null
