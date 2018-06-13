@@ -24,8 +24,7 @@ class Search extends React.Component {
 
 
       updateSearchResult(id){
-        debugger
-        this.props.updateSearchResult(this.state.query, id);
+        this.props.updateSearchResult([this.state.query, id]);
       }
 
 

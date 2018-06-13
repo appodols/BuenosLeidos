@@ -24,7 +24,7 @@ class SearchSuggestion
 
   def self.generate_prefixes(prefix)
     prefixes = []
-    (2..prefix.length-1).each do |i|
+    (2..prefix.length).each do |i|
       prefixes.push(prefix[0..i])
     end
     prefixes
@@ -34,12 +34,13 @@ class SearchSuggestion
   #
   def self.increment(prefix, result)
   #   #make sure result is submitted as a string
+
+
     prefixes = generate_prefixes(prefix)
     prefixes.each do |prefix|
-      $redis.ZINCRBY prefix "1" "#{result}"
-      #prefix "1" result
-      # $redis.ZINCRBY n "1" "4"
+        $redis.ZINCRBY(prefix, "1", result)
     end
+
   end
 
 
