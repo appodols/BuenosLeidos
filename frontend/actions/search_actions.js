@@ -8,10 +8,18 @@ export const updateSearchQuery = searchQuery => dispatch => {
   return(ApiUtils.updateSearchQuery(searchQuery).then(searchQuery => (
     dispatch(receiveSearchQuery(searchQuery))
   ), (error) => (
-    dispatch(receiveSessionErrors(error.responseJSON))
+    dispatch(receiveSearchErrors(error.responseJSON))
   ))
  );
 };
+
+
+export const updateSearchResult = updateInfo =>  {
+  debugger
+  return(ApiUtils.updateSearchResult(updateInfo));
+};
+
+
 
 const receiveSearchQuery = searchQuery => {
   return({
@@ -21,6 +29,6 @@ const receiveSearchQuery = searchQuery => {
 };
 
 export const receiveSearchErrors = (error) => ({
-  type: RECEIVE_SESSION_ERRORS,
+  type: RECEIVE_SEARCH_ERRORS,
   error: error
 });

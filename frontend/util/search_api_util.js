@@ -7,7 +7,7 @@ export const updateSearchQuery = search_query => {
   });
 };
 
-export const incrementSearchResult = update_info => {
+export const updateSearchResult = update_info => {
   return $.ajax({
     method: 'POST',
     url: '/api/search_suggestions',
