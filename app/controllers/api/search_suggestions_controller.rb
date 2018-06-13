@@ -7,9 +7,16 @@ class Api::SearchSuggestionsController < ApplicationController
     render :index
   end
 
+  def update
+    update = params[:searchSuggestion][:update_info]
+    #note in this object update is a tuple containing ['prefix','id'']
+    SearchSuggestion.increment(update[0],update[1])
+  end
+
+
 
   def search_params
-    params.require(:searchSuggestion).permit(:search_query)
+    params.require(:searchSuggestion).permit(:search_query, :update_info)
   end
 
 
