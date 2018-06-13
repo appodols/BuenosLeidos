@@ -19,8 +19,28 @@ class SearchSuggestion
 
 
   def self.terms_for(prefix)
-    $redis.zrevrange prefix, 0, 9
+    $redis.zrevrange prefix, 0, 5
   end
+
+  def generate_prefixes(prefix)
+    prefixes = []
+    (2..prefix.length-1).each do |i|
+      prefixes.push(prefix[0..i])
+    end
+    prefixes
+  end
+
+
+
+  def increment(prefix, result)
+    #make sure result is submitted as a string
+    prefixes = generate_prefixes(prefix)
+    prefixes.each do |prefix|
+      $redis.zincrby prefix 1 result
+    end
+  end
+
+
 
 
 
