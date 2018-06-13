@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # match 'api/search_suggestions', to: 'search_suggestions#index', via: :get
 
   namespace :api, defaults: {format: :json} do
-    resources :search_suggestions, only: [:index, :edit]
+    resources :search_suggestions, only: [:index, :create]
     resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy]
     resources :books, only: [:create, :show, :index]

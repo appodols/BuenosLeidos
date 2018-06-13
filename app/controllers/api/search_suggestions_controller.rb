@@ -7,7 +7,7 @@ class Api::SearchSuggestionsController < ApplicationController
     render :index
   end
 
-  def update
+  def create
     update = params[:searchSuggestion][:update_info]
     #note in this object update is a tuple containing ['prefix','id'']
     SearchSuggestion.increment(update[0],update[1])

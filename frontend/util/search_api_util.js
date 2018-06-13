@@ -6,3 +6,11 @@ export const updateSearchQuery = search_query => {
     data: {searchSuggestion: {search_query} }
   });
 };
+
+export const incrementSearchResult = update_info => {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/search_suggestions',
+    data: {searchSuggestion: {update_info} }
+  });
+};
