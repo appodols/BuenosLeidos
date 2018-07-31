@@ -31,9 +31,8 @@ class SearchSuggestion
   end
 
 
-  #
+
   def self.increment(prefix, result)
-  #   #make sure result is submitted as a string
 
 
     prefixes = generate_prefixes(prefix)

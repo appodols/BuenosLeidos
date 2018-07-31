@@ -15,6 +15,7 @@ export const updateSearchQuery = searchQuery => dispatch => {
 
 
 export const updateSearchResult = updateInfo =>  {
+  
   return(ApiUtils.updateSearchResult(updateInfo));
 };
 
